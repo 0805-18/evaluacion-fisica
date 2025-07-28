@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Evaluación Física ACSM</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header><h1>Evaluación Física ACSM</h1></header>
-
   <nav class="menu">
     <ul class="main-tabs">
-      <li class="tab-item" onclick="toggleSubmenu(this, 'composicion')">
+      <li class="tab-item" onclick="toggleSubmenu(this,'composicion')">
         Composición Corporal
         <ul class="submenu">
-          <li onclick="showExercises('composicion', 'ninos', event)">Niños (6‑17)</li>
-          <li onclick="showExercises('composicion', 'adultos', event)">Adultos (18‑64)</li>
-          <li onclick="showExercises('composicion', 'mayores', event)">Mayores (65+)</li>
+          <li onclick="showExercises('composicion','ninos',event)">Niños (6‑17)</li>
+          <li onclick="showExercises('composicion','adultos',event)">Adultos (18‑64)</li>
+          <li onclick="showExercises('composicion','mayores',event)">Mayores (65+)</li>
         </ul>
       </li>
-      <!-- Repite lo mismo para las otras pestañas -->
+      <!-- Aquí van las otras pestañas -->
     </ul>
   </nav>
-
   <main id="content-area"></main>
-
   <script src="script.js" defer></script>
 </body>
 </html>
-
