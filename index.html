@@ -1,66 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Evaluación Física ACSM</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>Evaluación Física ACSM</h1></header>
-
+  <header class="hero">
+    <h1>Evaluación Física ACSM</h1>
+  </header>
   <nav class="menu">
     <ul class="main-tabs">
-      <li class="tab-item" onclick="toggleSubmenu(this, 'composicion')">
+      <!-- Repetir cada tab-item según componentes -->
+      <li class="tab-item" onclick="toggleSubmenu(this,'composicion')">
         Composición Corporal
         <ul class="submenu">
-          <li onclick="showExercises('composicion', 'ninos', event)">Niños (0–11)</li>
-          <li onclick="showExercises('composicion', 'adolescentes', event)">Adolescentes (12–17)</li>
-          <li onclick="showExercises('composicion', 'adultos', event)">Adultos (18–64)</li>
-          <li onclick="showExercises('composicion', 'mayores', event)">Adultos Mayores (65+)</li>
+          <li onclick="showExercises('composicion','ninos',event)">Niños (0–11)</li>
+          <li onclick="showExercises('composicion','adolescentes',event)">Adolescentes (12–17)</li>
+          <li onclick="showExercises('composicion','adultos',event)">Adultos (18–64)</li>
+          <li onclick="showExercises('composicion','mayores',event)">Mayores (65+)</li>
         </ul>
       </li>
-      <li class="tab-item" onclick="toggleSubmenu(this, 'flexibilidad')">
-        Flexibilidad
-        <ul class="submenu">
-          <li onclick="showExercises('flexibilidad', 'ninos', event)">Niños (0–11)</li>
-          <li onclick="showExercises('flexibilidad', 'adolescentes', event)">Adolescentes (12–17)</li>
-          <li onclick="showExercises('flexibilidad', 'adultos', event)">Adultos (18–64)</li>
-          <li onclick="showExercises('flexibilidad', 'mayores', event)">Adultos Mayores (65+)</li>
-        </ul>
-      </li>
-      <li class="tab-item" onclick="toggleSubmenu(this, 'fuerza')">
-        Fuerza Muscular
-        <ul class="submenu">
-          <li onclick="showExercises('fuerza', 'ninos', event)">Niños (0–11)</li>
-          <li onclick="showExercises('fuerza', 'adolescentes', event)">Adolescentes (12–17)</li>
-          <li onclick="showExercises('fuerza', 'adultos', event)">Adultos (18–64)</li>
-          <li onclick="showExercises('fuerza', 'mayores', event)">Adultos Mayores (65+)</li>
-        </ul>
-      </li>
-      <li class="tab-item" onclick="toggleSubmenu(this, 'resistenciaMuscular')">
-        Resistencia Muscular
-        <ul class="submenu">
-          <li onclick="showExercises('resistenciaMuscular', 'ninos', event)">Niños (0–11)</li>
-          <li onclick="showExercises('resistenciaMuscular', 'adolescentes', event)">Adolescentes (12–17)</li>
-          <li onclick="showExercises('resistenciaMuscular', 'adultos', event)">Adultos (18–64)</li>
-          <li onclick="showExercises('resistenciaMuscular', 'mayores', event)">Adultos Mayores (65+)</li>
-        </ul>
-      </li>
-      <li class="tab-item" onclick="toggleSubmenu(this, 'resistenciaCardio')">
-        Resistencia Cardiorrespiratoria
-        <ul class="submenu">
-          <li onclick="showExercises('resistenciaCardio', 'ninos', event)">Niños (0–11)</li>
-          <li onclick="showExercises('resistenciaCardio', 'adolescentes', event)">Adolescentes (12–17)</li>
-          <li onclick="showExercises('resistenciaCardio', 'adultos', event)">Adultos (18–64)</li>
-          <li onclick="showExercises('resistenciaCardio', 'mayores', event)">Adultos Mayores (65+)</li>
-        </ul>
-      </li>
+      <!-- otras secciones -->
     </ul>
   </nav>
-
-  <main id="content-area"></main>
-
+  <main id="content-area" class="content"></main>
   <script src="script.js" defer></script>
 </body>
 </html>
