@@ -10,13 +10,12 @@
   <header class="hero">
     <div class="overlay">
       <h1>Evaluación Física ACSM</h1>
-      <p>Evaluaciones por tipo físico y grupo etario</p>
+      <p>Evaluaciones por componente físico y grupo de edad</p>
     </div>
   </header>
 
   <nav class="menu">
     <ul class="main-tabs">
-      <!-- IDs coinciden con script.js -->
       <li class="tab-item" onclick="toggleSubmenu(this,'composicion')">Composición Corporal
         <ul class="submenu">
           <li onclick="showExercises('composicion','ninos',event)">Niños (0–11)</li>
@@ -33,12 +32,25 @@
           <li onclick="showExercises('flexibilidad','mayores',event)">Adultos Mayores (65+)</li>
         </ul>
       </li>
-      <!-- Agrega fuerzas y resistencias igual -->
-    </ul>
-  </nav>
-
-  <main id="content-area" class="content"></main>
-
-  <script src="script.js" defer></script>
-</body>
-</html>
+      <li class="tab-item" onclick="toggleSubmenu(this,'fuerza')">Fuerza Muscular
+        <ul class="submenu">
+          <li onclick="showExercises('fuerza','ninos',event)">Niños (0–11)</li>
+          <li onclick="showExercises('fuerza','adolescentes',event)">Adolescentes (12–17)</li>
+          <li onclick="showExercises('fuerza','adultos',event)">Adultos (18–64)</li>
+          <li onclick="showExercises('fuerza','mayores',event)">Adultos Mayores (65+)</li>
+        </ul>
+      </li>
+      <li class="tab-item" onclick="toggleSubmenu(this,'resistenciaMuscular')">Resistencia Muscular
+        <ul class="submenu">
+          <li onclick="showExercises('resistenciaMuscular','ninos',event)">Niños (0–11)</li>
+          <li onclick="showExercises('resistenciaMuscular','adolescentes',event)">Adolescentes (12–17)</li>
+          <li onclick="showExercises('resistenciaMuscular','adultos',event)">Adultos (18–64)</li>
+          <li onclick="showExercises('resistenciaMuscular','mayores',event)">Adultos Mayores (65+)</li>
+        </ul>
+      </li>
+      <li class="tab-item" onclick="toggleSubmenu(this,'resistenciaCardio')">Resistencia Cardiorrespiratoria
+        <ul class="submenu">
+          <li onclick="showExercises('resistenciaCardio','ninos',event)">Niños (0–11)</li>
+          <li onclick="showExercises('resistenciaCardio','adolescentes',event)">Adolescentes (12–17)</li>
+          <li onclick="showExercises('resistenciaCardio','adultos',event)">Adultos (18–64)</li>
+          <li onclick="showExercises('resistenciaCardio','mayores',event)">Adultos Mayores (65+)</
