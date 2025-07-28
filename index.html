@@ -120,4 +120,49 @@ const components = {
     mayores:['Caminata suave','Levantamiento de talones','Ejercicios de equilibrio','Estiramientos suaves']
   }},
   flexibilidad:{ name:'Flexibilidad', exercises:{
-    ninos:['Estiramiento de brazos','Piernas','
+    ninos:['Estiramiento de brazos','Piernas','Cuello','Juegos suaves'],
+    adolescentes:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
+    adultos:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
+    mayores:['Cuello suave','Brazos sentado','Flexión lateral suave','Movilidad lenta']
+  }},
+  fuerza:{ name:'Fuerza Muscular', exercises:{
+    ninos:['Flexiones modificadas','Sentadillas sin peso','Elevación de talones','Botellas como pesas'],
+    adolescentes:['Flexiones estándar','Sentadillas','Peso muerto ligero','Prensa de pecho'],
+    adultos:['Press banca','Sentadillas','Peso muerto','Remo con barra'],
+    mayores:['Sentadillas asistidas','Pesas livianas','Elevaciones laterales','Empuje contra pared']
+  }},
+  resistenciaMuscular:{ name:'Resistencia Muscular', exercises:{
+    ninos:['Circuito activo','Saltos repetidos','Carrera corta','Juegos de fuerza'],
+    adolescentes:['Plancha','Sentadillas con salto','Burpees','Mountain Climbers'],
+    adultos:['Circuito resistencia','Series altas','Pesas ligeras','Ciclismo'],
+    mayores:['Marcha en sitio','Bandas elásticas','Elevación de piernas','Flexiones modificadas']
+  }},
+  resistenciaCardio:{ name:'Resistencia Cardiorrespiratoria', exercises:{
+    ninos:['Carrera corta','Salto de cuerda','Aeróbico infantil','Ciclismo suave'],
+    adolescentes:['Running','Natación','Spinning','Intervalos de carrera'],
+    adultos:['Trote','Clases grupales','Ciclismo','Natación'],
+    mayores:['Caminata rápida','Ejercicios acuáticos','Yoga cardio','Bicicleta estática']
+  }}
+};
+const ageLabels = {
+  ninos:'Niños (0–11 años)',
+  adolescentes:'Adolescentes (12–17 años)',
+  adultos:'Adultos (18–64 años)',
+  mayores:'Adultos Mayores (65+ años)'
+};
+
+function showExercises(compId, ageKey, evt){
+  evt.stopPropagation();
+  const comp = components[compId];
+  if(!comp || !comp.exercises[ageKey]){
+    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios para esta opción.</p>';
+    return;
+  }
+  const list = comp.exercises[ageKey].map(e=>`<li>${e} – 4 series</li>`).join('');
+  document.getElementById('content-area').innerHTML = `
+    <h2>${comp.name}</h2><h3>${ageLabels[ageKey]}</h3><ul>${list}</ul>`;
+}
+</script>
+
+</body>
+</html>
