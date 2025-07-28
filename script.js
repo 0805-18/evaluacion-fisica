@@ -2,46 +2,46 @@ const components = {
   composicion: {
     name: 'Composición Corporal',
     exercises: {
-      ninos: ['Saltos con cuerda', 'Caminata ligera', 'Juegos activos', 'Circuito básico'],
-      adolescentes: ['Burpees', 'Abdominales', 'Plancha', 'Sentadillas'],
-      adultos: ['Mountain climbers', 'Saltos', 'Running', 'Cardio en circuito'],
-      mayores: ['Caminar', 'Levantamiento de talones', 'Ejercicios sentados', 'Marcha suave']
+      ninos: ['Salto con cuerda','Caminata','Juego activo','Circuito básico'],
+      adolescentes: ['Burpees','Plancha','Sentadillas','Abdominales'],
+      adultos: ['Mountain climbers','Running','Cardio circuito','Saltar'],
+      mayores: ['Caminar','Equilibrio','Sentadilla asistida','Estiramientos']
     }
   },
   flexibilidad: {
     name: 'Flexibilidad',
     exercises: {
-      ninos: ['Estiramientos de brazos', 'Piernas', 'Juego de yoga', 'Movilidad articular'],
-      adolescentes: ['Flexión de tronco', 'Cuádriceps', 'Hombros', 'Isquiotibiales'],
-      adultos: ['Espalda baja', 'Cadera', 'Pecho', 'Gemelos'],
-      mayores: ['Cuello', 'Brazos', 'Piernas', 'Tronco']
+      ninos: ['Estirar brazos','Leg swings','Torsiones suaves','Juego de yoga'],
+      adolescentes: ['Cuádriceps','Isquiotibiales','Hombros','Cadera'],
+      adultos: ['Yoga dinámico','Pilates','Estiramiento estático','Respiración'],
+      mayores: ['Cuello suave','Brazos sentado','Flexión lateral','Movilidad lenta']
     }
   },
   fuerza: {
     name: 'Fuerza Muscular',
     exercises: {
-      ninos: ['Flexiones asistidas', 'Peso corporal', 'Bandas elásticas', 'Sentadillas'],
-      adolescentes: ['Flexiones', 'Dominadas asistidas', 'Press de hombro', 'Curl de bíceps'],
-      adultos: ['Entrenamiento funcional', 'Máquinas de fuerza', 'Sentadilla con peso', 'Peso muerto'],
-      mayores: ['Levantamiento ligero', 'Sentadillas con silla', 'Elevación de brazos', 'Empuje de pared']
+      ninos: ['Sentadillas con apoyo','Flexiones ligeras','Bandas suaves','Botellas como pesas'],
+      adolescentes: ['Flexiones','Press hombros','Curl bíceps','Sentadilla con peso corporal'],
+      adultos: ['Sentadilla con carga','Peso muerto','Press banca','Plancha'],
+      mayores: ['Pesas livianas','Sentadilla asistida','Elevación lateral','Empuje contra pared']
     }
   },
   resistenciaMuscular: {
     name: 'Resistencia Muscular',
     exercises: {
-      ninos: ['Abdominales', 'Juegos de resistencia', 'Sentadillas dinámicas', 'Circuitos'],
-      adolescentes: ['Plancha', 'Repeticiones altas', 'Escaladores', 'Saltos en caja'],
-      adultos: ['Series múltiples', 'Bicicleta estática', 'Pesas ligeras', 'Ejercicios funcionales'],
-      mayores: ['Levantamientos repetidos', 'Subir escalones', 'Marcha continua', 'Bandas de resistencia']
+      ninos: ['Circuito divertido','Abdominales cortos','Saltos','Mini juegos'],
+      adolescentes: ['Plancha','Flexiones múltiples','Saltos pliométricos','Burpees’],
+      adultos: ['Circuito resistencia','Series largas','Pesas ligeras','Ciclismo continuo'],
+      mayores: ['Marcha en altillo','Subir escaleras','Repeticiones lentas','Bandas elásticas']
     }
   },
   resistenciaCardio: {
     name: 'Resistencia Cardiorrespiratoria',
     exercises: {
-      ninos: ['Carrera corta', 'Saltos', 'Cuerda', 'Bailes'],
-      adolescentes: ['Running', 'Ciclismo', 'Natación', 'Saltar la cuerda'],
-      adultos: ['Trotar', 'Clases grupales', 'Spinning', 'Caminatas intensas'],
-      mayores: ['Caminar diario', 'Bicicleta estática', 'Ejercicios acuáticos', 'Yoga suave']
+      ninos: ['Carrera corta','Salto de cuerda','Aeróbico infantil','Ciclo suave'],
+      adolescentes: ['Running','Natación','Bicicleta','Saltos en trampolín'],
+      adultos: ['Trote','Spinning','Clases grupales','Caminata intensa'],
+      mayores: ['Caminar diario','Ejercicios acuáticos','Yoga cardio','Marcha en sitio']
     }
   }
 };
@@ -54,14 +54,18 @@ const ageLabels = {
 };
 
 function toggleSubmenu(elem, compId) {
-  document.querySelectorAll('.tab-item').forEach(item => {
-    if (item !== elem) item.classList.remove('active');
+  document.querySelectorAll('.tab-item').forEach(i => {
+    if (i !== elem) i.classList.remove('active');
   });
   elem.classList.toggle('active');
 }
 
 function showExercises(compId, ageKey, evt) {
   evt.stopPropagation();
+  if (!components[compId] || !components[compId].exercises[ageKey]) {
+    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios disponibles.</p>';
+    return;
+  }
   const comp = components[compId];
   const listItems = comp.exercises[ageKey].map(e => `<li>${e} – 4 series</li>`).join('');
   document.getElementById('content-area').innerHTML = `
