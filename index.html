@@ -21,27 +21,24 @@
     background: rgba(0,0,0,0.4);
   }
   .hero h1 {
-    position: relative;
-    z-index: 1;
-    color: white;
-    font-size: 2.8rem;
-    margin: 0;
-    text-align: center;
+    position: relative; z-index: 1; color: white;
+    font-size: 2.8rem; text-align: center; margin: 0;
     padding-top: 80px;
   }
   .menu {
     background: #0d47a1;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   .main-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0; padding: 0;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
   }
   .tab-item {
-    flex: 1 1 20%;
-    min-width: 160px;
-    padding: 16px;
+    flex: 0 0 auto;
+    padding: 16px 24px;
     color: white;
     cursor: pointer;
     text-align: center;
@@ -203,11 +200,9 @@ function showExercises(compId, ageKey, evt){
     document.getElementById('content-area').innerHTML = '<p>No hay ejercicios para esta opción.</p>';
     return;
   }
-  const list = comp.exercises[ageKey].map(e=>`<li>${e} – 4 series</li>`).join('');
+  const list = comp.exercises[ageKey].map(e=>`<li>${e} – 4 series</li>`).join('');
   document.getElementById('content-area').innerHTML = `
-    <h2>${comp.name}</h2>
-    <h3>${ageLabels[ageKey]}</h3>
-    <ul>${list}</ul>`;
+    <h2>${comp.name}</h2><h3>${ageLabels[ageKey]}</h3><ul>${list}</ul>`;
 }
 </script>
 
