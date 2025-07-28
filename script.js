@@ -2,49 +2,55 @@ const components = {
   composicion: {
     name: 'Composición Corporal',
     exercises: {
-      ninos: ['Saltos de cuerda', 'Juegos de carrera', 'Ejercicios con balón', 'Mini circuitos de agilidad'],
-      adultos: ['Burpees', 'Mountain Climbers', 'Jumping Jacks', 'Carrera en el lugar'],
-      mayores: ['Caminata suave', 'Levantamiento de talones', 'Ejercicios de equilibrio', 'Estiramientos suaves']
+      ninos: ['Juegos con pelota', 'Caminatas suaves', 'Saltos', 'Circuitos básicos'],
+      adolescentes: ['Burpees', 'Jumping Jacks', 'Mountain Climbers', 'Correr en el lugar'],
+      adultos: ['HIIT', 'Entrenamiento funcional', 'Bicicleta', 'Correr'],
+      mayores: ['Caminar', 'Levantarse de la silla', 'Ejercicios de equilibrio', 'Estiramientos']
     }
   },
   flexibilidad: {
     name: 'Flexibilidad',
     exercises: {
-      ninos: ['Estiramiento de brazos', 'Piernas', 'Cuello', 'Juegos suaves'],
-      adultos: ['Isquiotibiales', 'Cuádriceps', 'Espalda baja', 'Hombros'],
-      mayores: ['Cuello suave', 'Brazos sentado', 'Flexión lateral suave', 'Movilidad lenta']
+      ninos: ['Estiramiento de brazos', 'Tocar los pies', 'Flexión lateral', 'Giros de torso'],
+      adolescentes: ['Cuádriceps', 'Isquiotibiales', 'Espalda baja', 'Hombros'],
+      adultos: ['Yoga', 'Pilates', 'Estiramiento dinámico', 'Estiramiento estático'],
+      mayores: ['Estiramientos suaves', 'Cuello', 'Hombros sentado', 'Flexión suave']
     }
   },
   fuerza: {
     name: 'Fuerza Muscular',
     exercises: {
-      ninos: ['Flexiones pared', 'Sentadillas asistidas', 'Botellas de agua', 'Bandas ligeras'],
-      adultos: ['Flexiones', 'Sentadillas', 'Press de hombros', 'Curl de bíceps'],
-      mayores: ['Peso ligero', 'Sentadillas asistidas', 'Bandas elásticas', 'Elevaciones laterales']
+      ninos: ['Sentadillas con apoyo', 'Flexiones suaves', 'Botellas de agua', 'Cajas ligeras'],
+      adolescentes: ['Flexiones', 'Sentadillas', 'Abdominales', 'Curl de bíceps'],
+      adultos: ['Peso corporal', 'Barras', 'Bandas elásticas', 'Plancha'],
+      mayores: ['Pesas livianas', 'Bandas suaves', 'Levantarse de la silla', 'Sentadillas asistidas']
     }
   },
   resistenciaMuscular: {
     name: 'Resistencia Muscular',
     exercises: {
-      ninos: ['Abdominales cortos', 'Flexiones modificadas', 'Saltos', 'Circuitos cortos'],
-      adultos: ['Plancha', 'Abdominales', 'Flexiones', 'Sentadillas'],
-      mayores: ['Marcha en sitio', 'Levantamiento talones', 'Equilibrio', 'Piernas sentado']
+      ninos: ['Circuito de juegos', 'Correr suave', 'Trepar', 'Saltar la cuerda'],
+      adolescentes: ['Abdominales', 'Plancha', 'Saltos', 'Flexiones'],
+      adultos: ['Trote largo', 'Ciclismo', 'Rondas funcionales', 'Saltar la cuerda'],
+      mayores: ['Caminar por tiempo', 'Marcha en el sitio', 'Levantamientos lentos', 'Estiramiento dinámico']
     }
   },
   resistenciaCardio: {
     name: 'Resistencia Cardiorrespiratoria',
     exercises: {
-      ninos: ['Carrera corta', 'Saltar cuerda', 'Juegos activos', 'Circuitos de velocidad'],
-      adultos: ['Trotar', 'Ciclismo', 'Natación', 'Saltar cuerda'],
-      mayores: ['Caminata rápida', 'Ejercicios acuáticos', 'Yoga suave', 'Bici estática']
+      ninos: ['Carreras cortas', 'Juegos activos', 'Saltar cuerda', 'Escalera'],
+      adolescentes: ['Running', 'Bicicleta', 'Deportes', 'Cardio en circuito'],
+      adultos: ['Correr', 'Nadar', 'Ciclismo', 'Caminadora'],
+      mayores: ['Caminata rápida', 'Ejercicios acuáticos', 'Yoga suave', 'Bicicleta estática']
     }
   }
 };
 
 const ageLabels = {
-  ninos: 'Niños (6–17)',
-  adultos: 'Adultos (18–64)',
-  mayores: 'Mayores (65+)'
+  ninos: 'Niños (0–11 años)',
+  adolescentes: 'Adolescentes (12–17 años)',
+  adultos: 'Adultos (18–64 años)',
+  mayores: 'Adultos Mayores (65+ años)'
 };
 
 function toggleSubmenu(elem, compId) {
