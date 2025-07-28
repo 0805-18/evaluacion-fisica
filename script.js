@@ -1,13 +1,13 @@
-  const components = {
+const components = {
   composicion: {
     name: 'Composición Corporal',
     exercises: {
       ninos: ['Saltos de cuerda','Juegos de carrera','Ejercicios con balón','Mini circuitos'],
       adultos: ['Burpees','Mountain Climbers','Jumping Jacks','Carrera en el lugar'],
-      mayores: ['Caminata suave','Talones arriba','Equilibrio','Estiramientos suaves']
+      mayores: ['Caminata suave','Levantamiento de talones','Equilibrio','Estiramientos suaves']
     }
-  },
-  // Definir para flexibilidad, fuerza, resistencia muscular y cardio
+  }
+  // Puedes agregar más componentes como flexibilidad, fuerza, etc.
 };
 
 const ageLabels = {
@@ -17,6 +17,7 @@ const ageLabels = {
 };
 
 function toggleSubmenu(elem, compId) {
+  // activar/desactivar estado hover táctil
   document.querySelectorAll('.tab-item').forEach(item => {
     if (item === elem) item.classList.toggle('active');
     else item.classList.remove('active');
@@ -26,10 +27,9 @@ function toggleSubmenu(elem, compId) {
 function showExercises(compId, ageKey, evt) {
   evt.stopPropagation();
   const comp = components[compId];
-  const listItems = comp.exercises[ageKey].map(e => `<li>${e} – 4 series</li>`).join('');
+  const items = comp.exercises[ageKey].map(e => `<li>${e} – 4 series</li>`).join('');
   document.getElementById('content-area').innerHTML = `
     <h2>${comp.name}</h2>
     <h3>${ageLabels[ageKey]}</h3>
-    <ul>${listItems}</ul>
-  `;
+    <ul>${items}</ul>`;
 }
