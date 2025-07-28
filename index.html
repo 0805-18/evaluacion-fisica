@@ -5,87 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Evaluación Física ACSM</title>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-  }
+  body { margin: 0; font-family: Arial, sans-serif; background: #f2f2f2; }
   .hero {
-    position: relative;
-    background: url('https://picsum.photos/id/1067/1600/600') center center / cover no-repeat;
-    height: 350px;
+    background: url('https://picsum.photos/id/1067/1600/600') center/cover no-repeat;
+    height: 350px; position: relative;
   }
   .hero::after {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
     background: rgba(0,0,0,0.4);
   }
   .hero h1 {
-    position: relative; z-index: 1; color: white;
-    font-size: 2.8rem; text-align: center; margin: 0;
-    padding-top: 80px;
+    position: relative; z-index:1;
+    color: white; font-size: 2.5rem;
+    text-align: center; margin: 0; padding-top: 80px;
   }
   .menu {
-    background: #0d47a1;
-    overflow-x: auto;
-    white-space: nowrap;
+    background: #0d47a1; overflow-x: auto;
   }
   .main-tabs {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
+    display: inline-flex; margin: 0; padding: 0;
     list-style: none;
   }
   .tab-item {
-    flex: 0 0 auto;
-    padding: 16px 24px;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;
-    transition: background 0.3s;
-    position: relative;
+    flex: 0 0 auto; padding:16px 24px; color:white;
+    text-align:center; font-weight:bold; cursor:pointer;
+    position: relative; transition: background 0.3s;
   }
   .tab-item:hover, .tab-item.active {
     background: #08306b;
   }
   .submenu {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: white;
-    display: none;
-    margin: 0; padding: 0;
-    list-style: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute; top:100%; left:0; right:0;
+    background: white; display: none; margin:0; padding:0;
+    list-style: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 10;
   }
   .tab-item:hover .submenu, .tab-item.active .submenu {
     display: block;
   }
   .submenu li {
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
+    padding: 10px 15px; font-size:0.9rem; color:#333;
+    border-bottom:1px solid #ddd; cursor:pointer;
     transition: background 0.2s;
   }
-  .submenu li:hover {
-    background: #e3f2fd;
-    color: #0d47a1;
-  }
+  .submenu li:hover { background:#e3f2fd; color:#0d47a1; }
   #content-area {
-    max-width: 700px;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+    max-width:700px; margin:30px auto; background:white;
+    padding:20px; border-radius:8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  #content-area h2 { color: #0d47a1; margin-top: 0; }
-  #content-area h3 { color: #555; margin-bottom: 8px; }
-  #content-area ul { padding-left: 20px; }
-  #content-area ul li { margin-bottom: 8px; }
+  #content-area h2 { color:#0d47a1; margin-top:0;}
+  #content-area h3 { color:#555; margin-bottom:8px;}
+  #content-area ul { padding-left:20px; }
+  #content-area ul li { margin-bottom:8px; }
 </style>
 </head>
 <body>
