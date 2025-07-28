@@ -5,62 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Evaluación Física ACSM</title>
 <style>
-  body { margin: 0; font-family: Arial, sans-serif; background: #f2f2f2; }
-  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
   .hero {
     position: relative;
-    background-image: url('https://picsum.photos/1600/600?random');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+    background: url('https://picsum.photos/id/1067/1600/600') center center / cover no-repeat;
+    height: 350px;
   }
   .hero::after {
     content: '';
     position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5); z-index: 0;
+    background: rgba(0,0,0,0.4);
   }
   .hero h1 {
-    position: relative; z-index: 1; font-size: 2.5rem; margin: 0;
-    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 2.8rem;
+    margin: 0;
+    text-align: center;
+    padding-top: 80px;
   }
-
-  .menu { background: #0d47a1; }
-  .main-tabs { display: flex; margin: 0; padding: 0; list-style: none; }
+  .menu {
+    background: #0d47a1;
+  }
+  .main-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; padding: 0;
+    list-style: none;
+  }
   .tab-item {
-    flex: 1; position: relative; padding: 15px; color: white;
-    text-align: center; font-weight: bold; cursor: pointer;
-    transition: background .3s;
+    flex: 1 1 20%;
+    min-width: 160px;
+    padding: 16px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+    position: relative;
   }
-  .tab-item:hover, .tab-item.active { background: #08306b; }
-
+  .tab-item:hover, .tab-item.active {
+    background: #08306b;
+  }
   .submenu {
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: white; display: none; margin: 0; padding: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 10;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: white;
+    display: none;
+    margin: 0; padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
   }
   .tab-item:hover .submenu, .tab-item.active .submenu {
     display: block;
   }
   .submenu li {
-    padding: 10px 15px; font-size: 0.9rem; color: #333;
-    border-bottom: 1px solid #ddd; cursor: pointer;
-    transition: background .2s;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.2s;
   }
-  .submenu li:hover { background: #e3f2fd; color: #0d47a1; }
-
+  .submenu li:hover {
+    background: #e3f2fd;
+    color: #0d47a1;
+  }
   #content-area {
-    max-width: 700px; margin: 30px auto;
-    background: white; padding: 20px; border-radius: 8px;
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   #content-area h2 { color: #0d47a1; margin-top: 0; }
-  #content-area h3 { color: #555; margin-bottom: 10px; }
+  #content-area h3 { color: #555; margin-bottom: 8px; }
   #content-area ul { padding-left: 20px; }
   #content-area ul li { margin-bottom: 8px; }
 </style>
@@ -91,7 +117,33 @@
         <li onclick="showExercises('flexibilidad','mayores',event)">Adultos Mayores (65+ años)</li>
       </ul>
     </li>
-    <!-- Más pestañas iguales -->
+    <li class="tab-item" onclick="toggleSubmenu(this)">
+      Fuerza Muscular
+      <ul class="submenu">
+        <li onclick="showExercises('fuerza','ninos',event)">Niños (0–11 años)</li>
+        <li onclick="showExercises('fuerza','adolescentes',event)">Adolescentes (12–17 años)</li>
+        <li onclick="showExercises('fuerza','adultos',event)">Adultos (18–64 años)</li>
+        <li onclick="showExercises('fuerza','mayores',event)">Adultos Mayores (65+ años)</li>
+      </ul>
+    </li>
+    <li class="tab-item" onclick="toggleSubmenu(this)">
+      Resistencia Muscular
+      <ul class="submenu">
+        <li onclick="showExercises('resistenciaMuscular','ninos',event)">Niños (0–11 años)</li>
+        <li onclick="showExercises('resistenciaMuscular','adolescentes',event)">Adolescentes (12–17 años)</li>
+        <li onclick="showExercises('resistenciaMuscular','adultos',event)">Adultos (18–64 años)</li>
+        <li onclick="showExercises('resistenciaMuscular','mayores',event)">Adultos Mayores (65+ años)</li>
+      </ul>
+    </li>
+    <li class="tab-item" onclick="toggleSubmenu(this)">
+      Resistencia Cardiorrespiratoria
+      <ul class="submenu">
+        <li onclick="showExercises('resistenciaCardio','ninos',event)">Niños (0–11 años)</li>
+        <li onclick="showExercises('resistenciaCardio','adolescentes',event)">Adolescentes (12–17 años)</li>
+        <li onclick="showExercises('resistenciaCardio','adultos',event)">Adultos (18–64 años)</li>
+        <li onclick="showExercises('resistenciaCardio','mayores',event)">Adultos Mayores (65+ años)</li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -101,20 +153,37 @@
 
 <script>
 const components = {
-  composicion: { name:'Composición Corporal', exercises:{
-    ninos:['Salto cuerda','Caminata','Juegos','Circuito'],
-    adolescentes:['Burpees','Plancha','Sentadillas','Abdominales'],
-    adultos:['Mountain climbers','Running','Circuito','Cardio'],
-    mayores:['Caminar','Equilibrio','Sentadillas asistidas','Estiramientos']
+  composicion:{ name:'Composición Corporal', exercises:{
+    ninos:['Saltos de cuerda','Juegos de carrera','Ejercicios con balón','Circuito básico'],
+    adolescentes:['Burpees','Mountain Climbers','Jumping Jacks','Carrera en el lugar'],
+    adultos:['Burpees','Mountain Climbers','Jumping Jacks','Carrera en el lugar'],
+    mayores:['Caminata suave','Levantamiento de talones','Ejercicios de equilibrio','Estiramientos suaves']
   }},
-  flexibilidad: { name:'Flexibilidad', exercises:{
-    ninos:['Estirar brazos','Piernas','Cuello','Movilidad'],
-    adolescentes:['Isquiotibiales','Cuádriceps','Hombros','Espalda baja'],
-    adultos:['Yoga','Pilates','Estiramiento estático','Respiración'],
-    mayores:['Cuello suave','Piernas sentado','Flex lateral','Movilidad lenta']
+  flexibilidad:{ name:'Flexibilidad', exercises:{
+    ninos:['Estiramiento de brazos','Piernas','Cuello','Juegos suaves'],
+    adolescentes:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
+    adultos:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
+    mayores:['Cuello suave','Brazos sentado','Flexión lateral suave','Movilidad lenta']
+  }},
+  fuerza:{ name:'Fuerza Muscular', exercises:{
+    ninos:['Flexiones modificadas','Sentadillas sin peso','Elevación de talones','Botellas como pesas'],
+    adolescentes:['Flexiones estándar','Sentadillas','Peso muerto ligero','Prensa de pecho'],
+    adultos:['Press banca','Sentadillas','Peso muerto','Remo con barra'],
+    mayores:['Sentadillas asistidas','Pesas livianas','Elevaciones laterales','Empuje contra pared']
+  }},
+  resistenciaMuscular:{ name:'Resistencia Muscular', exercises:{
+    ninos:['Circuito activo','Saltos repetidos','Carrera corta','Juegos de fuerza'],
+    adolescentes:['Plancha','Sentadillas con salto','Burpees','Mountain Climbers'],
+    adultos:['Circuito resistencia','Series altas','Pesas ligeras','Ciclismo'],
+    mayores:['Marcha en sitio','Bandas elásticas','Elevación de piernas','Flexiones modificadas']
+  }},
+  resistenciaCardio:{ name:'Resistencia Cardiorrespiratoria', exercises:{
+    ninos:['Carrera corta','Salto de cuerda','Aeróbico infantil','Ciclismo suave'],
+    adolescentes:['Running','Natación','Spinning','Intervalos de carrera'],
+    adultos:['Trote','Clases grupales','Ciclismo','Natación'],
+    mayores:['Caminata rápida','Ejercicios acuáticos','Yoga cardio','Bicicleta estática']
   }}
 };
-
 const ageLabels = {
   ninos:'Niños (0–11 años)',
   adolescentes:'Adolescentes (12–17 años)',
@@ -122,18 +191,16 @@ const ageLabels = {
   mayores:'Adultos Mayores (65+ años)'
 };
 
-function toggleSubmenu(elem) {
-  document.querySelectorAll('.tab-item').forEach(tab => {
-    if (tab !== elem) tab.classList.remove('active');
-  });
+function toggleSubmenu(elem){
+  document.querySelectorAll('.tab-item').forEach(t=>{ if(t!==elem) t.classList.remove('active'); });
   elem.classList.toggle('active');
 }
 
-function showExercises(compId, ageKey, evt) {
+function showExercises(compId, ageKey, evt){
   evt.stopPropagation();
   const comp = components[compId];
-  if (!comp || !comp.exercises[ageKey]) {
-    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios disponibles.</p>';
+  if(!comp || !comp.exercises[ageKey]){
+    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios para esta opción.</p>';
     return;
   }
   const list = comp.exercises[ageKey].map(e=>`<li>${e} – 4 series</li>`).join('');
