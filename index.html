@@ -1,152 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Evaluación Física ACSM</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f2f2;
-  }
-  /* Hero con imagen y overlay */
-  .hero {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1599058917761-423fca1f839b?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-    height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
-  .overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0,0,0,0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    z-index: 1;
-  }
-  .overlay h1 {
-    font-size: 2.6rem;
-    margin: 0;
-    font-weight: 700;
-  }
-  .overlay p {
-    font-size: 1.2rem;
-    margin: 10px 0 0 0;
-    font-weight: 500;
-  }
-
-  /* Menú principal */
-  .menu {
-    background-color: #0d47a1;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
-  }
-  .main-tabs {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .tab-item {
-    position: relative;
-    flex: 1;
-    padding: 18px 20px;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    text-align: center;
-    user-select: none;
-    transition: background-color 0.3s;
-    font-size: 1.1rem;
-  }
-  .tab-item:hover,
-  .tab-item.active {
-    background-color: #08306b;
-  }
-  /* Submenú */
-  .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-    border-radius: 0 0 6px 6px;
-    z-index: 15;
-  }
-  .tab-item:hover .submenu,
-  .tab-item.active .submenu {
-    display: block;
-  }
-  .submenu li {
-    padding: 12px 18px;
-    font-size: 0.9rem;
-    color: #0d47a1;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.25s ease, color 0.25s ease;
-  }
-  .submenu li:hover {
-    background-color: #e3f2fd;
-    color: #08306b;
-  }
-  .submenu li:last-child {
-    border-bottom: none;
-  }
-
-  /* Área de contenido */
-  #content-area {
-    max-width: 720px;
-    margin: 30px auto 50px auto;
-    background: white;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-  }
-  #content-area h2 {
-    margin-top: 0;
-    color: #0d47a1;
-    font-weight: 700;
-  }
-  #content-area h3 {
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #555;
-  }
-  #content-area ul {
-    list-style: disc inside;
-    padding-left: 0;
-  }
-  #content-area ul li {
-    margin-bottom: 8px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evaluación Física ACSM</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #f2f2f2;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1599058917761-423fca1f839b?auto=format&fit=crop&w=1350&q=80');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5); /* overlay para texto visible */
+      z-index: 0;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .menu {
+      background: #007BFF;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .main-tabs {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .tab-item {
+      position: relative;
+      flex: 1;
+      padding: 15px 20px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      user-select: none;
+    }
+    .tab-item:hover, .tab-item.active {
+      background: #0056b3;
+    }
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 10;
+    }
+    .tab-item:hover .submenu, .tab-item.active .submenu {
+      display: block;
+    }
+    .submenu li {
+      padding: 10px 15px;
+      color: #333;
+      font-size: 0.9em;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .submenu li:hover {
+      background: #f2f2f2;
+      color: #007BFF;
+    }
+    #content-area {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      min-height: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
+<header>
+  <h1>Evaluación Física ACSM</h1>
+</header>
+
 <div class="hero">
-  <div class="overlay">
-    <h1>Evaluación Física ACSM</h1>
-    <p>Guía de ejercicios para diferentes edades</p>
-  </div>
+  <h1>Mejora tu salud con ejercicios personalizados</h1>
 </div>
 
-<div class="menu">
+<nav class="menu">
   <ul class="main-tabs">
     <li class="tab-item" onclick="toggleSubmenu(this)">
       Composición Corporal
@@ -194,93 +162,93 @@
       </ul>
     </li>
   </ul>
-</div>
+</nav>
 
 <div id="content-area">
-  <p>Seleccione una categoría y edad para ver los ejercicios.</p>
+  <p>Selecciona una categoría y una edad para ver los ejercicios.</p>
 </div>
 
 <script>
-const components = {
-  composicion: {
-    name: 'Composición Corporal',
-    exercises: {
-      ninos: ['Saltos de cuerda', 'Juegos de carrera', 'Ejercicios con balón', 'Mini circuitos de agilidad'],
-      adolescentes: ['Burpees', 'Mountain Climbers', 'Jumping Jacks', 'Carrera en el lugar'],
-      adultos: ['Burpees', 'Mountain Climbers', 'Jumping Jacks', 'Carrera en el lugar'],
-      mayores: ['Caminata suave', 'Levantamiento de talones', 'Ejercicios de equilibrio', 'Estiramientos suaves']
+  const components = {
+    composicion: {
+      name: 'Composición Corporal',
+      exercises: {
+        ninos: ['Saltos de cuerda', 'Juegos de carrera', 'Ejercicios con balón', 'Mini circuitos de agilidad'],
+        adolescentes: ['Burpees', 'Mountain Climbers', 'Jumping Jacks', 'Carrera en el lugar'],
+        adultos: ['Burpees', 'Mountain Climbers', 'Jumping Jacks', 'Carrera en el lugar'],
+        mayores: ['Caminata suave', 'Levantamiento de talones', 'Ejercicios de equilibrio', 'Estiramientos suaves']
+      }
+    },
+    flexibilidad: {
+      name: 'Flexibilidad',
+      exercises: {
+        ninos: ['Estiramiento de brazos', 'Piernas', 'Cuello', 'Juegos suaves'],
+        adolescentes: ['Isquiotibiales', 'Cuádriceps', 'Espalda baja', 'Hombros'],
+        adultos: ['Isquiotibiales', 'Cuádriceps', 'Espalda baja', 'Hombros'],
+        mayores: ['Cuello suave', 'Brazos sentado', 'Flexión lateral suave', 'Movilidad lenta']
+      }
+    },
+    fuerza: {
+      name: 'Fuerza Muscular',
+      exercises: {
+        ninos: ['Flexiones modificadas', 'Sentadillas con peso corporal', 'Elevación de talones', 'Ejercicios con balón medicinal ligero'],
+        adolescentes: ['Flexiones estándar', 'Sentadillas', 'Peso muerto con barra ligera', 'Prensa de pecho'],
+        adultos: ['Press de banca', 'Sentadillas', 'Peso muerto', 'Remo con barra'],
+        mayores: ['Elevación de talones sentado', 'Ejercicios con banda elástica', 'Sentadillas asistidas', 'Levantamiento de mancuernas ligero']
+      }
+    },
+    resistenciaMuscular: {
+      name: 'Resistencia Muscular',
+      exercises: {
+        ninos: ['Circuitos de juegos activos', 'Saltos repetidos', 'Carrera corta', 'Juegos de fuerza con peso corporal'],
+        adolescentes: ['Plancha', 'Sentadillas con salto', 'Burpees', 'Mountain Climbers'],
+        adultos: ['Plancha', 'Sentadillas con salto', 'Burpees', 'Mountain Climbers'],
+        mayores: ['Caminata', 'Ejercicios de resistencia con bandas', 'Elevación de piernas', 'Flexiones modificadas']
+      }
+    },
+    resistenciaCardio: {
+      name: 'Resistencia Cardiorrespiratoria',
+      exercises: {
+        ninos: ['Juegos al aire libre', 'Carreras cortas', 'Saltos de tijera', 'Saltar la cuerda'],
+        adolescentes: ['Trote continuo', 'Ciclismo', 'Natación', 'Entrenamiento en intervalos'],
+        adultos: ['Trote', 'Ciclismo', 'Natación', 'Entrenamiento en intervalos'],
+        mayores: ['Caminata rápida', 'Bicicleta estática', 'Ejercicios de bajo impacto', 'Natación suave']
+      }
     }
-  },
-  flexibilidad: {
-    name: 'Flexibilidad',
-    exercises: {
-      ninos: ['Estiramiento de brazos', 'Piernas', 'Cuello', 'Juegos suaves'],
-      adolescentes: ['Isquiotibiales', 'Cuádriceps', 'Espalda baja', 'Hombros'],
-      adultos: ['Isquiotibiales', 'Cuádriceps', 'Espalda baja', 'Hombros'],
-      mayores: ['Cuello suave', 'Brazos sentado', 'Flexión lateral suave', 'Movilidad lenta']
-    }
-  },
-  fuerza: {
-    name: 'Fuerza Muscular',
-    exercises: {
-      ninos: ['Flexiones modificadas', 'Sentadillas con peso corporal', 'Elevación de talones', 'Ejercicios con balón medicinal ligero'],
-      adolescentes: ['Flexiones estándar', 'Sentadillas', 'Peso muerto con barra ligera', 'Prensa de pecho'],
-      adultos: ['Press de banca', 'Sentadillas', 'Peso muerto', 'Remo con barra'],
-      mayores: ['Elevación de talones sentado', 'Ejercicios con banda elástica', 'Sentadillas asistidas', 'Levantamiento de mancuernas ligero']
-    }
-  },
-  resistenciaMuscular: {
-    name: 'Resistencia Muscular',
-    exercises: {
-      ninos: ['Circuitos de juegos activos', 'Saltos repetidos', 'Carrera corta', 'Juegos de fuerza con peso corporal'],
-      adolescentes: ['Plancha', 'Sentadillas con salto', 'Burpees', 'Mountain Climbers'],
-      adultos: ['Plancha', 'Sentadillas con salto', 'Burpees', 'Mountain Climbers'],
-      mayores: ['Caminata', 'Ejercicios de resistencia con bandas', 'Elevación de piernas', 'Flexiones modificadas']
-    }
-  },
-  resistenciaCardio: {
-    name: 'Resistencia Cardiorrespiratoria',
-    exercises: {
-      ninos: ['Juegos al aire libre', 'Carreras cortas', 'Saltos de tijera', 'Saltar la cuerda'],
-      adolescentes: ['Trote continuo', 'Ciclismo', 'Natación', 'Entrenamiento en intervalos'],
-      adultos: ['Trote', 'Ciclismo', 'Natación', 'Entrenamiento en intervalos'],
-      mayores: ['Caminata rápida', 'Bicicleta estática', 'Ejercicios de bajo impacto', 'Natación suave']
-    }
+  };
+
+  const ageLabels = {
+    ninos: 'Niños (0–11 años)',
+    adolescentes: 'Adolescentes (12–17 años)',
+    adultos: 'Adultos (18–64 años)',
+    mayores: 'Adultos Mayores (65+ años)'
+  };
+
+  function toggleSubmenu(elem) {
+    document.querySelectorAll('.tab-item').forEach(tab => {
+      if (tab !== elem) {
+        tab.classList.remove('active');
+      }
+    });
+    elem.classList.toggle('active');
   }
-};
 
-const ageLabels = {
-  ninos: 'Niños (0–11 años)',
-  adolescentes: 'Adolescentes (12–17 años)',
-  adultos: 'Adultos (18–64 años)',
-  mayores: 'Adultos Mayores (65+ años)'
-};
-
-function toggleSubmenu(elem) {
-  document.querySelectorAll('.tab-item').forEach(tab => {
-    if (tab !== elem) {
-      tab.classList.remove('active');
+  function showExercises(compId, ageKey, evt) {
+    evt.stopPropagation();
+    const comp = components[compId];
+    if (!comp || !comp.exercises[ageKey]) {
+      document.getElementById('content-area').innerHTML = '<p>No hay ejercicios disponibles para esta opción.</p>';
+      return;
     }
-  });
-  elem.classList.toggle('active');
-}
-
-function showExercises(compId, ageKey, evt) {
-  evt.stopPropagation();
-  const comp = components[compId];
-  if (!comp || !comp.exercises[ageKey]) {
-    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios disponibles para esta opción.</p>';
-    return;
+    const listItems = comp.exercises[ageKey]
+      .map(e => `<li>${e} – 4 series</li>`)
+      .join('');
+    document.getElementById('content-area').innerHTML = `
+      <h2>${comp.name}</h2>
+      <h3>${ageLabels[ageKey]}</h3>
+      <ul>${listItems}</ul>
+    `;
   }
-  const listItems = comp.exercises[ageKey]
-    .map(e => `<li>${e} – 4 series</li>`)
-    .join('');
-  document.getElementById('content-area').innerHTML = `
-    <h2>${comp.name}</h2>
-    <h3>${ageLabels[ageKey]}</h3>
-    <ul>${listItems}</ul>
-  `;
-}
 </script>
 
 </body>
