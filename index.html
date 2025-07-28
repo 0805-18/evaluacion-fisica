@@ -7,8 +7,9 @@
 <style>
   body { margin: 0; font-family: Arial, sans-serif; background: #f2f2f2; }
   .hero {
+    position: relative;
     background: url('https://picsum.photos/id/1067/1600/600') center/cover no-repeat;
-    height: 350px; position: relative;
+    height: 350px;
   }
   .hero::after {
     content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
@@ -19,30 +20,20 @@
     color: white; font-size: 2.5rem;
     text-align: center; margin: 0; padding-top: 80px;
   }
-  .menu {
-    background: #0d47a1; overflow-x: auto;
-  }
-  .main-tabs {
-    display: inline-flex; margin: 0; padding: 0;
-    list-style: none;
-  }
+  .menu { background: #0d47a1; overflow-x: auto; }
+  .main-tabs { display: inline-flex; margin: 0; padding: 0; list-style: none; }
   .tab-item {
     flex: 0 0 auto; padding:16px 24px; color:white;
     text-align:center; font-weight:bold; cursor:pointer;
     position: relative; transition: background 0.3s;
   }
-  .tab-item:hover, .tab-item.active {
-    background: #08306b;
-  }
+  .tab-item:hover, .tab-item.active { background: #08306b; }
   .submenu {
-    position: absolute; top:100%; left:0; right:0;
-    background: white; display: none; margin:0; padding:0;
-    list-style: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 10;
+    position: absolute; top:100%; left:0; background:white;
+    display: none; margin:0; padding:0; width: 100%;
+    list-style:none; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:10;
   }
-  .tab-item:hover .submenu, .tab-item.active .submenu {
-    display: block;
-  }
+  .tab-item:hover .submenu { display: block; }
   .submenu li {
     padding: 10px 15px; font-size:0.9rem; color:#333;
     border-bottom:1px solid #ddd; cursor:pointer;
@@ -52,10 +43,10 @@
   #content-area {
     max-width:700px; margin:30px auto; background:white;
     padding:20px; border-radius:8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
   }
-  #content-area h2 { color:#0d47a1; margin-top:0;}
-  #content-area h3 { color:#555; margin-bottom:8px;}
+  #content-area h2 { color:#0d47a1; margin-top:0; }
+  #content-area h3 { color:#555; margin-bottom:8px; }
   #content-area ul { padding-left:20px; }
   #content-area ul li { margin-bottom:8px; }
 </style>
@@ -68,7 +59,7 @@
 
 <nav class="menu">
   <ul class="main-tabs">
-    <li class="tab-item" onclick="toggleSubmenu(this)">
+    <li class="tab-item">
       Composición Corporal
       <ul class="submenu">
         <li onclick="showExercises('composicion','ninos',event)">Niños (0–11 años)</li>
@@ -77,7 +68,7 @@
         <li onclick="showExercises('composicion','mayores',event)">Adultos Mayores (65+ años)</li>
       </ul>
     </li>
-    <li class="tab-item" onclick="toggleSubmenu(this)">
+    <li class="tab-item">
       Flexibilidad
       <ul class="submenu">
         <li onclick="showExercises('flexibilidad','ninos',event)">Niños (0–11 años)</li>
@@ -86,7 +77,7 @@
         <li onclick="showExercises('flexibilidad','mayores',event)">Adultos Mayores (65+ años)</li>
       </ul>
     </li>
-    <li class="tab-item" onclick="toggleSubmenu(this)">
+    <li class="tab-item">
       Fuerza Muscular
       <ul class="submenu">
         <li onclick="showExercises('fuerza','ninos',event)">Niños (0–11 años)</li>
@@ -95,7 +86,7 @@
         <li onclick="showExercises('fuerza','mayores',event)">Adultos Mayores (65+ años)</li>
       </ul>
     </li>
-    <li class="tab-item" onclick="toggleSubmenu(this)">
+    <li class="tab-item">
       Resistencia Muscular
       <ul class="submenu">
         <li onclick="showExercises('resistenciaMuscular','ninos',event)">Niños (0–11 años)</li>
@@ -104,7 +95,7 @@
         <li onclick="showExercises('resistenciaMuscular','mayores',event)">Adultos Mayores (65+ años)</li>
       </ul>
     </li>
-    <li class="tab-item" onclick="toggleSubmenu(this)">
+    <li class="tab-item">
       Resistencia Cardiorrespiratoria
       <ul class="submenu">
         <li onclick="showExercises('resistenciaCardio','ninos',event)">Niños (0–11 años)</li>
@@ -129,54 +120,4 @@ const components = {
     mayores:['Caminata suave','Levantamiento de talones','Ejercicios de equilibrio','Estiramientos suaves']
   }},
   flexibilidad:{ name:'Flexibilidad', exercises:{
-    ninos:['Estiramiento de brazos','Piernas','Cuello','Juegos suaves'],
-    adolescentes:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
-    adultos:['Isquiotibiales','Cuádriceps','Espalda baja','Hombros'],
-    mayores:['Cuello suave','Brazos sentado','Flexión lateral suave','Movilidad lenta']
-  }},
-  fuerza:{ name:'Fuerza Muscular', exercises:{
-    ninos:['Flexiones modificadas','Sentadillas sin peso','Elevación de talones','Botellas como pesas'],
-    adolescentes:['Flexiones estándar','Sentadillas','Peso muerto ligero','Prensa de pecho'],
-    adultos:['Press banca','Sentadillas','Peso muerto','Remo con barra'],
-    mayores:['Sentadillas asistidas','Pesas livianas','Elevaciones laterales','Empuje contra pared']
-  }},
-  resistenciaMuscular:{ name:'Resistencia Muscular', exercises:{
-    ninos:['Circuito activo','Saltos repetidos','Carrera corta','Juegos de fuerza'],
-    adolescentes:['Plancha','Sentadillas con salto','Burpees','Mountain Climbers'],
-    adultos:['Circuito resistencia','Series altas','Pesas ligeras','Ciclismo'],
-    mayores:['Marcha en sitio','Bandas elásticas','Elevación de piernas','Flexiones modificadas']
-  }},
-  resistenciaCardio:{ name:'Resistencia Cardiorrespiratoria', exercises:{
-    ninos:['Carrera corta','Salto de cuerda','Aeróbico infantil','Ciclismo suave'],
-    adolescentes:['Running','Natación','Spinning','Intervalos de carrera'],
-    adultos:['Trote','Clases grupales','Ciclismo','Natación'],
-    mayores:['Caminata rápida','Ejercicios acuáticos','Yoga cardio','Bicicleta estática']
-  }}
-};
-const ageLabels = {
-  ninos:'Niños (0–11 años)',
-  adolescentes:'Adolescentes (12–17 años)',
-  adultos:'Adultos (18–64 años)',
-  mayores:'Adultos Mayores (65+ años)'
-};
-
-function toggleSubmenu(elem){
-  document.querySelectorAll('.tab-item').forEach(t=>{ if(t!==elem) t.classList.remove('active'); });
-  elem.classList.toggle('active');
-}
-
-function showExercises(compId, ageKey, evt){
-  evt.stopPropagation();
-  const comp = components[compId];
-  if(!comp || !comp.exercises[ageKey]){
-    document.getElementById('content-area').innerHTML = '<p>No hay ejercicios para esta opción.</p>';
-    return;
-  }
-  const list = comp.exercises[ageKey].map(e=>`<li>${e} – 4 series</li>`).join('');
-  document.getElementById('content-area').innerHTML = `
-    <h2>${comp.name}</h2><h3>${ageLabels[ageKey]}</h3><ul>${list}</ul>`;
-}
-</script>
-
-</body>
-</html>
+    ninos:['Estiramiento de brazos','Piernas','
