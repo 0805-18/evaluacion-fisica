@@ -1,12 +1,11 @@
-/* Fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
   --main-bg: #ffe6f0;
-  --accent: #ffb6c1;
+  --accent: #ff69b4; /* rosa más brillante */
   --text: #333;
   --white: #fff;
-  --hover: #ffcbd9;
+  --hover: #ffaec9;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
@@ -95,27 +94,6 @@ img {
   border-radius: 10px;
   margin-top: 1rem;
   box-shadow: 0 2px 6px var(--shadow);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  background-color: var(--white);
-}
-
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-table th {
-  background-color: var(--accent);
-  color: var(--white);
-  font-weight: 600;
 }
 
 @media (max-width: 768px) {
