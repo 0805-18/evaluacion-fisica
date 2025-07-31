@@ -13,7 +13,9 @@ header {
   font-size: 1.5rem;
 }
 
-.menu-tabs { background: #022b3a; }
+.menu-tabs {
+  background: #022b3a;
+}
 
 .tabs {
   display: flex;
@@ -21,6 +23,7 @@ header {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .tab-item {
@@ -32,7 +35,9 @@ header {
   user-select: none;
 }
 
-.tab-item:last-child { border-right: none; }
+.tab-item:last-child {
+  border-right: none;
+}
 
 .tab-item.active,
 .tab-item:hover {
@@ -40,13 +45,23 @@ header {
   color: #02121f;
 }
 
-main { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
 
-.tab-content { display: none; }
+.tab-content {
+  display: none;
+}
 
-.tab-content.active { display: block; }
+.tab-content.active {
+  display: block;
+}
 
-.tab-content h2 { color: #005f73; }
+.tab-content h2 {
+  color: #005f73;
+}
 
 .tab-content img {
   max-width: 100%;
