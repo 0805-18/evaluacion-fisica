@@ -2,27 +2,26 @@
 
 :root {
   --main-bg: #ffe6f0;
-  --accent: #ff69b4; /* rosa más brillante */
+  --accent: #ff69b4;
   --text: #333;
   --white: #fff;
-  --hover: #ffaec9;
+  --hover: #ffc0d9;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   background-color: var(--main-bg);
-  margin: 0;
+  font-family: 'Poppins', sans-serif;
   color: var(--text);
-  line-height: 1.6;
+  margin: 0;
 }
 
 header {
   background-color: var(--accent);
   color: var(--white);
-  text-align: center;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px var(--shadow);
+  text-align: center;
+  box-shadow: 0px 3px 6px var(--shadow);
 }
 
 header h1 {
@@ -31,49 +30,42 @@ header h1 {
 }
 
 nav {
-  background-color: var(--white);
   display: flex;
   justify-content: center;
+  padding: 1rem;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 6px var(--shadow);
 }
 
 .tab-item {
   background-color: var(--accent);
   color: var(--white);
-  border: none;
-  padding: 0.6rem 1.2rem;
   border-radius: 25px;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
-.tab-item:hover {
-  background-color: var(--hover);
-  transform: translateY(-2px);
-}
-
+.tab-item:hover,
 .tab-item.active {
   background-color: var(--hover);
-  box-shadow: 0 0 10px var(--shadow);
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 8px var(--shadow);
 }
 
 main {
   padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 960px;
+  margin: auto;
 }
 
 .tab-content {
   display: none;
   background-color: var(--white);
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 12px;
   margin-top: 1.5rem;
+  box-shadow: 0px 4px 10px var(--shadow);
 }
 
 .tab-content.active {
@@ -82,18 +74,32 @@ main {
 
 h2 {
   color: var(--accent);
-  margin-top: 0;
-}
-
-ul {
-  padding-left: 1.2rem;
 }
 
 img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-top: 1rem;
-  box-shadow: 0 2px 6px var(--shadow);
+  box-shadow: 0px 2px 6px var(--shadow);
+}
+
+/* Estilo didáctico para listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+ul li::before {
+  content: "🌸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
