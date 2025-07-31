@@ -1,136 +1,89 @@
-// Ejercicios de ejemplo para cada combinación componente + edad
 const ejercicios = {
   composicion: {
-    ninos: [
-      "Ejercicio 1 para Composición Corporal Niños",
-      "Ejercicio 2 para Composición Corporal Niños"
+    adolecentes: [
+      "Promover actividad física diaria para mejorar la composición corporal.",
+      "Reducir el consumo de alimentos altos en grasas y azúcares.",
+      "Incluir actividades de resistencia y aeróbicas moderadas."
+    ],
+    jovenes: [
+      "Ejercicios aeróbicos como caminar rápido, correr o nadar, 150 minutos semanales.",
+      "Entrenamiento de fuerza para aumentar masa muscular y reducir grasa corporal.",
+      "Controlar la ingesta calórica y mantener una alimentación balanceada."
     ],
     adultos: [
-      "Ejercicio 1 para Composición Corporal Adultos",
-      "Ejercicio 2 para Composición Corporal Adultos"
-    ],
-    mayores: [
-      "Ejercicio 1 para Composición Corporal Adultos Mayores",
-      "Ejercicio 2 para Composición Corporal Adultos Mayores"
+      "Ejercicios de baja intensidad como caminatas y actividades acuáticas.",
+      "Entrenamiento de fuerza con cargas ligeras para mantener masa muscular.",
+      "Monitorear el peso corporal y mantener una dieta rica en proteínas."
     ]
   },
   flexibilidad: {
-    ninos: [
-      "Ejercicio 1 para Flexibilidad Niños",
-      "Ejercicio 2 para Flexibilidad Niños"
+    adolecentes: [
+      "Estiramientos dinámicos durante el calentamiento de actividades deportivas.",
+      "Ejercicios de movilidad articular para mejorar la amplitud de movimiento.",
+      "Yoga o actividades lúdicas que fomenten la flexibilidad."
+    ],
+    jovenes: [
+      "Estiramientos estáticos mantenidos por 15-30 segundos después del ejercicio.",
+      "Incluir ejercicios de flexibilidad 2-3 veces por semana.",
+      "Ejercicios de movilidad para las articulaciones principales."
     ],
     adultos: [
-      "Ejercicio 1 para Flexibilidad Adultos",
-      "Ejercicio 2 para Flexibilidad Adultos"
-    ],
-    mayores: [
-      "Ejercicio 1 para Flexibilidad Adultos Mayores",
-      "Ejercicio 2 para Flexibilidad Adultos Mayores"
+      "Ejercicios suaves de estiramiento para mejorar la movilidad.",
+      "Ejercicios de rango de movimiento para evitar rigidez articular.",
+      "Incluir estiramientos diarios para mantener funcionalidad."
     ]
   },
+
+  // Las demás categorías siguen igual con los grupos originales
   fuerza: {
     ninos: [
-      "Ejercicio 1 para Fuerza Muscular Niños",
-      "Ejercicio 2 para Fuerza Muscular Niños"
+      "Actividades que impliquen el uso del peso corporal, como subir escaleras o juegos con resistencia.",
+      "Ejercicios supervisados para mejorar fuerza sin peso adicional.",
+      "Incluir juegos que fomenten fuerza muscular."
     ],
     adultos: [
-      "Ejercicio 1 para Fuerza Muscular Adultos",
-      "Ejercicio 2 para Fuerza Muscular Adultos"
+      "Entrenamiento con pesas o resistencia 2-3 veces por semana.",
+      "Ejercicios multiarticulares como sentadillas, press de pecho, y remo.",
+      "Realizar 2-4 series de 8-12 repeticiones por grupo muscular."
     ],
     mayores: [
-      "Ejercicio 1 para Fuerza Muscular Adultos Mayores",
-      "Ejercicio 2 para Fuerza Muscular Adultos Mayores"
+      "Entrenamiento con cargas ligeras a moderadas para preservar masa muscular.",
+      "Ejercicios funcionales para mejorar equilibrio y fuerza.",
+      "Evitar cargas máximas y priorizar técnica correcta."
     ]
   },
   resistenciaMuscular: {
     ninos: [
-      "Ejercicio 1 para Resistencia Muscular Niños",
-      "Ejercicio 2 para Resistencia Muscular Niños"
+      "Ejercicios repetitivos con el peso corporal como saltos y carreras cortas.",
+      "Juegos activos que mantengan la actividad muscular prolongada.",
+      "Incluir actividades que promuevan resistencia muscular local."
     ],
     adultos: [
-      "Ejercicio 1 para Resistencia Muscular Adultos",
-      "Ejercicio 2 para Resistencia Muscular Adultos"
+      "Ejercicios con pesos moderados y altas repeticiones (12-20 repeticiones).",
+      "Circuitos de entrenamiento para mejorar resistencia muscular general.",
+      "Actividades como remo, ciclismo o natación de intensidad moderada."
     ],
     mayores: [
-      "Ejercicio 1 para Resistencia Muscular Adultos Mayores",
-      "Ejercicio 2 para Resistencia Muscular Adultos Mayores"
+      "Entrenamientos con bajo peso y altas repeticiones para mantener resistencia.",
+      "Ejercicios en circuitos para mejorar capacidad funcional.",
+      "Actividades adaptadas que no provoquen fatiga excesiva."
     ]
   },
   resistenciaCardio: {
     ninos: [
-      "Ejercicio 1 para Resistencia Cardiorrespiratoria Niños",
-      "Ejercicio 2 para Resistencia Cardiorrespiratoria Niños"
+      "Juegos aeróbicos activos como correr, saltar y bailar.",
+      "Actividad física moderada a vigorosa al menos 60 minutos diarios.",
+      "Promover deportes y actividades recreativas que aumenten la frecuencia cardíaca."
     ],
     adultos: [
-      "Ejercicio 1 para Resistencia Cardiorrespiratoria Adultos",
-      "Ejercicio 2 para Resistencia Cardiorrespiratoria Adultos"
+      "Ejercicio aeróbico moderado (caminar, nadar, bicicleta) 150 minutos semanales.",
+      "Ejercicio aeróbico vigoroso (correr, HIIT) 75 minutos semanales.",
+      "Combinar ambas intensidades para mejores resultados."
     ],
     mayores: [
-      "Ejercicio 1 para Resistencia Cardiorrespiratoria Adultos Mayores",
-      "Ejercicio 2 para Resistencia Cardiorrespiratoria Adultos Mayores"
+      "Ejercicio aeróbico de baja a moderada intensidad como caminar o natación.",
+      "Sesiones diarias de 30 minutos adaptadas a la condición física.",
+      "Monitorear signos vitales y evitar esfuerzos excesivos."
     ]
   }
 };
-
-// Referencia al contenedor donde se mostrarán los ejercicios
-const contentArea = document.getElementById("content-area");
-
-// Función para limpiar y mostrar ejercicios según componente y edad
-function mostrarEjercicios(componente, edad) {
-  const listaEjercicios = ejercicios[componente][edad];
-
-  // Limpiar contenido previo
-  contentArea.innerHTML = "";
-
-  // Crear título
-  const titulo = document.createElement("h2");
-  titulo.textContent = `Ejercicios para ${capitalize(componente)} - ${formatearEdad(edad)}`;
-  contentArea.appendChild(titulo);
-
-  // Crear lista de ejercicios
-  const ul = document.createElement("ul");
-  listaEjercicios.forEach(ejercicio => {
-    const li = document.createElement("li");
-    li.textContent = ejercicio;
-    ul.appendChild(li);
-  });
-  contentArea.appendChild(ul);
-}
-
-// Función para capitalizar la primera letra
-function capitalize(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
-
-// Función para mostrar texto legible de las edades
-function formatearEdad(edad) {
-  switch (edad) {
-    case "ninos":
-      return "Niños y Adolescentes (6–17 años)";
-    case "adultos":
-      return "Adultos (18–65 años)";
-    case "mayores":
-      return "Adultos Mayores (65+ años)";
-    default:
-      return "";
-  }
-}
-
-// Agregar evento a cada item de submenú
-const submenuItems = document.querySelectorAll(".submenu li");
-
-submenuItems.forEach(item => {
-  item.addEventListener("click", () => {
-    const componente = item.getAttribute("data-comp");
-    const edad = item.getAttribute("data-age");
-    mostrarEjercicios(componente, edad);
-  });
-
-  // Para accesibilidad y teclado
-  item.addEventListener("keydown", e => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      item.click();
-    }
-  });
-});
