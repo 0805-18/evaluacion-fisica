@@ -1,89 +1,113 @@
 const ejercicios = {
-  composicion: {
-    adolecentes: [
-      "Promover actividad física diaria para mejorar la composición corporal.",
-      "Reducir el consumo de alimentos altos en grasas y azúcares.",
-      "Incluir actividades de resistencia y aeróbicas moderadas."
+  adolecentes: {
+    composicion: [
+      "Evaluación de IMC",
+      "Medición de pliegues cutáneos",
+      "Análisis de bioimpedancia",
+      "Control de circunferencia de cintura"
     ],
-    jovenes: [
-      "Ejercicios aeróbicos como caminar rápido, correr o nadar, 150 minutos semanales.",
-      "Entrenamiento de fuerza para aumentar masa muscular y reducir grasa corporal.",
-      "Controlar la ingesta calórica y mantener una alimentación balanceada."
+    flexibilidad: [
+      "Estiramiento de isquiotibiales",
+      "Estiramiento de cuádriceps",
+      "Estiramiento de espalda baja",
+      "Estiramiento de hombros"
     ],
-    adultos: [
-      "Ejercicios de baja intensidad como caminatas y actividades acuáticas.",
-      "Entrenamiento de fuerza con cargas ligeras para mantener masa muscular.",
-      "Monitorear el peso corporal y mantener una dieta rica en proteínas."
+    fuerza: [
+      "Flexiones modificadas",
+      "Sentadillas sin peso",
+      "Levantamiento de pesas ligeras",
+      "Ejercicios con banda elástica"
+    ],
+    resistencia_muscular: [
+      "Plancha abdominal",
+      "Sentadillas sin peso",
+      "Puente de glúteos",
+      "Ejercicios de equilibrio"
+    ],
+    resistencia_cardiorrespiratoria: [
+      "Carrera suave",
+      "Saltos de tijera",
+      "Juegos activos",
+      "Caminatas prolongadas"
     ]
   },
-  flexibilidad: {
-    adolecentes: [
-      "Estiramientos dinámicos durante el calentamiento de actividades deportivas.",
-      "Ejercicios de movilidad articular para mejorar la amplitud de movimiento.",
-      "Yoga o actividades lúdicas que fomenten la flexibilidad."
+  jovenes: {
+    composicion: [
+      "Evaluación de IMC",
+      "Medición de pliegues cutáneos",
+      "Análisis de bioimpedancia",
+      "Control de circunferencia de cintura"
     ],
-    jovenes: [
-      "Estiramientos estáticos mantenidos por 15-30 segundos después del ejercicio.",
-      "Incluir ejercicios de flexibilidad 2-3 veces por semana.",
-      "Ejercicios de movilidad para las articulaciones principales."
+    flexibilidad: [
+      "Estiramiento de isquiotibiales",
+      "Estiramiento de cuádriceps",
+      "Estiramiento de espalda baja",
+      "Estiramiento de hombros"
     ],
-    adultos: [
-      "Ejercicios suaves de estiramiento para mejorar la movilidad.",
-      "Ejercicios de rango de movimiento para evitar rigidez articular.",
-      "Incluir estiramientos diarios para mantener funcionalidad."
+    fuerza: [
+      "Press de banca",
+      "Sentadillas con peso",
+      "Remo con barra",
+      "Ejercicios con pesas libres"
+    ],
+    resistencia_muscular: [
+      "Circuitos de alta repetición",
+      "Ejercicios con peso corporal",
+      "Entrenamiento en intervalos",
+      "Saltos pliométricos"
+    ],
+    resistencia_cardiorrespiratoria: [
+      "Correr o trotar",
+      "Ciclismo",
+      "Natación",
+      "Entrenamiento en circuito"
     ]
   },
-
-  // Las demás categorías siguen igual con los grupos originales
-  fuerza: {
-    ninos: [
-      "Actividades que impliquen el uso del peso corporal, como subir escaleras o juegos con resistencia.",
-      "Ejercicios supervisados para mejorar fuerza sin peso adicional.",
-      "Incluir juegos que fomenten fuerza muscular."
+  adultos: {
+    composicion: [
+      "Evaluación de IMC",
+      "Medición de pliegues cutáneos",
+      "Análisis de bioimpedancia",
+      "Control de circunferencia de cintura"
     ],
-    adultos: [
-      "Entrenamiento con pesas o resistencia 2-3 veces por semana.",
-      "Ejercicios multiarticulares como sentadillas, press de pecho, y remo.",
-      "Realizar 2-4 series de 8-12 repeticiones por grupo muscular."
+    flexibilidad: [
+      "Estiramiento de isquiotibiales",
+      "Estiramiento de cuádriceps",
+      "Estiramiento de espalda baja",
+      "Estiramiento de hombros"
     ],
-    mayores: [
-      "Entrenamiento con cargas ligeras a moderadas para preservar masa muscular.",
-      "Ejercicios funcionales para mejorar equilibrio y fuerza.",
-      "Evitar cargas máximas y priorizar técnica correcta."
-    ]
-  },
-  resistenciaMuscular: {
-    ninos: [
-      "Ejercicios repetitivos con el peso corporal como saltos y carreras cortas.",
-      "Juegos activos que mantengan la actividad muscular prolongada.",
-      "Incluir actividades que promuevan resistencia muscular local."
+    fuerza: [
+      "Press de banca",
+      "Sentadillas con peso",
+      "Remo con barra",
+      "Ejercicios con pesas libres"
     ],
-    adultos: [
-      "Ejercicios con pesos moderados y altas repeticiones (12-20 repeticiones).",
-      "Circuitos de entrenamiento para mejorar resistencia muscular general.",
-      "Actividades como remo, ciclismo o natación de intensidad moderada."
+    resistencia_muscular: [
+      "Circuitos de alta repetición",
+      "Ejercicios con peso corporal",
+      "Entrenamiento en intervalos",
+      "Saltos pliométricos"
     ],
-    mayores: [
-      "Entrenamientos con bajo peso y altas repeticiones para mantener resistencia.",
-      "Ejercicios en circuitos para mejorar capacidad funcional.",
-      "Actividades adaptadas que no provoquen fatiga excesiva."
-    ]
-  },
-  resistenciaCardio: {
-    ninos: [
-      "Juegos aeróbicos activos como correr, saltar y bailar.",
-      "Actividad física moderada a vigorosa al menos 60 minutos diarios.",
-      "Promover deportes y actividades recreativas que aumenten la frecuencia cardíaca."
-    ],
-    adultos: [
-      "Ejercicio aeróbico moderado (caminar, nadar, bicicleta) 150 minutos semanales.",
-      "Ejercicio aeróbico vigoroso (correr, HIIT) 75 minutos semanales.",
-      "Combinar ambas intensidades para mejores resultados."
-    ],
-    mayores: [
-      "Ejercicio aeróbico de baja a moderada intensidad como caminar o natación.",
-      "Sesiones diarias de 30 minutos adaptadas a la condición física.",
-      "Monitorear signos vitales y evitar esfuerzos excesivos."
+    resistencia_cardiorrespiratoria: [
+      "Correr o trotar",
+      "Ciclismo",
+      "Natación",
+      "Entrenamiento en circuito"
     ]
   }
 };
+
+function mostrarEjercicios(edad, categoria) {
+  const lista = ejercicios[edad][categoria];
+  const resultado = document.getElementById('resultado');
+  if (!lista) {
+    resultado.innerHTML = "No hay ejercicios disponibles.";
+    return;
+  }
+  let html = `<h2>Ejercicios para ${categoria.replace('_', ' ').toUpperCase()} - ${edad.toUpperCase()}</h2><ul>`;
+  lista.forEach(ejercicio => {
+    html += `<li>${ejercicio}</li>`;
+  });
+  html += "</ul>";
+  resultado.innerHTML = html;
+}
