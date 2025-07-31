@@ -1,4 +1,31 @@
 const ejercicios = {
+  ninos: {
+    composicion: [
+      "Evaluación del índice de masa corporal (IMC)",
+      "Medición de pliegues cutáneos",
+      "Control de circunferencia de cintura"
+    ],
+    flexibilidad: [
+      "Estiramiento de piernas y brazos",
+      "Ejercicios de movilidad articular",
+      "Estiramiento de espalda"
+    ],
+    fuerza: [
+      "Flexiones modificadas",
+      "Sentadillas sin peso",
+      "Ejercicios con balón medicinal ligero"
+    ],
+    resistencia_muscular: [
+      "Saltos suaves",
+      "Circuitos de ejercicios con peso corporal",
+      "Ejercicios de equilibrio"
+    ],
+    resistencia_cardiorrespiratoria: [
+      "Juegos activos",
+      "Caminatas rápidas",
+      "Carreras suaves"
+    ]
+  },
   adolecentes: {
     composicion: [
       "Evaluación de IMC",
@@ -29,38 +56,6 @@ const ejercicios = {
       "Saltos de tijera",
       "Juegos activos",
       "Caminatas prolongadas"
-    ]
-  },
-  jovenes: {
-    composicion: [
-      "Evaluación de IMC",
-      "Medición de pliegues cutáneos",
-      "Análisis de bioimpedancia",
-      "Control de circunferencia de cintura"
-    ],
-    flexibilidad: [
-      "Estiramiento de isquiotibiales",
-      "Estiramiento de cuádriceps",
-      "Estiramiento de espalda baja",
-      "Estiramiento de hombros"
-    ],
-    fuerza: [
-      "Press de banca",
-      "Sentadillas con peso",
-      "Remo con barra",
-      "Ejercicios con pesas libres"
-    ],
-    resistencia_muscular: [
-      "Circuitos de alta repetición",
-      "Ejercicios con peso corporal",
-      "Entrenamiento en intervalos",
-      "Saltos pliométricos"
-    ],
-    resistencia_cardiorrespiratoria: [
-      "Correr o trotar",
-      "Ciclismo",
-      "Natación",
-      "Entrenamiento en circuito"
     ]
   },
   adultos: {
@@ -94,6 +89,33 @@ const ejercicios = {
       "Natación",
       "Entrenamiento en circuito"
     ]
+  },
+  adultos_mayores: {
+    composicion: [
+      "Evaluación de IMC",
+      "Medición de pliegues cutáneos",
+      "Control de circunferencia de cintura"
+    ],
+    flexibilidad: [
+      "Estiramientos suaves de cuerpo completo",
+      "Movilidad articular lenta",
+      "Yoga o tai chi adaptado"
+    ],
+    fuerza: [
+      "Ejercicios con bandas elásticas",
+      "Sentadillas asistidas",
+      "Levantamiento de pesas ligeras"
+    ],
+    resistencia_muscular: [
+      "Caminar con pausas",
+      "Ejercicios en silla",
+      "Entrenamientos de bajo impacto"
+    ],
+    resistencia_cardiorrespiratoria: [
+      "Caminatas regulares",
+      "Natación suave",
+      "Ejercicios aeróbicos de bajo impacto"
+    ]
   }
 };
 
@@ -104,7 +126,6 @@ function mostrarEjercicios(edad, categoria) {
     resultado.innerHTML = "<p>No hay ejercicios disponibles.</p>";
     return;
   }
-  // Mapeamos nombres bonitos para mostrar
   const nombresCategorias = {
     composicion: "Composición Corporal",
     flexibilidad: "Flexibilidad",
@@ -113,9 +134,10 @@ function mostrarEjercicios(edad, categoria) {
     resistencia_cardiorrespiratoria: "Resistencia Cardiorrespiratoria"
   };
   const nombresEdades = {
-    adolecentes: "Adolecentes 12 a 17 Años",
-    jovenes: "Jóvenes Adultos 18 a 29 Años",
-    adultos: "Adultos 30 a 64 Años"
+    ninos: "Niños de 10 a 11 Años",
+    adolecentes: "Adolescentes de 12 a 17 Años",
+    adultos: "Adultos, 18 a 64 Años",
+    adultos_mayores: "Adultos Mayores 65 + Años"
   };
 
   let html = `<h2>${nombresCategorias[categoria]} - ${nombresEdades[edad]}</h2><ul>`;
