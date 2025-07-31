@@ -101,10 +101,24 @@ function mostrarEjercicios(edad, categoria) {
   const lista = ejercicios[edad][categoria];
   const resultado = document.getElementById('resultado');
   if (!lista) {
-    resultado.innerHTML = "No hay ejercicios disponibles.";
+    resultado.innerHTML = "<p>No hay ejercicios disponibles.</p>";
     return;
   }
-  let html = `<h2>Ejercicios para ${categoria.replace('_', ' ').toUpperCase()} - ${edad.toUpperCase()}</h2><ul>`;
+  // Mapeamos nombres bonitos para mostrar
+  const nombresCategorias = {
+    composicion: "Composición Corporal",
+    flexibilidad: "Flexibilidad",
+    fuerza: "Fuerza Muscular",
+    resistencia_muscular: "Resistencia Muscular",
+    resistencia_cardiorrespiratoria: "Resistencia Cardiorrespiratoria"
+  };
+  const nombresEdades = {
+    adolecentes: "Adolecentes 12 a 17 Años",
+    jovenes: "Jóvenes Adultos 18 a 29 Años",
+    adultos: "Adultos 30 a 64 Años"
+  };
+
+  let html = `<h2>${nombresCategorias[categoria]} - ${nombresEdades[edad]}</h2><ul>`;
   lista.forEach(ejercicio => {
     html += `<li>${ejercicio}</li>`;
   });
