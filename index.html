@@ -7,48 +7,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Entrenamiento Para Todas las Edades</h1>
-  </header>
-  <nav>
-    <ul class="menu">
-      <li class="dropdown" onclick="mostrarInfoNinos()">
-        Niños de 10 a 11 Años
-      </li>
-      <li class="dropdown">Adolescentes de 12 a 17 Años
-        <ul class="submenu">
-          <li onclick="mostrarEjercicios('adolecentes', 'composicion')">Composición Corporal</li>
-          <li onclick="mostrarEjercicios('adolecentes', 'flexibilidad')">Flexibilidad</li>
-          <li onclick="mostrarEjercicios('adolecentes', 'fuerza')">Fuerza Muscular</li>
-          <li onclick="mostrarEjercicios('adolecentes', 'resistencia_muscular')">Resistencia Muscular</li>
-          <li onclick="mostrarEjercicios('adolecentes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-        </ul>
-      </li>
-      <li class="dropdown">Adultos, 18 a 64 Años
-        <ul class="submenu">
-          <li onclick="mostrarEjercicios('adultos', 'composicion')">Composición Corporal</li>
-          <li onclick="mostrarEjercicios('adultos', 'flexibilidad')">Flexibilidad</li>
-          <li onclick="mostrarEjercicios('adultos', 'fuerza')">Fuerza Muscular</li>
-          <li onclick="mostrarEjercicios('adultos', 'resistencia_muscular')">Resistencia Muscular</li>
-          <li onclick="mostrarEjercicios('adultos', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-        </ul>
-      </li>
-      <li class="dropdown">Adultos Mayores 65 + Años
-        <ul class="submenu">
-          <li onclick="mostrarEjercicios('adultos_mayores', 'composicion')">Composición Corporal</li>
-          <li onclick="mostrarEjercicios('adultos_mayores', 'flexibilidad')">Flexibilidad</li>
-          <li onclick="mostrarEjercicios('adultos_mayores', 'fuerza')">Fuerza Muscular</li>
-          <li onclick="mostrarEjercicios('adultos_mayores', 'resistencia_muscular')">Resistencia Muscular</li>
-          <li onclick="mostrarEjercicios('adultos_mayores', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-        </ul>
-      </li>
+  <header>Entrenamiento Para Todas las Edades</header>
+
+  <nav class="menu">
+    <ul class="main-tabs">
+      <li class="tab-item" tabindex="0" id="tab-ninos" onclick="mostrarInfoNinos()">Niños de 10 a 11 Años</li>
+      <li class="tab-item" tabindex="0">Adolescentes de 12 a 17 Años</li>
+      <li class="tab-item" tabindex="0">Adultos de 18 a 64 Años</li>
+      <li class="tab-item" tabindex="0">Adultos Mayores 65+ Años</li>
     </ul>
   </nav>
-  <main>
-    <div id="resultado" class="resultado">
-      <p>Seleccione una pestaña para ver la información o los ejercicios.</p>
-    </div>
+
+  <main id="content-area">
+    <h2>Seleccione una categoría para ver información y ejercicios</h2>
+    <p>Despliegue un menú superior y elija una categoría para comenzar.</p>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
