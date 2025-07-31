@@ -1,12 +1,14 @@
+/* Fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
   --main-bg: #ffe6f0;
-  --accent: #ffb6c1;
+  --accent: #ff6f91;
   --text: #333;
   --white: #fff;
-  --hover: #ffcbd9;
+  --hover: #ff99ac;
   --shadow: rgba(0, 0, 0, 0.1);
+  --ripple-color: rgba(255, 111, 145, 0.5);
 }
 
 body {
@@ -24,7 +26,7 @@ header {
   padding: 1rem 0;
   box-shadow: 0 2px 4px var(--shadow);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 nav {
@@ -42,108 +44,105 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 0.6rem;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tab-item {
   background-color: var(--accent);
   color: var(--white);
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
   position: relative;
   overflow: hidden;
+  user-select: none;
 }
 
 .tab-item:hover,
-.tab-item:focus {
+.tab-item:focus-visible {
   background-color: var(--hover);
   transform: translateY(-2px);
   outline: none;
-}
-
-.tab-item.active {
-  background-color: var(--hover);
-  box-shadow: 0 0 10px var(--shadow);
-  cursor: default;
-  transform: none;
+  box-shadow: 0 0 8px var(--hover);
 }
 
 /* Ripple effect */
-.tab-item:after {
+.tab-item::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--ripple-color);
   top: 50%;
   left: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s ease, opacity 1s ease;
   opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease, opacity 1s ease;
 }
 
-.tab-item:active:after {
+.tab-item:active::after {
+  opacity: 0.3;
   transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
   transition: 0s;
 }
 
-main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.tab-item.active {
+  background-color: var(--hover);
+  box-shadow: 0 0 12px var(--shadow);
+  font-weight: 700;
 }
 
-/* Contenido con transición de opacidad */
-.tab-content {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease, height 0.4s ease;
-  background-color: var(--white);
-  padding: 0 2rem;
+main {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  background: var(--white);
   border-radius: 15px;
   box-shadow: 0 4px 12px var(--shadow);
-  margin-top: 1.5rem;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
 }
 
 .tab-content.active {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-  padding: 2rem;
-  overflow: visible;
+  display: block;
 }
 
 h2 {
   color: var(--accent);
   margin-top: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+h3 {
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin-left: 0;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-ul li {
-  position: relative;
-  padding-left: 1.3rem;
+li {
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
-ul li::before {
-  content: "🌸";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 img {
@@ -153,14 +152,54 @@ img {
   box-shadow: 0 2px 6px var(--shadow);
 }
 
+/* Table styles (if you add tables later) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  background-color: var(--white);
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--accent);
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: center;
   }
 
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
   .tab-item {
     width: 90%;
     text-align: center;
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 1rem;
   }
 }
