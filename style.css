@@ -1,50 +1,56 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  color: #333;
 }
 
 header {
-  background-color: #0077b6;
-  color: white;
-  padding: 1em;
+  background: #02121f;
+  color: #00d2ff;
   text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
 }
 
-nav {
-  background-color: #023e8a;
-}
+.menu-tabs { background: #022b3a; }
 
 .tabs {
   display: flex;
   justify-content: center;
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.tabs li {
-  padding: 1em;
+.tab-item {
+  padding: 0.8rem 1.2rem;
   cursor: pointer;
-  color: white;
+  color: #a0d8ef;
   transition: background 0.3s;
+  border-right: 1px solid #00b0ff55;
+  user-select: none;
 }
 
-.tabs li:hover,
-.tabs li.active {
-  background-color: #0096c7;
+.tab-item:last-child { border-right: none; }
+
+.tab-item.active,
+.tab-item:hover {
+  background: #00b0ff;
+  color: #02121f;
 }
 
-.tab-content {
-  display: none;
-  padding: 2em;
-}
+main { max-width: 900px; margin: 2rem auto; padding: 1rem; }
 
-.tab-content.active {
-  display: block;
-}
+.tab-content { display: none; }
 
-img {
+.tab-content.active { display: block; }
+
+.tab-content h2 { color: #005f73; }
+
+.tab-content img {
   max-width: 100%;
-  margin-top: 1em;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 128, 255, 0.3);
 }
