@@ -10,17 +10,10 @@
   <header>
     <h1>Entrenamiento Para Todas las Edades</h1>
   </header>
-
   <nav>
     <ul class="menu">
-      <li class="dropdown">Niños de 10 a 11 Años
-        <ul class="submenu">
-          <li onclick="mostrarEjercicios('ninos', 'composicion')">Composición Corporal</li>
-          <li onclick="mostrarEjercicios('ninos', 'flexibilidad')">Flexibilidad</li>
-          <li onclick="mostrarEjercicios('ninos', 'fuerza')">Fuerza Muscular</li>
-          <li onclick="mostrarEjercicios('ninos', 'resistencia_muscular')">Resistencia Muscular</li>
-          <li onclick="mostrarEjercicios('ninos', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-        </ul>
+      <li class="dropdown" onclick="mostrarInfoNinos()">
+        Niños de 10 a 11 Años
       </li>
       <li class="dropdown">Adolescentes de 12 a 17 Años
         <ul class="submenu">
@@ -51,13 +44,11 @@
       </li>
     </ul>
   </nav>
-
   <main>
-    <div id="resultado">
-      <p>Seleccione una categoría del menú para ver ejercicios.</p>
+    <div id="resultado" class="resultado">
+      <p>Seleccione una pestaña para ver la información o los ejercicios.</p>
     </div>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
