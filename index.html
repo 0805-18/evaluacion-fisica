@@ -8,34 +8,77 @@
 </head>
 <body>
   <header>Entrenamiento Para Todas las Edades</header>
-  <nav class="menu-tabs" role="tablist" aria-label="Secciones de entrenamiento">
+
+  <nav class="menu-tabs" role="tablist" aria-label="Categorías de entrenamiento">
     <ul class="tabs">
       <li>
-        <button class="tab-item active" data-tab="ninos" aria-selected="true" role="tab" tabindex="0">
-          👦 Niños 10-11 Años
+        <button
+          class="tab-item active"
+          data-tab="ninos"
+          data-emoji="👦"
+          role="tab"
+          aria-selected="true"
+          tabindex="0"
+          id="tab-ninos"
+          aria-controls="ninos"
+        >
+          Niños 10-11 Años
         </button>
       </li>
       <li>
-        <button class="tab-item" data-tab="adolescentes" aria-selected="false" role="tab" tabindex="-1">
-          🧑‍🎓 Adolescentes 12-17 Años
+        <button
+          class="tab-item"
+          data-tab="adolescentes"
+          data-emoji="🧑‍🎓"
+          role="tab"
+          aria-selected="false"
+          tabindex="-1"
+          id="tab-adolescentes"
+          aria-controls="adolescentes"
+        >
+          Adolescentes 12-17 Años
         </button>
       </li>
       <li>
-        <button class="tab-item" data-tab="jovenes" aria-selected="false" role="tab" tabindex="-1">
-          💪 Jóvenes y Adultos 18-64 Años
+        <button
+          class="tab-item"
+          data-tab="jovenes"
+          data-emoji="🧑‍🏫"
+          role="tab"
+          aria-selected="false"
+          tabindex="-1"
+          id="tab-jovenes"
+          aria-controls="jovenes"
+        >
+          Jóvenes y Adultos 18-64 Años
         </button>
       </li>
       <li>
-        <button class="tab-item" data-tab="adultomayor" aria-selected="false" role="tab" tabindex="-1">
-          👴 Adulto Mayor 65+ Años
+        <button
+          class="tab-item"
+          data-tab="adultomayor"
+          data-emoji="🧓"
+          role="tab"
+          aria-selected="false"
+          tabindex="-1"
+          id="tab-adultomayor"
+          aria-controls="adultomayor"
+        >
+          Adulto Mayor 65+ Años
         </button>
       </li>
     </ul>
   </nav>
-  <main id="content-area" role="tabpanel" tabindex="0">
-    
+
+  <main id="content-area">
     <!-- Sección Niños -->
-    <section id="ninos" class="tab-content active">
+    <section
+      id="ninos"
+      class="tab-content active"
+      role="tabpanel"
+      aria-labelledby="tab-ninos"
+      tabindex="0"
+    >
       <h2>Microciclo para Niños de 10 a 11 Años</h2>
       <p>Aquí tienes un microciclo de 1 semana diseñado para un niño de 10 años...</p>
       <h3>Objetivos</h3>
@@ -57,9 +100,18 @@
     </section>
 
     <!-- Sección Adolescentes -->
-    <section id="adolescentes" class="tab-content">
+    <section
+      id="adolescentes"
+      class="tab-content"
+      role="tabpanel"
+      aria-labelledby="tab-adolescentes"
+      tabindex="-1"
+    >
       <h2>Microciclo para Adolescentes de 12 a 17 Años</h2>
-      <p>Aquí tienes un microciclo de 1 semana diseñado para adolescentes (12–17 años)...</p>
+      <p>
+        Aquí tienes un microciclo de 1 semana diseñado para adolescentes
+        (12–17 años)...
+      </p>
       <h3>Objetivos</h3>
       <ul>
         <li>Mejorar resistencia cardiovascular y fuerza general.</li>
@@ -79,10 +131,18 @@
     </section>
 
     <!-- Sección Jóvenes y Adultos -->
-    <section id="jovenes" class="tab-content">
+    <section
+      id="jovenes"
+      class="tab-content"
+      role="tabpanel"
+      aria-labelledby="tab-jovenes"
+      tabindex="-1"
+    >
       <h2>Microciclo para Jóvenes y Adultos (18 a 64 Años)</h2>
       <p>
-        Aquí tienes un microciclo de 1 semana diseñado para jóvenes adultos (18‑29 años) y adultos (30‑64 años) con condición física promedio, sin prescripciones médicas.
+        Aquí tienes un microciclo de 1 semana diseñado para jóvenes adultos
+        (18‑29 años) y adultos (30‑64 años) con condición física promedio, sin
+        prescripciones médicas.
       </p>
       <h3>Objetivos del microciclo</h3>
       <ul>
@@ -103,10 +163,19 @@
     </section>
 
     <!-- Sección Adulto Mayor -->
-    <section id="adultomayor" class="tab-content">
+    <section
+      id="adultomayor"
+      class="tab-content"
+      role="tabpanel"
+      aria-labelledby="tab-adultomayor"
+      tabindex="-1"
+    >
       <h2>Microciclo para Adulto Mayor 65+ Años</h2>
       <p>
-        Aquí tienes un microciclo de 1 semana diseñado para un adulto mayor de 65 años sin restricciones médicas. Está orientado a mejorar la movilidad, fuerza funcional, resistencia cardiovascular y equilibrio, usando ejercicios de bajo impacto y controlados.
+        Aquí tienes un microciclo de 1 semana diseñado para un adulto mayor de
+        65 años sin restricciones médicas. Está orientado a mejorar la movilidad,
+        fuerza funcional, resistencia cardiovascular y equilibrio, usando ejercicios
+        de bajo impacto y controlados.
       </p>
       <h3>Objetivos del microciclo</h3>
       <ul>
@@ -124,8 +193,8 @@
       </ul>
       <img src="https://i.imgur.com/Fu24u7v.png" alt="Microciclo Adulto Mayor" />
     </section>
-
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
