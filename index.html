@@ -5,192 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Entrenamientos Para Todas Las Edades</title>
   <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f2027; /* Fondo deportivo */
-      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-      color: #eee;
-    }
-
-    header {
-      background: #02121f;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #00d2ff;
-      text-shadow: 0 0 8px #00d2ffaa;
-      user-select: none;
-    }
-
-    .menu {
-      background-color: #022b3a;
-      display: flex;
-      justify-content: center;
-      box-shadow: 0 3px 10px #00d2ffaa;
-      user-select: none;
-    }
-
-    .main-tabs {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      width: 100%;
-      max-width: 900px;
-    }
-
-    .tab-item {
-      position: relative;
-      flex: 1;
-      padding: 15px 0;
-      text-align: center;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #a0d8ef;
-      transition: background 0.3s, color 0.3s;
-      border-right: 1px solid #00b0ff55;
-    }
-
-    .tab-item:last-child {
-      border-right: none;
-    }
-
-    .tab-item:hover,
-    .tab-item.active {
-      background-color: #00b0ff;
-      color: #02121f;
-      text-shadow: 0 0 6px #02121f;
-    }
-
-    /* Submenu de edades (hover para mostrar) */
-    .submenu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #02121f;
-      list-style: none;
-      margin: 0;
-      padding: 5px 0;
-      width: 100%;
-      display: none;
-      box-shadow: 0 4px 10px #00d2ffcc;
-      border-radius: 0 0 8px 8px;
-      z-index: 10;
-    }
-
-    .tab-item:hover .submenu {
-      display: block;
-    }
-
-    .submenu li {
-      padding: 8px 10px;
-      font-size: 0.85rem;
-      color: #a0d8efcc;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      border-top: 1px solid #00b0ff22;
-    }
-
-    .submenu li:first-child {
-      border-top: none;
-    }
-
-    .submenu li:hover {
-      background: #00b0ffaa;
-      color: #02121f;
-      font-weight: 700;
-      text-shadow: 0 0 4px #02121f;
-    }
-
-    /* Contenido principal */
-    #content-area {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #02121fcc;
-      padding: 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #00b0ffaa;
-      color: #cceeff;
-      user-select: text;
-    }
-
-    #content-area h2 {
-      margin-top: 0;
-      font-size: 2rem;
-      color: #00d2ff;
-      text-shadow: 0 0 6px #00d2ffcc;
-      border-bottom: 2px solid #00d2ff66;
-      padding-bottom: 5px;
-    }
-
-    #content-area h3 {
-      margin-top: 10px;
-      font-size: 1.3rem;
-      color: #80c6f9;
-      text-shadow: 0 0 4px #00aaffaa;
-    }
-
-    #content-area ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #cceeffcc;
-    }
-
-    #content-area ul li {
-      margin-bottom: 8px;
-    }
-
-    /* Imagen deportiva */
-    #content-area img {
-      display: block;
-      max-width: 100%;
-      max-height: 200px;
-      margin: 15px auto 25px auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00b0ffcc;
-      object-fit: cover;
-      user-select: none;
-    }
-
-    /* Scroll para lista ejercicios si muy larga */
-    #content-area ul {
-      max-height: 220px;
-      overflow-y: auto;
-    }
-
-    /* Scrollbar estilizado */
-    #content-area ul::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    #content-area ul::-webkit-scrollbar-thumb {
-      background: #00b0ffaa;
-      border-radius: 4px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .tab-item {
-        font-size: 0.9rem;
-        padding: 12px 6px;
-      }
-
-      #content-area {
-        margin: 15px 10px;
-        padding: 20px 15px;
-      }
-    }
+    /* (Estilos sin cambios, los puedes dejar tal como los tenías) */
+    /* OMITIDO PARA AHORRAR ESPACIO */
   </style>
 </head>
 <body>
@@ -201,9 +17,8 @@
       <li class="tab-item" role="tab" tabindex="0" data-comp="composicion">
         Composición Corporal
         <ul class="submenu" role="menu" aria-label="Edades Composición Corporal">
-          <li role="menuitem" tabindex="0" data-age="ninos" data-comp="composicion">Niños (0–11 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adolescentes" data-comp="composicion">Adolescentes (12–17 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="composicion">Adultos (18–64 años)</li>
+          <li role="menuitem" tabindex="0" data-age="jovenes" data-comp="composicion">Niños y Adolescentes (6–17 años)</li>
+          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="composicion">Adultos (18–65 años)</li>
           <li role="menuitem" tabindex="0" data-age="mayores" data-comp="composicion">Adultos Mayores (65+ años)</li>
         </ul>
       </li>
@@ -211,9 +26,8 @@
       <li class="tab-item" role="tab" tabindex="0" data-comp="flexibilidad">
         Flexibilidad
         <ul class="submenu" role="menu" aria-label="Edades Flexibilidad">
-          <li role="menuitem" tabindex="0" data-age="ninos" data-comp="flexibilidad">Niños (0–11 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adolescentes" data-comp="flexibilidad">Adolescentes (12–17 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="flexibilidad">Adultos (18–64 años)</li>
+          <li role="menuitem" tabindex="0" data-age="jovenes" data-comp="flexibilidad">Niños y Adolescentes (6–17 años)</li>
+          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="flexibilidad">Adultos (18–65 años)</li>
           <li role="menuitem" tabindex="0" data-age="mayores" data-comp="flexibilidad">Adultos Mayores (65+ años)</li>
         </ul>
       </li>
@@ -221,9 +35,8 @@
       <li class="tab-item" role="tab" tabindex="0" data-comp="fuerza">
         Fuerza Muscular
         <ul class="submenu" role="menu" aria-label="Edades Fuerza Muscular">
-          <li role="menuitem" tabindex="0" data-age="ninos" data-comp="fuerza">Niños (0–11 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adolescentes" data-comp="fuerza">Adolescentes (12–17 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="fuerza">Adultos (18–64 años)</li>
+          <li role="menuitem" tabindex="0" data-age="jovenes" data-comp="fuerza">Niños y Adolescentes (6–17 años)</li>
+          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="fuerza">Adultos (18–65 años)</li>
           <li role="menuitem" tabindex="0" data-age="mayores" data-comp="fuerza">Adultos Mayores (65+ años)</li>
         </ul>
       </li>
@@ -231,9 +44,8 @@
       <li class="tab-item" role="tab" tabindex="0" data-comp="resistenciaMuscular">
         Resistencia Muscular
         <ul class="submenu" role="menu" aria-label="Edades Resistencia Muscular">
-          <li role="menuitem" tabindex="0" data-age="ninos" data-comp="resistenciaMuscular">Niños (0–11 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adolescentes" data-comp="resistenciaMuscular">Adolescentes (12–17 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="resistenciaMuscular">Adultos (18–64 años)</li>
+          <li role="menuitem" tabindex="0" data-age="jovenes" data-comp="resistenciaMuscular">Niños y Adolescentes (6–17 años)</li>
+          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="resistenciaMuscular">Adultos (18–65 años)</li>
           <li role="menuitem" tabindex="0" data-age="mayores" data-comp="resistenciaMuscular">Adultos Mayores (65+ años)</li>
         </ul>
       </li>
@@ -241,9 +53,8 @@
       <li class="tab-item" role="tab" tabindex="0" data-comp="resistenciaCardio">
         Resistencia Cardiorrespiratoria
         <ul class="submenu" role="menu" aria-label="Edades Resistencia Cardiorrespiratoria">
-          <li role="menuitem" tabindex="0" data-age="ninos" data-comp="resistenciaCardio">Niños (0–11 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adolescentes" data-comp="resistenciaCardio">Adolescentes (12–17 años)</li>
-          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="resistenciaCardio">Adultos (18–64 años)</li>
+          <li role="menuitem" tabindex="0" data-age="jovenes" data-comp="resistenciaCardio">Niños y Adolescentes (6–17 años)</li>
+          <li role="menuitem" tabindex="0" data-age="adultos" data-comp="resistenciaCardio">Adultos (18–65 años)</li>
           <li role="menuitem" tabindex="0" data-age="mayores" data-comp="resistenciaCardio">Adultos Mayores (65+ años)</li>
         </ul>
       </li>
@@ -256,14 +67,18 @@
   </main>
 
   <script>
-    // Datos de componentes, ejercicios e imágenes
+    // Datos de componentes con edades actualizadas
     const components = {
       composicion: {
         name: 'Composición Corporal',
         image: 'https://images.unsplash.com/photo-1554284126-24d9ed068a5c?auto=format&fit=crop&w=900&q=80',
         exercises: {
-          ninos: ['Saltos de cuerda – 4 series', 'Juegos de carrera – 4 series', 'Ejercicios con balón – 4 series', 'Mini circuitos de agilidad – 4 series'],
-          adolescentes: ['Burpees – 4 series', 'Mountain Climbers – 4 series', 'Jumping Jacks – 4 series', 'Carrera en el lugar – 4 series'],
+          jovenes: [
+            'Saltos de cuerda – 4 series',
+            'Juegos de carrera – 4 series',
+            'Burpees – 4 series',
+            'Jumping Jacks – 4 series'
+          ],
           adultos: ['Sentadillas – 4 series', 'Peso muerto – 4 series', 'Press banca – 4 series', 'Zancadas – 4 series'],
           mayores: ['Caminata suave – 4 series', 'Levantamiento de talones – 4 series', 'Ejercicios de equilibrio – 4 series', 'Estiramientos suaves – 4 series']
         }
@@ -272,8 +87,12 @@
         name: 'Flexibilidad',
         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
         exercises: {
-          ninos: ['Estiramiento de brazos – 4 series', 'Piernas – 4 series', 'Cuello – 4 series', 'Juegos suaves – 4 series'],
-          adolescentes: ['Isquiotibiales – 4 series', 'Cuádriceps – 4 series', 'Espalda baja – 4 series', 'Hombros – 4 series'],
+          jovenes: [
+            'Estiramiento de brazos – 4 series',
+            'Isquiotibiales – 4 series',
+            'Cuádriceps – 4 series',
+            'Juegos suaves – 4 series'
+          ],
           adultos: ['Isquiotibiales – 4 series', 'Cuádriceps – 4 series', 'Espalda baja – 4 series', 'Hombros – 4 series'],
           mayores: ['Cuello suave – 4 series', 'Brazos sentado – 4 series', 'Flexión lateral suave – 4 series', 'Movilidad lenta – 4 series']
         }
@@ -282,8 +101,12 @@
         name: 'Fuerza Muscular',
         image: 'https://images.unsplash.com/photo-1517960413843-7a6f9e5cc4e5?auto=format&fit=crop&w=900&q=80',
         exercises: {
-          ninos: ['Flexiones pared – 4 series', 'Sentadillas asistidas – 4 series', 'Botellas de agua – 4 series', 'Bandas ligeras – 4 series'],
-          adolescentes: ['Flexiones – 4 series', 'Sentadillas – 4 series', 'Press de hombros – 4 series', 'Curl de bíceps – 4 series'],
+          jovenes: [
+            'Flexiones pared – 4 series',
+            'Sentadillas asistidas – 4 series',
+            'Flexiones – 4 series',
+            'Curl de bíceps – 4 series'
+          ],
           adultos: ['Flexiones – 4 series', 'Sentadillas – 4 series', 'Press de hombros – 4 series', 'Curl de bíceps – 4 series'],
           mayores: ['Peso ligero – 4 series', 'Sentadillas asistidas – 4 series', 'Bandas elásticas – 4 series', 'Elevaciones laterales – 4 series']
         }
@@ -292,8 +115,12 @@
         name: 'Resistencia Muscular',
         image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80',
         exercises: {
-          ninos: ['Abdominales cortos – 4 series', 'Flexiones modificadas – 4 series', 'Saltos – 4 series', 'Circuitos cortos – 4 series'],
-          adolescentes: ['Plancha – 4 series', 'Abdominales – 4 series', 'Flexiones – 4 series', 'Sentadillas – 4 series'],
+          jovenes: [
+            'Abdominales cortos – 4 series',
+            'Plancha – 4 series',
+            'Saltos – 4 series',
+            'Flexiones – 4 series'
+          ],
           adultos: ['Plancha – 4 series', 'Abdominales – 4 series', 'Flexiones – 4 series', 'Sentadillas – 4 series'],
           mayores: ['Marcha en sitio – 4 series', 'Levantamiento talones – 4 series', 'Equilibrio – 4 series', 'Piernas sentado – 4 series']
         }
@@ -302,19 +129,21 @@
         name: 'Resistencia Cardiorrespiratoria',
         image: 'https://images.unsplash.com/photo-1526403227114-131f92a95abf?auto=format&fit=crop&w=900&q=80',
         exercises: {
-          ninos: ['Carrera corta – 4 series', 'Saltar cuerda – 4 series', 'Juegos activos – 4 series', 'Circuitos de velocidad – 4 series'],
-          adolescentes: ['Trotar – 4 series', 'Saltos de tijera – 4 series', 'Sprint – 4 series', 'Carrera continua – 4 series'],
+          jovenes: [
+            'Carrera corta – 4 series',
+            'Saltar cuerda – 4 series',
+            'Sprint – 4 series',
+            'Circuitos de velocidad – 4 series'
+          ],
           adultos: ['Caminata rápida – 4 series', 'Trotar suave – 4 series', 'Bicicleta estática – 4 series', 'Natación – 4 series'],
           mayores: ['Caminata suave – 4 series', 'Movilidad articular – 4 series', 'Ejercicios acuáticos – 4 series', 'Respiración controlada – 4 series']
         }
       }
     };
 
-    // Referencias DOM
     const contentArea = document.getElementById('content-area');
     const tabItems = document.querySelectorAll('.tab-item .submenu li');
 
-    // Función para mostrar ejercicios y foto
     function showExercises(componentKey, ageKey) {
       const component = components[componentKey];
       if (!component || !component.exercises[ageKey]) {
@@ -333,15 +162,12 @@
       `;
     }
 
-    // Texto formateado para edades
     function formatAge(ageKey) {
       switch (ageKey) {
-        case 'ninos':
-          return 'Niños (0 a 11 años)';
-        case 'adolescentes':
-          return 'Adolescentes (12 a 17 años)';
+        case 'jovenes':
+          return 'Niños y Adolescentes (6 a 17 años)';
         case 'adultos':
-          return 'Adultos (18 a 64 años)';
+          return 'Adultos (18 a 65 años)';
         case 'mayores':
           return 'Adultos Mayores (65 años en adelante)';
         default:
@@ -349,20 +175,16 @@
       }
     }
 
-    // Agregar listeners a cada subcategoria
     tabItems.forEach(item => {
       item.addEventListener('click', () => {
         const componentKey = item.getAttribute('data-comp');
         const ageKey = item.getAttribute('data-age');
         showExercises(componentKey, ageKey);
-
-        // Marcar pestaña activa para mejor UX
         document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
         const parentTab = item.closest('.tab-item');
         if (parentTab) parentTab.classList.add('active');
       });
 
-      // Para accesibilidad: permitir Enter y Space activar clic
       item.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -370,16 +192,6 @@
         }
       });
     });
-
-    // Opcional: setear primera pestaña activa y mostrar ejercicios iniciales
-    // Puedes activar este bloque si quieres que cargue algo al iniciar
-    /*
-    window.addEventListener('load', () => {
-      const firstTab = document.querySelector('.tab-item');
-      if (firstTab) firstTab.classList.add('active');
-      showExercises('composicion', 'ninos');
-    });
-    */
   </script>
 </body>
 </html>
