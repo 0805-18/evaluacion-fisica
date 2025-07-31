@@ -1,96 +1,50 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #333;
+  padding: 0;
 }
 
 header {
-  background: #005a87;
+  background-color: #0077b6;
   color: white;
-  padding: 1rem;
+  padding: 1em;
   text-align: center;
 }
 
 nav {
-  background: #0077b6;
+  background-color: #023e8a;
 }
 
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.tabs {
   display: flex;
-}
-
-.menu > li {
-  position: relative;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  color: white;
-  user-select: none;
-}
-
-.menu > li:hover {
-  background: #023e58;
-}
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #0096c7;
-  display: none;
+  justify-content: center;
   list-style: none;
-  padding: 0;
   margin: 0;
-  min-width: 200px;
-  z-index: 10;
+  padding: 0;
 }
 
-.menu > li:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  padding: 0.75rem 1rem;
+.tabs li {
+  padding: 1em;
   cursor: pointer;
   color: white;
+  transition: background 0.3s;
 }
 
-.submenu li:hover {
-  background: #023e58;
+.tabs li:hover,
+.tabs li.active {
+  background-color: #0096c7;
 }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ccc;
+.tab-content {
+  display: none;
+  padding: 2em;
 }
 
-.resultado h2 {
-  color: #0077b6;
-}
-
-.resultado img {
+.tab-content.active {
   display: block;
-  margin: 1rem auto;
+}
+
+img {
   max-width: 100%;
-  height: auto;
-}
-
-.resultado ul {
-  margin-left: 20px;
-}
-
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-  }
-  .menu > li {
-    padding: 1rem;
-  }
+  margin-top: 1em;
 }
