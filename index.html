@@ -1,31 +1,54 @@
-<nav>
-  <ul class="menu">
-    <li class="dropdown">Adolecentes 12 a 17 Años
-      <ul class="submenu">
-        <li onclick="mostrarEjercicios('adolecentes', 'composicion')">Composición Corporal</li>
-        <li onclick="mostrarEjercicios('adolecentes', 'flexibilidad')">Flexibilidad</li>
-        <li onclick="mostrarEjercicios('adolecentes', 'fuerza')">Fuerza Muscular</li>
-        <li onclick="mostrarEjercicios('adolecentes', 'resistencia_muscular')">Resistencia Muscular</li>
-        <li onclick="mostrarEjercicios('adolecentes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-      </ul>
-    </li>
-    <li class="dropdown">Jóvenes Adultos 18 a 29 Años
-      <ul class="submenu">
-        <li onclick="mostrarEjercicios('jovenes', 'composicion')">Composición Corporal</li>
-        <li onclick="mostrarEjercicios('jovenes', 'flexibilidad')">Flexibilidad</li>
-        <li onclick="mostrarEjercicios('jovenes', 'fuerza')">Fuerza Muscular</li>
-        <li onclick="mostrarEjercicios('jovenes', 'resistencia_muscular')">Resistencia Muscular</li>
-        <li onclick="mostrarEjercicios('jovenes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-      </ul>
-    </li>
-    <li class="dropdown">Adultos 30 a 64 Años
-      <ul class="submenu">
-        <li onclick="mostrarEjercicios('adultos', 'composicion')">Composición Corporal</li>
-        <li onclick="mostrarEjercicios('adultos', 'flexibilidad')">Flexibilidad</li>
-        <li onclick="mostrarEjercicios('adultos', 'fuerza')">Fuerza Muscular</li>
-        <li onclick="mostrarEjercicios('adultos', 'resistencia_muscular')">Resistencia Muscular</li>
-        <li onclick="mostrarEjercicios('adultos', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrenamiento Para Todas las Edades</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Entrenamiento Para Todas las Edades</h1>
+  </header>
+
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">Adolecentes 12 a 17 Años
+        <ul class="submenu">
+          <li onclick="mostrarEjercicios('adolecentes', 'composicion')">Composición Corporal</li>
+          <li onclick="mostrarEjercicios('adolecentes', 'flexibilidad')">Flexibilidad</li>
+          <li onclick="mostrarEjercicios('adolecentes', 'fuerza')">Fuerza Muscular</li>
+          <li onclick="mostrarEjercicios('adolecentes', 'resistencia_muscular')">Resistencia Muscular</li>
+          <li onclick="mostrarEjercicios('adolecentes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+        </ul>
+      </li>
+      <li class="dropdown">Jóvenes Adultos 18 a 29 Años
+        <ul class="submenu">
+          <li onclick="mostrarEjercicios('jovenes', 'composicion')">Composición Corporal</li>
+          <li onclick="mostrarEjercicios('jovenes', 'flexibilidad')">Flexibilidad</li>
+          <li onclick="mostrarEjercicios('jovenes', 'fuerza')">Fuerza Muscular</li>
+          <li onclick="mostrarEjercicios('jovenes', 'resistencia_muscular')">Resistencia Muscular</li>
+          <li onclick="mostrarEjercicios('jovenes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+        </ul>
+      </li>
+      <li class="dropdown">Adultos 30 a 64 Años
+        <ul class="submenu">
+          <li onclick="mostrarEjercicios('adultos', 'composicion')">Composición Corporal</li>
+          <li onclick="mostrarEjercicios('adultos', 'flexibilidad')">Flexibilidad</li>
+          <li onclick="mostrarEjercicios('adultos', 'fuerza')">Fuerza Muscular</li>
+          <li onclick="mostrarEjercicios('adultos', 'resistencia_muscular')">Resistencia Muscular</li>
+          <li onclick="mostrarEjercicios('adultos', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="resultado">
+      <p>Seleccione una categoría del menú para ver ejercicios.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
