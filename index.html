@@ -1,19 +1,31 @@
-<!-- Para Composición Corporal -->
-<li>
-  <a href="#" class="dropdown-toggle">Composición Corporal</a>
-  <ul class="dropdown-menu">
-    <li><a href="#" onclick="mostrarEjercicios('composicion','adolecentes')">Adolecentes 12 a 17 Años</a></li>
-    <li><a href="#" onclick="mostrarEjercicios('composicion','jovenes')">Jóvenes Adultos 18 a 29 Años</a></li>
-    <li><a href="#" onclick="mostrarEjercicios('composicion','adultos')">Adultos 30 a 64 Años</a></li>
+<nav>
+  <ul class="menu">
+    <li class="dropdown">Adolecentes 12 a 17 Años
+      <ul class="submenu">
+        <li onclick="mostrarEjercicios('adolecentes', 'composicion')">Composición Corporal</li>
+        <li onclick="mostrarEjercicios('adolecentes', 'flexibilidad')">Flexibilidad</li>
+        <li onclick="mostrarEjercicios('adolecentes', 'fuerza')">Fuerza Muscular</li>
+        <li onclick="mostrarEjercicios('adolecentes', 'resistencia_muscular')">Resistencia Muscular</li>
+        <li onclick="mostrarEjercicios('adolecentes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+      </ul>
+    </li>
+    <li class="dropdown">Jóvenes Adultos 18 a 29 Años
+      <ul class="submenu">
+        <li onclick="mostrarEjercicios('jovenes', 'composicion')">Composición Corporal</li>
+        <li onclick="mostrarEjercicios('jovenes', 'flexibilidad')">Flexibilidad</li>
+        <li onclick="mostrarEjercicios('jovenes', 'fuerza')">Fuerza Muscular</li>
+        <li onclick="mostrarEjercicios('jovenes', 'resistencia_muscular')">Resistencia Muscular</li>
+        <li onclick="mostrarEjercicios('jovenes', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+      </ul>
+    </li>
+    <li class="dropdown">Adultos 30 a 64 Años
+      <ul class="submenu">
+        <li onclick="mostrarEjercicios('adultos', 'composicion')">Composición Corporal</li>
+        <li onclick="mostrarEjercicios('adultos', 'flexibilidad')">Flexibilidad</li>
+        <li onclick="mostrarEjercicios('adultos', 'fuerza')">Fuerza Muscular</li>
+        <li onclick="mostrarEjercicios('adultos', 'resistencia_muscular')">Resistencia Muscular</li>
+        <li onclick="mostrarEjercicios('adultos', 'resistencia_cardiorrespiratoria')">Resistencia Cardiorrespiratoria</li>
+      </ul>
+    </li>
   </ul>
-</li>
-
-<!-- Para Flexibilidad -->
-<li>
-  <a href="#" class="dropdown-toggle">Flexibilidad</a>
-  <ul class="dropdown-menu">
-    <li><a href="#" onclick="mostrarEjercicios('flexibilidad','adolecentes')">Adolecentes 12 a 17 Años</a></li>
-    <li><a href="#" onclick="mostrarEjercicios('flexibilidad','jovenes')">Jóvenes Adultos 18 a 29 Años</a></li>
-    <li><a href="#" onclick="mostrarEjercicios('flexibilidad','adultos')">Adultos 30 a 64 Años</a></li>
-  </ul>
-</li>
+</nav>
