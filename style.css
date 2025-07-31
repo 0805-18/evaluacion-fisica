@@ -1,166 +1,88 @@
-/* Reset general */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-  color: #eee;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
-/* Encabezado */
 header {
-  background: #02121f;
-  color: #00d2ff;
+  background-color: #005f73;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 20px 0;
-  font-size: 1.8rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 8px #00d2ffaa;
 }
 
-/* Navegación principal */
 .menu {
-  background-color: #022b3a;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 3px 10px #00d2ffaa;
-}
-
-.main-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 900px;
-  width: 100%;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #0a9396;
 }
 
-.tab-item {
-  flex: 1;
+.menu > li {
   position: relative;
-  text-align: center;
-  padding: 15px 10px;
-  color: #a0d8ef;
+  padding: 15px 25px;
   cursor: pointer;
-  font-weight: 600;
-  border-right: 1px solid #00b0ff55;
-  transition: background 0.3s, color 0.3s;
+  color: white;
+  user-select: none;
 }
 
-.tab-item:last-child {
-  border-right: none;
+.menu > li:hover {
+  background-color: #94d2bd;
+  color: #003d33;
 }
 
-.tab-item:hover,
-.tab-item.active {
-  background-color: #00b0ff;
-  color: #02121f;
-  text-shadow: 0 0 6px #02121f;
-}
-
-/* Submenú desplegable */
 .submenu {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
-  display: none;
-  background: #02121f;
-  box-shadow: 0 4px 10px #00d2ffcc;
+  list-style: none;
+  background-color: #94d2bd;
+  padding: 0;
+  margin: 0;
+  min-width: 220px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 10;
-  border-radius: 0 0 8px 8px;
-}
-
-.tab-item:hover .submenu {
-  display: block;
 }
 
 .submenu li {
-  padding: 10px;
-  font-size: 0.95rem;
-  color: #a0d8efcc;
-  border-top: 1px solid #00b0ff22;
+  padding: 10px 15px;
+  color: #003d33;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid #b8d8d8;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
 }
 
 .submenu li:hover {
-  background-color: #00b0ffaa;
-  color: #02121f;
-  font-weight: bold;
-  text-shadow: 0 0 4px #02121f;
+  background-color: #ee9b00;
+  color: white;
 }
 
-/* Contenido principal */
-#content-area {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px;
-  background: #02121fcc;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00b0ffaa;
-  color: #cceeff;
-}
-
-#content-area h2 {
-  color: #00d2ff;
-  font-size: 2rem;
-  border-bottom: 2px solid #00d2ff66;
-  padding-bottom: 10px;
-  text-shadow: 0 0 6px #00d2ffcc;
-}
-
-#content-area h3 {
-  color: #80c6f9;
-  margin-top: 15px;
-  font-size: 1.3rem;
-  text-shadow: 0 0 4px #00aaffaa;
-}
-
-#content-area ul {
-  margin-top: 15px;
-  list-style: disc;
-  padding-left: 20px;
-  color: #cceeffcc;
-  max-height: 220px;
-  overflow-y: auto;
-}
-
-/* Estilo de scrollbar */
-#content-area ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-#content-area ul::-webkit-scrollbar-thumb {
-  background: #00b0ffaa;
-  border-radius: 4px;
-}
-
-/* Imagen dentro del contenido */
-#content-area img {
+.menu > li:hover > .submenu {
   display: block;
-  max-width: 100%;
-  max-height: 200px;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #00b0ffcc;
-  object-fit: cover;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .tab-item {
-    font-size: 0.9rem;
-    padding: 12px 6px;
-  }
+main {
+  padding: 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-  #content-area {
-    padding: 20px 15px;
-    margin: 15px 10px;
-  }
+h2 {
+  color: #005f73;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
