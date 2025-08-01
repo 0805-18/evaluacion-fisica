@@ -1,108 +1,104 @@
-/* Estilo general */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffeef5;
   margin: 0;
   padding: 0;
-  background-color: #fdeef4; /* rosado claro suave */
   color: #333;
 }
 
 header {
-  background-color: #f8c8dc; /* rosado pastel */
-  color: #4a4a4a;
+  background-color: #f8a5c2;
   padding: 20px;
   text-align: center;
+  color: white;
 }
 
-h1, h2, h3 {
-  color: #4b2c3c;
-}
-
-nav {
-  background-color: #f7d9e4;
-}
-
-.tabs {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+h1 {
   margin: 0;
 }
 
+nav {
+  background-color: #fcd1e2;
+  padding: 10px 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
 .tab-item {
-  cursor: pointer;
   padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f5b6cf;
+  margin: 0 5px;
   border-radius: 5px;
-  background-color: #f9d5e5;
-  color: #4b2c3c;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .tab-item:hover {
-  background-color: #f7cde2;
+  background-color: #e99db8;
 }
 
 .tab-item.active {
-  background-color: #f6b4d1;
-  font-weight: bold;
+  background-color: #d86a9c;
+  color: white;
 }
 
-/* Contenido de las pestañas */
+main {
+  padding: 20px;
+}
+
 .tab-content {
   display: none;
-  padding: 20px;
 }
 
 .tab-content.active {
   display: block;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Estilo de las tablas */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
 }
 
 th, td {
-  border: 1px solid #dcaecb;
-  padding: 12px;
+  border: 1px solid #f2a8c1;
+  padding: 10px;
   text-align: center;
 }
 
 th {
-  background-color: #f6b4d1;
-  color: #333;
+  background-color: #f9c2d1;
 }
 
-/* Listas */
-ul {
-  list-style-type: square;
-  margin-left: 20px;
+td {
+  background-color: #fff4f8;
 }
 
-/* Imágenes */
-.section-image {
+img {
   max-width: 100%;
   height: auto;
-  margin: 20px 0;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  margin: 20px 0;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .tabs {
-    flex-direction: column;
-    align-items: center;
-  }
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
 
-  .tab-item {
-    width: 90%;
-    text-align: center;
-    margin-bottom: 5px;
-  }
+h2, h3 {
+  color: #c84f88;
 }
