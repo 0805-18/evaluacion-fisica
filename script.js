@@ -1,18 +1,16 @@
-// Selecciona todos los elementos de pestaña
+// Selecciona todas las pestañas y los contenidos
 const tabs = document.querySelectorAll(".tab-item");
 const contents = document.querySelectorAll(".tab-content");
 
-// Función para activar una pestaña
+// Función para manejar el cambio de pestañas
 tabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
-    // Elimina la clase activa de todas las pestañas
+    // Quitar clases activas de todas las pestañas y contenidos
     tabs.forEach(t => t.classList.remove("active"));
-    // Elimina la clase activa de todo el contenido
     contents.forEach(c => c.classList.remove("active"));
 
-    // Agrega la clase activa a la pestaña actual
+    // Activar la pestaña y el contenido correspondiente
     tab.classList.add("active");
-    // Muestra el contenido correspondiente
     contents[index].classList.add("active");
   });
 });
