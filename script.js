@@ -1,15 +1,23 @@
-const tabs = document.querySelectorAll(".tab-item");
-const contents = document.querySelectorAll(".tab-content");
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    // Eliminar 'active' de todas las pestañas
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
+  function deactivateTabs() {
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+  }
 
-    // Activar pestaña y contenido actual
-    tab.classList.add("active");
-    const content = document.getElementById(tab.dataset.tab);
-    content.classList.add("active");
+  tabButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      deactivateTabs();
+      button.classList.add('active');
+      tabContents[index].classList.add('active');
+    });
   });
+
+  // Activar la primera pestaña al cargar
+  if (tabButtons.length > 0) {
+    tabButtons[0].classList.add('active');
+    tabContents[0].classList.add('active');
+  }
 });
