@@ -1,85 +1,70 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5; /* Rosado claro */
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  background-color: #fff0f5;
+  color: #333;
 }
 
-h1 {
+header {
+  background-color: #f8c8dc;
+  padding: 1rem;
   text-align: center;
-  color: #cc3366;
-  margin-bottom: 30px;
+  color: #660033;
 }
 
 .tabs {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  background-color: #f4c2d7;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
-.tab-button {
-  background-color: #f8c8dc;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
+.tab-item {
+  padding: 1rem 1.5rem;
   cursor: pointer;
-  border-radius: 20px;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
 }
 
-.tab-button:hover {
-  background-color: #f4a6c6;
+.tab-item:hover,
+.tab-item.active {
+  background-color: #ffe6f0;
+  border-bottom: 3px solid #cc6699;
 }
 
-.tab-button.active {
-  background-color: #e75480;
-  color: white;
-  font-weight: bold;
+main {
+  padding: 1.5rem;
 }
 
 .tab-content {
   display: none;
-  border-top: 2px solid #e75480;
-  padding: 20px;
-  background-color: #fff5fa;
-  border-radius: 8px;
 }
 
 .tab-content.active {
   display: block;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  background-color: #ffe6ee;
+  margin: 1rem 0;
+  background-color: #fff7fb;
 }
 
-table th, table td {
-  border: 1px solid #e75480;
-  padding: 10px;
-  text-align: center;
+th,
+td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-table th {
-  background-color: #f4a6c6;
-  color: white;
+h3 {
+  color: #b30059;
 }
 
-.age-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 20px auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+ul {
+  padding-left: 1.2rem;
 }
