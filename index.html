@@ -1,200 +1,353 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Entrenamiento Para Todas las Edades</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>Entrenamiento Para Todas las Edades</header>
+<section id="ninos" class="tab-content active" role="tabpanel" aria-labelledby="tab-ninos" tabindex="0">
+  <h2>Microciclo para Niños de 10 a 11 Años</h2>
+  <p>Este microciclo semanal busca desarrollar habilidades motoras en niños de forma segura, lúdica y progresiva.</p>
 
-  <nav class="menu-tabs" role="tablist" aria-label="Categorías de entrenamiento">
-    <ul class="tabs">
-      <li>
-        <button
-          class="tab-item active"
-          data-tab="ninos"
-          data-emoji="👦"
-          role="tab"
-          aria-selected="true"
-          tabindex="0"
-          id="tab-ninos"
-          aria-controls="ninos"
-        >
-          Niños 10-11 Años
-        </button>
-      </li>
-      <li>
-        <button
-          class="tab-item"
-          data-tab="adolescentes"
-          data-emoji="🧑‍🎓"
-          role="tab"
-          aria-selected="false"
-          tabindex="-1"
-          id="tab-adolescentes"
-          aria-controls="adolescentes"
-        >
-          Adolescentes 12-17 Años
-        </button>
-      </li>
-      <li>
-        <button
-          class="tab-item"
-          data-tab="jovenes"
-          data-emoji="🧑‍🏫"
-          role="tab"
-          aria-selected="false"
-          tabindex="-1"
-          id="tab-jovenes"
-          aria-controls="jovenes"
-        >
-          Jóvenes y Adultos 18-64 Años
-        </button>
-      </li>
-      <li>
-        <button
-          class="tab-item"
-          data-tab="adultomayor"
-          data-emoji="🧓"
-          role="tab"
-          aria-selected="false"
-          tabindex="-1"
-          id="tab-adultomayor"
-          aria-controls="adultomayor"
-        >
-          Adulto Mayor 65+ Años
-        </button>
-      </li>
-    </ul>
-  </nav>
+  <h3>Objetivos</h3>
+  <ul>
+    <li>Mejorar coordinación y agilidad.</li>
+    <li>Desarrollar fuerza general funcional segura.</li>
+    <li>Fomentar resistencia aeróbica mediante juegos activos.</li>
+    <li>Promover hábitos de actividad física divertida.</li>
+  </ul>
 
-  <main id="content-area">
-    <!-- Sección Niños -->
-    <section
-      id="ninos"
-      class="tab-content active"
-      role="tabpanel"
-      aria-labelledby="tab-ninos"
-      tabindex="0"
-    >
-      <h2>Microciclo para Niños de 10 a 11 Años</h2>
-      <p>Aquí tienes un microciclo de 1 semana diseñado para un niño de 10 años...</p>
-      <h3>Objetivos</h3>
-      <ul>
-        <li>Mejorar coordinación y agilidad.</li>
-        <li>Desarrollar fuerza general funcional segura.</li>
-        <li>Fomentar resistencia aeróbica mediante juegos activos.</li>
-        <li>Promover hábitos de actividad física divertida.</li>
-      </ul>
-      <img src="https://i.imgur.com/Fu24u7v.png" alt="Microciclo Niños" />
-      <h3>Recomendaciones</h3>
-      <ul>
-        <li>Duración: 30‑40 minutos.</li>
-        <li>Intensidad: Moderada, sin fatiga excesiva.</li>
-        <li>Progresión: +1‑2 repeticiones por semana.</li>
-        <li>Supervisión: Adulto presente para guiar técnica.</li>
-        <li>Enfoque lúdico: Juegos para motivación.</li>
-      </ul>
-    </section>
+  <h3>Recomendaciones</h3>
+  <ul>
+    <li>Duración: 30‑40 minutos.</li>
+    <li>Intensidad: Moderada, sin fatiga excesiva.</li>
+    <li>Progresión: +1‑2 repeticiones por semana.</li>
+    <li>Supervisión: Adulto presente para guiar técnica.</li>
+    <li>Enfoque lúdico: Juegos para motivación.</li>
+  </ul>
 
-    <!-- Sección Adolescentes -->
-    <section
-      id="adolescentes"
-      class="tab-content"
-      role="tabpanel"
-      aria-labelledby="tab-adolescentes"
-      tabindex="-1"
-    >
-      <h2>Microciclo para Adolescentes de 12 a 17 Años</h2>
-      <p>
-        Aquí tienes un microciclo de 1 semana diseñado para adolescentes
-        (12–17 años)...
-      </p>
-      <h3>Objetivos</h3>
-      <ul>
-        <li>Mejorar resistencia cardiovascular y fuerza general.</li>
-        <li>Desarrollar coordinación, agilidad y potencia progresiva.</li>
-        <li>Prevenir lesiones mediante movilidad y técnica.</li>
-        <li>Promover ejercicio regular y seguro.</li>
-      </ul>
-      <img src="https://i.imgur.com/Fu24u7v.png" alt="Microciclo Adolescentes" />
-      <h3>Recomendaciones</h3>
-      <ul>
-        <li>Duración: 40‑50 minutos.</li>
-        <li>Intensidad: Moderada‑vigorosa (RPE 5‑7).</li>
-        <li>Progresión: +5‑10 % cada 2 semanas.</li>
-        <li>Seguridad: Supervisión técnica constante.</li>
-        <li>Variedad: Ejercicios lúdicos y funcionales.</li>
-      </ul>
-    </section>
+  <h3>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Objetivo</th>
+        <th>Ejercicios</th>
+        <th>Series x Repeticiones</th>
+        <th>Descanso</th>
+        <th>Observaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lunes</td>
+        <td>Coordinación y agilidad</td>
+        <td>1. Zigzag<br>2. Saltos sobre líneas<br>3. Juego de atrapar</td>
+        <td>4x20 m<br>3x12<br>3x1 min</td>
+        <td>1 min</td>
+        <td>Espacios seguros y planos.</td>
+      </tr>
+      <tr>
+        <td>Martes</td>
+        <td>Fuerza básica</td>
+        <td>1. Sentadillas<br>2. Flexiones asistidas<br>3. Plancha frontal</td>
+        <td>3x12<br>3x8<br>3x15 seg</td>
+        <td>45 seg</td>
+        <td>Supervisión técnica.</td>
+      </tr>
+      <tr>
+        <td>Miércoles</td>
+        <td>Resistencia lúdica</td>
+        <td>1. Relevos<br>2. Skipping bajo<br>3. Saltos laterales</td>
+        <td>4x50 m<br>3x20 seg<br>3x12</td>
+        <td>1 min</td>
+        <td>Ambiente motivante y recreativo.</td>
+      </tr>
+      <tr>
+        <td>Jueves</td>
+        <td>Descanso activo</td>
+        <td>Caminata ligera y juegos libres</td>
+        <td>20 min</td>
+        <td>–</td>
+        <td>Fomentar movimiento espontáneo.</td>
+      </tr>
+      <tr>
+        <td>Viernes</td>
+        <td>Coordinación y equilibrio</td>
+        <td>1. Caminar en línea<br>2. Simón dice<br>3. Saltos unipodales</td>
+        <td>3x10 pasos<br>3x2 min<br>3x6 por pierna</td>
+        <td>45 seg</td>
+        <td>Favorecer control postural.</td>
+      </tr>
+      <tr>
+        <td>Sábado</td>
+        <td>Circuito motriz</td>
+        <td>1. Gateo<br>2. Saltos cortos<br>3. Carreras + burpees mod.</td>
+        <td>3x10 m<br>3x10<br>3x20 seg</td>
+        <td>1 min</td>
+        <td>Presentar como juego en estaciones.</td>
+      </tr>
+      <tr>
+        <td>Domingo</td>
+        <td>Descanso activo</td>
+        <td>Juegos al aire libre</td>
+        <td>30 min</td>
+        <td>–</td>
+        <td>Movimiento libre y divertido.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="adolescentes" class="tab-content" role="tabpanel" aria-labelledby="tab-adolescentes" tabindex="-1">
+  <h2>Microciclo para Adolescentes de 12 a 17 Años</h2>
+  <p>Programa semanal para mejorar capacidades físicas generales y promover el desarrollo saludable de los adolescentes.</p>
 
-    <!-- Sección Jóvenes y Adultos -->
-    <section
-      id="jovenes"
-      class="tab-content"
-      role="tabpanel"
-      aria-labelledby="tab-jovenes"
-      tabindex="-1"
-    >
-      <h2>Microciclo para Jóvenes y Adultos (18 a 64 Años)</h2>
-      <p>
-        Aquí tienes un microciclo de 1 semana diseñado para jóvenes adultos
-        (18‑29 años) y adultos (30‑64 años) con condición física promedio, sin
-        prescripciones médicas.
-      </p>
-      <h3>Objetivos del microciclo</h3>
-      <ul>
-        <li>Mejorar fuerza general y resistencia cardiovascular.</li>
-        <li>Potenciar la movilidad y prevenir lesiones.</li>
-        <li>Desarrollar hábitos de entrenamiento estructurados.</li>
-        <li>Incrementar el gasto energético y condición física funcional.</li>
-      </ul>
-      <h3>Recomendaciones</h3>
-      <ul>
-        <li>Duración de la sesión: 45‑60 minutos.</li>
-        <li>Intensidad: Moderada (RPE 5‑7).</li>
-        <li>Progresión: +5‑10 % cada 2‑3 semanas.</li>
-        <li>Seguridad: Priorizar técnica y movilidad antes de fuerza.</li>
-        <li>Variación: Cambiar ejercicios cada 4 semanas para evitar estancamiento.</li>
-      </ul>
-      <img src="https://i.imgur.com/Fu24u7v.png" alt="Microciclo Jóvenes Adultos" />
-    </section>
+  <h3>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Objetivo</th>
+        <th>Ejercicios</th>
+        <th>Series x Repeticiones</th>
+        <th>Descanso</th>
+        <th>Observaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lunes</td>
+        <td>Fuerza general</td>
+        <td>1. Sentadillas<br>2. Flexiones<br>3. Plancha</td>
+        <td>3x12<br>3x10<br>3x20 seg</td>
+        <td>60 seg</td>
+        <td>Enfocar en técnica.</td>
+      </tr>
+      <tr>
+        <td>Martes</td>
+        <td>Resistencia aeróbica</td>
+        <td>1. Carrera continua<br>2. Skipping<br>3. Juego de relevos</td>
+        <td>10-15 min<br>3x30 seg<br>4 rep</td>
+        <td>60 seg</td>
+        <td>RPE 5–6 (moderado).</td>
+      </tr>
+      <tr>
+        <td>Miércoles</td>
+        <td>Coordinación y agilidad</td>
+        <td>1. Zigzag<br>2. Saltos laterales<br>3. Escalera de coordinación</td>
+        <td>4x20 m<br>3x12<br>3x20 seg</td>
+        <td>45 seg</td>
+        <td>Énfasis en precisión.</td>
+      </tr>
+      <tr>
+        <td>Jueves</td>
+        <td>Descanso activo</td>
+        <td>Caminata, estiramientos y juegos</td>
+        <td>20 min</td>
+        <td>–</td>
+        <td>Movilidad sin fatiga.</td>
+      </tr>
+      <tr>
+        <td>Viernes</td>
+        <td>Potencia y resistencia</td>
+        <td>1. Burpees mod.<br>2. Saltos rodillas al pecho<br>3. Mountain climbers</td>
+        <td>3x8<br>3x10<br>3x15 seg</td>
+        <td>60 seg</td>
+        <td>Adaptar a nivel individual.</td>
+      </tr>
+      <tr>
+        <td>Sábado</td>
+        <td>Circuito funcional</td>
+        <td>1. Sentadillas<br>2. Flexiones<br>3. Planchas laterales<br>4. Skipping alto</td>
+        <td>3 rondas de 30 seg/ejercicio</td>
+        <td>30 seg</td>
+        <td>Formato circuito (3 vueltas).</td>
+      </tr>
+      <tr>
+        <td>Domingo</td>
+        <td>Descanso activo</td>
+        <td>Juegos al aire libre</td>
+        <td>30 min</td>
+        <td>–</td>
+        <td>Recuperación activa.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section
+  id="adultos"
+  class="tab-content"
+  role="tabpanel"
+  aria-labelledby="tab-adultos"
+  tabindex="-1"
+>
+  <h2>Microciclo para Jóvenes y Adultos (18–64 años)</h2>
+  <p>
+    A continuación se presenta una planificación semanal de ejercicios orientada
+    a jóvenes y adultos entre 18 y 64 años con un nivel de condición física general.
+    El enfoque es mejorar fuerza, resistencia, movilidad y estabilidad funcional.
+  </p>
 
-    <!-- Sección Adulto Mayor -->
-    <section
-      id="adultomayor"
-      class="tab-content"
-      role="tabpanel"
-      aria-labelledby="tab-adultomayor"
-      tabindex="-1"
-    >
-      <h2>Microciclo para Adulto Mayor 65+ Años</h2>
-      <p>
-        Aquí tienes un microciclo de 1 semana diseñado para un adulto mayor de
-        65 años sin restricciones médicas. Está orientado a mejorar la movilidad,
-        fuerza funcional, resistencia cardiovascular y equilibrio, usando ejercicios
-        de bajo impacto y controlados.
-      </p>
-      <h3>Objetivos del microciclo</h3>
-      <ul>
-        <li>Mantener la salud articular y muscular.</li>
-        <li>Mejorar la resistencia cardiovascular.</li>
-        <li>Desarrollar fuerza funcional y equilibrio.</li>
-      </ul>
-      <h3>Recomendaciones</h3>
-      <ul>
-        <li>Intensidad controlada: RPE 4–6.</li>
-        <li>Progresión: +1–2 repeticiones por semana según tolerancia.</li>
-        <li>Seguridad: Usar apoyo si es necesario.</li>
-        <li>Monitoreo: Hidratarse y evitar fatiga extrema.</li>
-        <li>Objetivo: Prevenir caídas y preservar autonomía.</li>
-      </ul>
-      <img src="https://i.imgur.com/Fu24u7v.png" alt="Microciclo Adulto Mayor" />
-    </section>
-  </main>
+  <h3>Objetivos</h3>
+  <ul>
+    <li>Incrementar fuerza muscular funcional (tren superior e inferior).</li>
+    <li>Mejorar resistencia aeróbica y control corporal.</li>
+    <li>Estimular la potencia y el trabajo del core.</li>
+    <li>Fomentar el hábito de actividad física regular y segura.</li>
+  </ul>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <h3>Recomendaciones</h3>
+  <ul>
+    <li>Duración por sesión: 45–60 minutos.</li>
+    <li>Intensidad: Moderada a vigorosa (RPE 6–8).</li>
+    <li>Progresión: Incrementar carga o volumen gradualmente.</li>
+    <li>Supervisión: En ejercicios complejos o con sobrecarga.</li>
+    <li>Importancia de movilidad: Realizar calentamiento y enfriamiento.</li>
+  </ul>
+
+  <h3>Estructura del Microciclo (5 días de entrenamiento + 2 días de descanso activo)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Objetivo</th>
+        <th>Ejercicios</th>
+        <th>Series x Repeticiones</th>
+        <th>Descanso</th>
+        <th>Observaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lunes</td>
+        <td>Fuerza de tren inferior</td>
+        <td>
+          1. Sentadillas (peso corporal o con carga ligera)<br>
+          2. Zancadas alternas<br>
+          3. Puente de glúteos
+        </td>
+        <td>4x12<br>3x12 por pierna<br>3x15</td>
+        <td>60 seg</td>
+        <td>Priorizar técnica antes de progresar con carga.</td>
+      </tr>
+      <tr>
+        <td>Martes</td>
+        <td>Resistencia aeróbica</td>
+        <td>
+          1. Caminata rápida o trote suave<br>
+          2. Skipping bajo<br>
+          3. Remo sin máquina (con bandas o simulación)
+        </td>
+        <td>1. 20 min<br>2. 3x30 seg<br>3. 3x15</td>
+        <td>60 seg</td>
+        <td>Mantener esfuerzo moderado (RPE 5–6).</td>
+      </tr>
+      <tr>
+        <td>Miércoles</td>
+        <td>Fuerza de tren superior</td>
+        <td>
+          1. Flexiones (apoyando rodillas o completas)<br>
+          2. Remo invertido (mesa o barra baja)<br>
+          3. Plancha frontal
+        </td>
+        <td>4x8–12<br>3x10<br>3x30 seg</td>
+        <td>60–75 seg</td>
+        <td>Progresar aumentando repeticiones según tolerancia.</td>
+      </tr>
+      <tr>
+        <td>Jueves</td>
+        <td>Descanso activo</td>
+        <td>Caminata ligera + movilidad articular</td>
+        <td>30 min</td>
+        <td>–</td>
+        <td>Incluir estiramientos dinámicos.</td>
+      </tr>
+      <tr>
+        <td>Viernes</td>
+        <td>Potencia y core</td>
+        <td>
+          1. Burpees controlados<br>
+          2. Jumping jacks<br>
+          3. Mountain climbers
+        </td>
+        <td>3x8<br>3x30 seg<br>3x20</td>
+        <td>45–60 seg</td>
+        <td>Mantener técnica para evitar sobrecarga lumbar.</td>
+      </tr>
+      <tr>
+        <td>Sábado</td>
+        <td>Circuito funcional</td>
+        <td>
+          1. Sentadillas<br>
+          2. Flexiones<br>
+          3. Planchas laterales<br>
+          4. Saltos cortos
+        </td>
+        <td>3 rondas de 30 seg por ejercicio</td>
+        <td>30 seg</td>
+        <td>Formato circuito con 2 min entre rondas.</td>
+      </tr>
+      <tr>
+        <td>Domingo</td>
+        <td>Descanso activo</td>
+        <td>Bicicleta suave, caminata o yoga</td>
+        <td>30 min</td>
+        <td>–</td>
+        <td>Enfocado en recuperación y movilidad general.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="adultomayor" class="tab-content" role="tabpanel" aria-labelledby="tab-adultomayor" tabindex="-1">
+  <h2>Microciclo para Adulto Mayor 65+ Años</h2>
+  <p>Entrenamiento funcional adaptado para adultos mayores, enfocado en movilidad, fuerza y equilibrio.</p>
+
+  <h3>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Objetivo</th>
+        <th>Ejercicios</th>
+        <th>Series x Repeticiones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lunes</td>
+        <td>Movilidad y fuerza básica</td>
+        <td>1. Marcha en el lugar (2 min)<br>2. Sentarse/levantarse<br>3. Flexiones de pared<br>4. Elevación de talones</td>
+        <td>2 min<br>3x10<br>3x10<br>3x12</td>
+      </tr>
+      <tr>
+        <td>Martes</td>
+        <td>Resistencia cardiovascular</td>
+        <td>1. Caminata continua<br>2. Marcha lateral<br>3. Skipping bajo</td>
+        <td>20 min<br>3x20 pasos<br>3x20 seg</td>
+      </tr>
+      <tr>
+        <td>Miércoles</td>
+        <td>Equilibrio y fuerza</td>
+        <td>1. Apoyo unipodal (con apoyo)<br>2. Puente de glúteos<br>3. Curl isométrico</td>
+        <td>3x15 seg por pierna<br>3x12<br>3x8</td>
+      </tr>
+      <tr>
+        <td>Jueves</td>
+        <td>Descanso activo</td>
+        <td>Caminata ligera o movilidad articular</td>
+        <td>20 min</td>
+      </tr>
+      <tr>
+        <td>Viernes</td>
+        <td>Fuerza y resistencia</td>
+        <td>1. Sentadillas asistidas<br>2. Flexiones rodillas<br>3. Caminata rápida</td>
+        <td>3x8<br>3x6‑8<br>15 min</td>
+      </tr>
+      <tr>
+        <td>Sábado</td>
+        <td>Resistencia y equilibrio</td>
+        <td>1. Caminata en línea<br>2. Subir/bajar escalón<br>3. Elevación brazos</td>
+        <td>3x10 pasos<br>3x10<br>3x12</td>
+      </tr>
+      <tr>
+        <td>Domingo</td>
+        <td>Descanso activo</td>
+        <td>Estiramientos suaves y respiración</td>
+        <td>10 min</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
