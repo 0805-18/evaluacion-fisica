@@ -1,523 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planes de Entrenamiento 🏋️‍♂️✨</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microciclos de Actividad Física</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #ffe6f0;
-      color: #4b004b;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      line-height: 1.6;
     }
-    header {
-      background-color: #ff66b2;
-      color: white;
-      padding: 1rem;
+    h1 {
       text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(255, 102, 178, 0.4);
+      color: #2c3e50;
     }
-    .tabs {
-      display: flex;
-      background: #ffb3d9;
-      border-bottom: 3px solid #cc0077;
-      justify-content: center;
-      flex-wrap: wrap;
+    h2 {
+      margin-top: 40px;
+      color: #2980b9;
     }
-    .tab {
-      padding: 0.8rem 1.2rem;
-      cursor: pointer;
-      font-weight: 600;
-      color: #4b004b;
-      transition: background-color 0.3s ease;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      margin: 0 5px;
-      user-select: none;
+    h3 {
+      margin-top: 20px;
+      color: #16a085;
     }
-    .tab:hover {
-      background-color: #ff80bf;
+    ul {
+      margin-left: 20px;
     }
-    .tab.active {
-      background-color: white;
-      border: 3px solid #cc0077;
-      border-bottom: none;
-      color: #cc0077;
-      font-weight: 700;
-    }
-    .content {
-      max-width: 900px;
-      margin: 20px auto;
-      background: white;
-      border: 3px solid #cc0077;
-      border-top: none;
-      border-radius: 0 0 10px 10px;
+    .grupo {
+      background-color: #ffffff;
       padding: 20px;
-      box-shadow: 0 5px 15px rgba(204, 0, 119, 0.3);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.95rem;
-    }
-    th, td {
-      border: 1px solid #cc0077;
-      padding: 8px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background-color: #ffb3d9;
-      color: #4b004b;
-    }
-    /* Scroll horizontal on small screens */
-    .table-wrapper {
-      overflow-x: auto;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+  <h1>Microciclos de Actividad Física por Grupo Etario</h1>
 
-<header>Planes de Entrenamiento 🏋️‍♂️✨</header>
+  <div class="grupo">
+    <h2>Niños 10-11 Años</h2>
+    <p><strong>Aquí tienes un microciclo de 1 semana diseñado para un niño de 10 años</strong>, orientado al desarrollo motriz global, con ejercicios lúdicos que estimulan la coordinación, agilidad, fuerza básica y resistencia a través de juegos.</p>
 
-<div class="tabs">
-  <div class="tab active" data-tab="adulto-mayor">👵 Adulto Mayor 65+ Años</div>
-  <div class="tab" data-tab="ninos">👧 Niños 10-11 Años</div>
-  <div class="tab" data-tab="adolescentes">🧑‍🎓 Adolescentes 12-17 Años</div>
-  <div class="tab" data-tab="jovenes-adultos">💪 Jóvenes y Adultos 18-64 Años</div>
-</div>
+    <h3>Objetivos del microciclo</h3>
+    <ul>
+      <li>Mejorar coordinación y agilidad.</li>
+      <li>Desarrollar fuerza general de manera funcional y segura.</li>
+      <li>Fomentar la resistencia aeróbica mediante juegos activos.</li>
+      <li>Promover hábitos de actividad física divertida y segura.</li>
+    </ul>
 
-<div class="content" id="adulto-mayor">
-  <h2>👵 Adulto Mayor 65+ Años</h2>
-  <p><strong>Estructura del microciclo:</strong> 5 días de entrenamiento + 2 de descanso activo</p>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Objetivo</th>
-          <th>Ejercicios</th>
-          <th>Series x</th>
-          <th>Repeticiones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>Movilidad y fuerza básica</td>
-          <td>
-            1. Marcha en el lugar con brazos (2 min)<br/>
-            2. Sentarse y levantarse de la silla<br/>
-            3. Flexiones de pared<br/>
-            4. Elevación de talones
-          </td>
-          <td>1.<br/>2.<br/>3.<br/>4.</td>
-          <td>2 min<br/>3x10<br/>3x10<br/>3x12</td>
-        </tr>
-        <tr>
-          <td>Martes</td>
-          <td>Resistencia cardiovascular</td>
-          <td>
-            1. Caminata continua<br/>
-            2. Marcha lateral (pasos cortos)<br/>
-            3. Skipping bajo suave
-          </td>
-          <td>1.<br/>2.<br/>3.</td>
-          <td>20 min<br/>3x20 pasos<br/>3x20 seg</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>Equilibrio y fuerza</td>
-          <td>
-            1. Apoyo unipodal (con apoyo) pierna<br/>
-            2. Puente de glúteos<br/>
-            3. Curl de bíceps isométrico (sin carga, contracción 5 seg)
-          </td>
-          <td>1.<br/>2.<br/>3.</td>
-          <td>3x15 seg cada<br/>3x12<br/>3x8</td>
-        </tr>
-        <tr>
-          <td>Jueves</td>
-          <td>Descanso activo</td>
-          <td>Caminata ligera o movilidad articular completa</td>
-          <td>-</td>
-          <td>20 min</td>
-        </tr>
-        <tr>
-          <td>Viernes</td>
-          <td>Fuerza y resistencia</td>
-          <td>
-            1. Sentadillas asistidas (silla)<br/>
-            2. Flexiones de rodillas en el suelo<br/>
-            3. Caminata rápida
-          </td>
-          <td>3x8<br/>3x6-8<br/>-</td>
-          <td>-<br/>-<br/>15 min</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>Resistencia y equilibrio</td>
-          <td>
-            1. Caminata en línea recta (talón a punta)<br/>
-            2. Subir y bajar un escalón bajo<br/>
-            3. Elevación lateral de brazos sin carga
-          </td>
-          <td>3x10 pasos<br/>3x10<br/>3x12</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>Domingo</td>
-          <td>Descanso activo</td>
-          <td>Estiramientos suaves y respiración</td>
-          <td>-</td>
-          <td>10 min</td>
-        </tr>
-      </tbody>
-    </table>
+    <h3>Recomendaciones</h3>
+    <ul>
+      <li>Duración de cada sesión: 30-40 minutos.</li>
+      <li>Intensidad: Moderada, controlada por el disfrute y sin fatiga excesiva.</li>
+      <li>Progresión: Incrementar repeticiones de manera gradual (1-2 cada semana).</li>
+      <li>Supervisión: Un adulto debe vigilar y guiar la técnica en cada ejercicio.</li>
+      <li>Enfoque lúdico: Convertir los ejercicios en juegos para mantener la motivación.</li>
+    </ul>
+
+    <p><strong>Estructura del microciclo:</strong> Lunes a sábado (domingo libre)</p>
+    <ul>
+      <li><strong>Lunes:</strong> Circuito de coordinación (saltos, escaleras, conos) + juego de relevos.</li>
+      <li><strong>Martes:</strong> Juegos de agilidad (pollito inglés, la cuerda) + abdominales básicos.</li>
+      <li><strong>Miércoles:</strong> Juegos de fuerza (arrastre de objetos, empujar pelotas grandes).</li>
+      <li><strong>Jueves:</strong> Juegos de equilibrio y propiocepción (caminar en línea, un pie).</li>
+      <li><strong>Viernes:</strong> Circuito mixto (3 estaciones: salto, carrera corta, lanzamiento suave).</li>
+      <li><strong>Sábado:</strong> Juegos grupales: escondidas, captura la bandera, etc.</li>
+    </ul>
   </div>
-</div>
 
-<div class="content" id="ninos" style="display:none;">
-  <h2>👧 Niños 10-11 Años</h2>
-  <p><strong>Estructura del microciclo:</strong> 5 días de entrenamiento + 2 de descanso activo</p>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Objetivo</th>
-          <th>Ejercicios</th>
-          <th>Series x</th>
-          <th>Repeticiones</th>
-          <th>Descanso</th>
-          <th>Observaciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>Coordinación y agilidad</td>
-          <td>
-            1. Carrera con cambios de dirección (zigzag)<br/>
-            2. Saltos a pies juntos sobre líneas marcadas<br/>
-            3. Juego de "atrapa al compañero"
-          </td>
-          <td>4x20 m<br/>3x12<br/>3x1 min</td>
-          <td>-</td>
-          <td>1 min</td>
-          <td>Trabajar en espacios seguros, superficie plana.</td>
-        </tr>
-        <tr>
-          <td>Martes</td>
-          <td>Fuerza básica</td>
-          <td>
-            1. Sentadillas sin peso<br/>
-            2. Flexiones asistidas (apoyo rodillas)<br/>
-            3. Plancha frontal
-          </td>
-          <td>3x12<br/>3x8<br/>3x15 seg</td>
-          <td>-</td>
-          <td>45 seg</td>
-          <td>Asegurar correcta técnica y supervisión.</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>Resistencia lúdica</td>
-          <td>
-            1. Carrera suave (juego de relevos)<br/>
-            2. Skipping bajo<br/>
-            3. Saltos laterales
-          </td>
-          <td>4x50 m<br/>3x20 seg<br/>3x12</td>
-          <td>-</td>
-          <td>1 min</td>
-          <td>Mantener ambiente motivante y recreativo.</td>
-        </tr>
-        <tr>
-          <td>Jueves</td>
-          <td>Descanso activo</td>
-          <td>Caminata ligera y juegos libres</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Evitar esfuerzos intensos, fomentar movimiento espontáneo.</td>
-        </tr>
-        <tr>
-          <td>Viernes</td>
-          <td>Coordinación y equilibrio</td>
-          <td>
-            1. Caminar sobre línea recta (equilibrio)<br/>
-            2. Juego de "simón dice" con movimientos motrices<br/>
-            3. Saltos unipodales
-          </td>
-          <td>3x10 pasos<br/>3x2 min<br/>3x6 por pierna</td>
-          <td>-</td>
-          <td>45 seg</td>
-          <td>Favorecer el control postural.</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>Circuito motriz</td>
-          <td>
-            1. Gateo (4 puntos)<br/>
-            2. Saltos cortos consecutivos<br/>
-            3. Carreras cortas + burpees modificados
-          </td>
-          <td>3x10 m<br/>3x10<br/>3x20 seg</td>
-          <td>-</td>
-          <td>1 min</td>
-          <td>Presentarlo en forma de juego por estaciones.</td>
-        </tr>
-        <tr>
-          <td>Domingo</td>
-          <td>Descanso activo</td>
-          <td>Juegos al aire libre (bicicleta, pelota)</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Mantener movimiento sin estructura formal.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="grupo">
+    <h2>Adolescentes 12 a 17 Años</h2>
+    <p><strong>Aquí tienes un microciclo de 1 semana diseñado para adolescentes (12-17 años) promedio</strong>, orientado al desarrollo equilibrado de fuerza funcional, resistencia, coordinación y movilidad, siguiendo las recomendaciones del ACSM para esta población.</p>
+
+    <h3>Objetivos del microciclo</h3>
+    <ul>
+      <li>Mejorar resistencia cardiovascular y fuerza general.</li>
+      <li>Desarrollar coordinación, agilidad y potencia de forma progresiva.</li>
+      <li>Prevenir lesiones mediante trabajo de movilidad y técnica.</li>
+      <li>Promover hábitos de ejercicio regulares y seguros.</li>
+    </ul>
+
+    <h3>Recomendaciones</h3>
+    <ul>
+      <li>Duración de la sesión: 40-50 minutos.</li>
+      <li>Intensidad: Moderada a vigorosa, controlada con la escala de esfuerzo (RPE 5-7).</li>
+      <li>Progresión: Aumentar repeticiones o duración de ejercicios un 5-10% cada 2 semanas.</li>
+      <li>Seguridad: Supervisar técnica para prevenir lesiones.</li>
+      <li>Variedad: Combinar ejercicios lúdicos y funcionales para motivar.</li>
+    </ul>
+
+    <p><strong>Estructura del microciclo:</strong> Lunes a sábado (domingo libre)</p>
+    <ul>
+      <li><strong>Lunes:</strong> Entrenamiento de fuerza con peso corporal (sentadillas, flexiones, abdominales).</li>
+      <li><strong>Martes:</strong> Cardio aeróbico (trote, bicicleta, saltar cuerda).</li>
+      <li><strong>Miércoles:</strong> Circuito funcional (4 estaciones: fuerza, equilibrio, cardio, coordinación).</li>
+      <li><strong>Jueves:</strong> Juegos deportivos (fútbol, voleibol, básquet).</li>
+      <li><strong>Viernes:</strong> Movilidad y core (estiramientos activos, planchas, ejercicios posturales).</li>
+      <li><strong>Sábado:</strong> Actividad libre (bicicleta, caminata, baile, deporte recreativo).</li>
+    </ul>
   </div>
-</div>
 
-<div class="content" id="adolescentes" style="display:none;">
-  <h2>🧑‍🎓 Adolescentes 12-17 Años</h2>
-  <p><strong>Estructura del microciclo:</strong> 5 días de entrenamiento + 2 de descanso activo</p>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Objetivo</th>
-          <th>Ejercicios</th>
-          <th>Series x</th>
-          <th>Repeticiones</th>
-          <th>Descanso</th>
-          <th>Observaciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>Fuerza general</td>
-          <td>
-            1. Sentadillas sin peso<br/>
-            2. Flexiones de brazos<br/>
-            3. Plancha frontal
-          </td>
-          <td>3x12<br/>3x10<br/>3x20 seg</td>
-          <td>-</td>
-          <td>60 seg</td>
-          <td>Enfocar en técnica, progresar aumentando repeticiones.</td>
-        </tr>
-        <tr>
-          <td>Martes</td>
-          <td>Resistencia aeróbica</td>
-          <td>
-            1. Carrera continua<br/>
-            2. Skipping bajo<br/>
-            3. Juego de relevos
-          </td>
-          <td>-<br/>3x30 seg<br/>4 repeticiones</td>
-          <td>-</td>
-          <td>60 seg</td>
-          <td>Mantener RPE 5-6 (moderado).</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>Coordinación y agilidad</td>
-          <td>
-            1. Circuito de conos (zigzag)<br/>
-            2. Saltos laterales<br/>
-            3. Escalera de coordinación
-          </td>
-          <td>4x20 m<br/>3x12<br/>3x20 seg</td>
-          <td>-</td>
-          <td>45 seg</td>
-          <td>Velocidad controlada, énfasis en precisión.</td>
-        </tr>
-        <tr>
-          <td>Jueves</td>
-          <td>Descanso activo</td>
-          <td>Caminata suave, estiramientos y juegos recreativos</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Mantener movilidad sin fatiga.</td>
-        </tr>
-        <tr>
-          <td>Viernes</td>
-          <td>Potencia y resistencia</td>
-          <td>
-            1. Burpees modificados<br/>
-            2. Saltos con rodillas al pecho<br/>
-            3. Mountain climbers
-          </td>
-          <td>3x8<br/>3x10<br/>3x15 seg</td>
-          <td>-</td>
-          <td>60 seg</td>
-          <td>Trabajo explosivo adaptado al nivel del adolescente.</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>Circuito funcional</td>
-          <td>
-            1. Sentadillas<br/>
-            2. Flexiones<br/>
-            3. Planchas laterales<br/>
-            4. Skipping alto
-          </td>
-          <td>3 rondas de 30 seg por ejercicio</td>
-          <td>-</td>
-          <td>30 seg</td>
-          <td>Hacerlo tipo circuito (3 vueltas).</td>
-        </tr>
-        <tr>
-          <td>Domingo</td>
-          <td>Descanso activo</td>
-          <td>Juegos al aire libre, bicicleta o caminata</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>Recuperación activa.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="grupo">
+    <h2>Jóvenes Adultos (18-64 Años)</h2>
+    <p><strong>Aquí tienes un microciclo de 1 semana diseñado para jóvenes adultos (18-29 años) y adultos (30-64 años)</strong> con condición física promedio, sin prescripciones médicas. Está orientado al desarrollo equilibrado de fuerza, resistencia, movilidad y salud general, siguiendo las recomendaciones del ACSM.</p>
+
+    <h3>Objetivos del microciclo</h3>
+    <ul>
+      <li>Mejorar fuerza general y resistencia cardiovascular.</li>
+      <li>Potenciar la movilidad y prevenir lesiones.</li>
+      <li>Desarrollar hábitos de entrenamiento estructurados.</li>
+      <li>Incrementar el gasto energético y condición física funcional.</li>
+    </ul>
+
+    <h3>Recomendaciones</h3>
+    <ul>
+      <li>Duración de la sesión: 45-60 minutos.</li>
+      <li>Intensidad: Moderada (RPE 5-7).</li>
+      <li>Progresión: Aumentar un 5-10% en repeticiones o tiempo de trabajo cada 2-3 semanas.</li>
+      <li>Seguridad: Mantener buena técnica y priorizar movilidad antes de ejercicios de fuerza.</li>
+      <li>Variación: Cambiar algunos ejercicios cada 4 semanas para evitar estancamiento.</li>
+    </ul>
+
+    <p><strong>Estructura del microciclo:</strong> Lunes a sábado (domingo libre)</p>
+    <ul>
+      <li><strong>Lunes:</strong> Fuerza general (pesas libres o peso corporal).</li>
+      <li><strong>Martes:</strong> Cardio moderado (30-40 minutos).</li>
+      <li><strong>Miércoles:</strong> Movilidad + Core (plancha, abdominales, estiramientos activos).</li>
+      <li><strong>Jueves:</strong> Circuito funcional HIIT (30 seg. trabajo / 15 seg. pausa).</li>
+      <li><strong>Viernes:</strong> Actividad cardiovascular de mayor duración o deporte.</li>
+      <li><strong>Sábado:</strong> Actividad libre o sesión de recuperación activa.</li>
+    </ul>
   </div>
-</div>
 
-<div class="content" id="jovenes-adultos" style="display:none;">
-  <h2>💪 Jóvenes y Adultos 18-64 Años</h2>
-  <p><strong>Estructura del microciclo:</strong> 5 días de entrenamiento + 2 de descanso activo</p>
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Objetivo</th>
-          <th>Ejercicios</th>
-          <th>Series x</th>
-          <th>Repeticiones</th>
-          <th>Descanso</th>
-          <th>Observaciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>Fuerza de tren inferior</td>
-          <td>
-            1. Sentadillas (peso corporal o con carga ligera)<br/>
-            2. Zancadas alternas<br/>
-            3. Puente de glúteos
-          </td>
-          <td>4x12<br/>3x12 por pierna<br/>3x15</td>
-          <td>-</td>
-          <td>60 seg</td>
-          <td>Técnica correcta antes de progresar con carga.</td>
-        </tr>
-        <tr>
-          <td>Martes</td>
-          <td>Resistencia aeróbica</td>
-          <td>
-            1. Caminata rápida o trote suave<br/>
-            2. Skipping bajo<br/>
-            3. Remo sin máquina (simulación con bandas o movimiento corporal)
-          </td>
-          <td>20 min<br/>3x30 seg<br/>3x15</td>
-          <td>-</td>
-          <td>60 seg</td>
-          <td>Mantener RPE 5-6 (moderado).</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>Fuerza de tren superior</td>
-          <td>
-            1. Flexiones (rodillas apoyadas o completas)<br/>
-            2. Remo invertido (en mesa o barra baja)<br/>
-            3. Plancha frontal
-          </td>
-          <td>4x8-12<br/>3x10<br/>3x30 seg</td>
-          <td>-</td>
-          <td>60-75 seg</td>
-          <td>Progresar aumentando repeticiones según tolerancia.</td>
-        </tr>
-        <tr>
-          <td>Jueves</td>
-          <td>Descanso activo</td>
-          <td>Caminata ligera + movilidad articular</td>
-          <td>-</td>
-          <td>30 min</td>
-          <td>-</td>
-          <td>Incluye estiramientos dinámicos.</td>
-        </tr>
-        <tr>
-          <td>Viernes</td>
-          <td>Potencia y core</td>
-          <td>
-            1. Burpees controlados<br/>
-            2. Jumping jacks<br/>
-            3. Mountain climbers
-          </td>
-          <td>3x8<br/>3x30 seg<br/>3x20</td>
-          <td>-</td>
-          <td>45-60 seg</td>
-          <td>Mantener técnica para evitar sobrecarga lumbar.</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>Circuito funcional</td>
-          <td>
-            1. Sentadillas<br/>
-            2. Flexiones<br/>
-            3. Planchas laterales<br/>
-            4. Saltos cortos
-          </td>
-          <td>3 rondas de 30 seg por ejercicio</td>
-          <td>-</td>
-          <td>30 seg</td>
-          <td>Realizar en formato circuito con 2 min descanso entre vueltas.</td>
-        </tr>
-        <tr>
-          <td>Domingo</td>
-          <td>Descanso activo</td>
-          <td>Bicicleta suave, caminata o yoga</td>
-          <td>-</td>
-          <td>30 min</td>
-          <td>-</td>
-          <td>Enfocado en recuperación y movilidad.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="grupo">
+    <h2>Adulto Mayor (65+ Años)</h2>
+    <p><strong>Aquí tienes un microciclo de 1 semana diseñado para un adulto mayor de 65 años sin restricciones médicas.</strong> Está orientado a mejorar la movilidad, fuerza funcional, resistencia cardiovascular y equilibrio, usando ejercicios de bajo impacto y controlados.</p>
+
+    <h3>Objetivos del microciclo</h3>
+    <ul>
+      <li>Mantener la salud articular y muscular.</li>
+      <li>Mejorar la resistencia cardiovascular.</li>
+      <li>Desarrollar fuerza funcional y equilibrio.</li>
+    </ul>
+
+    <h3>Recomendaciones</h3>
+    <ul>
+      <li>Intensidad controlada: Mantener esfuerzo moderado (RPE 4-6).</li>
+      <li>Progresión: Aumentar 1-2 repeticiones por semana según tolerancia.</li>
+      <li>Seguridad: Usar apoyo para ejercicios de equilibrio si es necesario.</li>
+      <li>Monitoreo: Hidratarse y evitar llegar a la fatiga extrema.</li>
+      <li>Prevenir caídas y preservar autonomía.</li>
+    </ul>
+
+    <p><strong>Estructura del microciclo:</strong> Lunes a sábado (domingo libre)</p>
+    <ul>
+      <li><strong>Lunes:</strong> Caminata ligera + movilidad articular básica.</li>
+      <li><strong>Martes:</strong> Fuerza funcional (sentarse y levantarse, levantar botellas con brazos).</li>
+      <li><strong>Miércoles:</strong> Equilibrio (caminar en línea recta, ejercicios en un pie).</li>
+      <li><strong>Jueves:</strong> Cardio suave (bicicleta estática, caminadora lenta).</li>
+      <li><strong>Viernes:</strong> Estiramientos activos y ejercicios respiratorios.</li>
+      <li><strong>Sábado:</strong> Actividad libre supervisada (baile suave, yoga, paseo).</li>
+    </ul>
   </div>
-</div>
-
-<script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.content');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Quitar active de todos
-      tabs.forEach(t => t.classList.remove('active'));
-      // Ocultar todos contenidos
-      contents.forEach(c => c.style.display = 'none');
-
-      // Activar el tab clickeado
-      tab.classList.add('active');
-      // Mostrar contenido correspondiente
-      const id = tab.getAttribute('data-tab');
-      document.getElementById(id).style.display = 'block';
-    });
-  });
-</script>
 
 </body>
 </html>
