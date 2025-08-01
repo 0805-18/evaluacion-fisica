@@ -1,104 +1,85 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffeef5;
-  margin: 0;
-  padding: 0;
+  background-color: #fff0f5; /* Rosado claro */
   color: #333;
-}
-
-header {
-  background-color: #f8a5c2;
+  margin: 0;
   padding: 20px;
-  text-align: center;
-  color: white;
 }
 
 h1 {
-  margin: 0;
-}
-
-nav {
-  background-color: #fcd1e2;
-  padding: 10px 0;
+  text-align: center;
+  color: #cc3366;
+  margin-bottom: 30px;
 }
 
 .tabs {
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.tab-item {
+.tab-button {
+  background-color: #f8c8dc;
+  border: none;
   padding: 10px 20px;
+  margin: 5px;
   cursor: pointer;
-  background-color: #f5b6cf;
-  margin: 0 5px;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
-.tab-item:hover {
-  background-color: #e99db8;
+.tab-button:hover {
+  background-color: #f4a6c6;
 }
 
-.tab-item.active {
-  background-color: #d86a9c;
+.tab-button.active {
+  background-color: #e75480;
   color: white;
-}
-
-main {
-  padding: 20px;
+  font-weight: bold;
 }
 
 .tab-content {
   display: none;
+  border-top: 2px solid #e75480;
+  padding: 20px;
+  background-color: #fff5fa;
+  border-radius: 8px;
 }
 
 .tab-content.active {
   display: block;
-  animation: fadeIn 0.3s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #ffe6ee;
 }
 
-th, td {
-  border: 1px solid #f2a8c1;
+table th, table td {
+  border: 1px solid #e75480;
   padding: 10px;
   text-align: center;
 }
 
-th {
-  background-color: #f9c2d1;
+table th {
+  background-color: #f4a6c6;
+  color: white;
 }
 
-td {
-  background-color: #fff4f8;
-}
-
-img {
+.age-image {
+  display: block;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  margin: 20px 0;
-}
-
-ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-h2, h3 {
-  color: #c84f88;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
