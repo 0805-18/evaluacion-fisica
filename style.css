@@ -1,91 +1,99 @@
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6;
+  background-color: #f9f9f9;
   color: #333;
 }
 
 header {
-  background-color: #0077cc;
+  background-color: #0e6ba8;
   color: white;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
 
-h1, h2, h3 {
-  margin: 10px 0;
+h1, h2 {
+  margin: 0.5rem 0;
 }
 
 nav {
-  background-color: #fefefe;
-  border-bottom: 2px solid #ccc;
+  background-color: #e1ecf4;
 }
 
 .tabs {
-  list-style: none;
   display: flex;
   justify-content: space-around;
+  list-style: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 0.5rem 0;
 }
 
 .tab-item {
+  padding: 0.7rem 1.2rem;
   cursor: pointer;
-  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
   font-weight: bold;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 .tab-item:hover {
-  background-color: #e6e6e6;
+  background-color: #d0e5f0;
 }
 
 .tab-item.active {
-  color: #0077cc;
-  border-bottom: 3px solid #0077cc;
+  border-bottom: 3px solid #0e6ba8;
+  background-color: #cbe1f3;
 }
 
 main {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .tab-content {
   display: none;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .tab-content.active {
   display: block;
-  animation: fadeIn 0.3s ease-in-out;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin: 1rem 0;
+  background-color: #fff;
 }
 
-table, th, td {
-  border: 1px solid #ccc;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #0077cc;
+thead {
+  background-color: #0e6ba8;
   color: white;
 }
 
-ul {
-  margin-top: 10px;
-  padding-left: 20px;
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
 }
 
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  color: #0e6ba8;
+}
+
+/* Animación suave */
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
