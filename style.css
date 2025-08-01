@@ -1,100 +1,111 @@
-/* Estilo general */
+/* Fondo y tipografía general */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffeef4; /* Rosado claro suave */
   margin: 0;
   padding: 0;
-  background-color: #fff0f5; /* fondo rosado claro */
   color: #333;
 }
 
+/* Encabezado */
 header {
-  background-color: #d881a3; /* rosa más intenso */
+  background-color: #f8a5c2;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1.2rem 0;
 }
 
-h1, h2 {
-  margin: 0.5rem 0;
-}
-
+/* Navegación con pestañas */
 nav {
-  background-color: #fce4ec; /* rosa pastel */
+  background-color: #ffc0d9;
+  display: flex;
+  justify-content: center;
 }
 
 .tabs {
-  display: flex;
-  justify-content: space-around;
   list-style: none;
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tab-item {
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
   font-weight: bold;
-  transition: all 0.3s;
-  color: #a94468;
+  color: #6c1e39;
 }
 
 .tab-item:hover {
-  background-color: #f8bbd0; /* rosa suave al pasar */
+  background-color: #f9d3e1;
 }
 
 .tab-item.active {
-  border-bottom: 3px solid #d881a3;
-  background-color: #f8bbd0;
+  border-bottom: 3px solid #d44b84;
+  background-color: #fce4ec;
 }
 
-main {
-  padding: 1.5rem;
-}
-
+/* Contenido de pestañas */
 .tab-content {
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease;
 }
 
 .tab-content.active {
   display: block;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  background-color: #fff;
-}
-
-thead {
-  background-color: #d881a3;
-  color: white;
-}
-
-th, td {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-
-ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  color: #c2185b;
-}
-
-/* Animación suave */
+/* Animación */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #e6a9b3;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f8c2d5;
+  color: #4d1c2f;
+}
+
+td {
+  background-color: #fff5f8;
+}
+
+/* Listas */
+ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Imágenes */
+.tab-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 1rem auto 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
