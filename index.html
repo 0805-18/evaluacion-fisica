@@ -3,75 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Microciclos de Entrenamiento</title>
+  <title>Microciclos de Entrenamiento 🏋️‍♂️✨</title>
   <style>
-    /* Estilos básicos para pestañas */
+    /* Estilo general */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffe4f0; /* rosado suave */
       margin: 20px;
-      background: #f5f5f5;
+      color: #4a235a;
     }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #6a1b9a;
+    }
+
     nav {
       margin-bottom: 20px;
+      text-align: center;
     }
+
     nav button {
-      background: #007bff;
+      background: #d81b60;
       color: white;
       border: none;
-      padding: 10px 16px;
-      margin-right: 5px;
+      padding: 10px 18px;
+      margin: 0 5px;
+      font-size: 1rem;
+      border-radius: 12px 12px 0 0;
       cursor: pointer;
-      border-radius: 4px 4px 0 0;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+      user-select: none;
     }
+
+    nav button:hover {
+      background: #ad1457;
+    }
+
     nav button.active {
-      background: #0056b3;
+      background: #880e4f;
+      box-shadow: 0 4px 12px rgba(168, 44, 99, 0.5);
     }
-    section.tab-content {
-      display: none;
+
+    main {
       background: white;
-      padding: 15px;
-      border-radius: 0 4px 4px 4px;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      border-radius: 0 12px 12px 12px;
+      box-shadow: 0 8px 20px rgb(168 44 99 / 0.3);
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    section.tab-content.active {
-      display: block;
-    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
+      font-size: 0.95rem;
+      color: #4a235a;
     }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 8px 10px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background-color: #007bff;
-      color: white;
-    }
+
     caption {
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 1.1rem;
       margin-bottom: 10px;
-      font-size: 1.1em;
-      color: #333;
+      color: #a31e66;
+    }
+
+    th, td {
+      border: 1px solid #d81b60;
+      padding: 8px 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f48fb1;
+      color: #6a1b9a;
+    }
+
+    /* Ocultar contenido por defecto */
+    section.tab-content {
+      display: none;
+    }
+    section.tab-content.active {
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      nav button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        margin: 3px 3px;
+      }
+      table, th, td {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>Microciclos de Entrenamiento 🏃‍♂️💪🎉</h1>
 
   <nav>
-    <button data-tab="ninos" class="active">Niños 10-11 Años</button>
-    <button data-tab="adolescentes">Adolescentes 12-17 Años</button>
-    <button data-tab="jovenes">Jóvenes y Adultos 18-64 Años</button>
-    <button data-tab="adultomayor">Adulto Mayor 65+ Años</button>
+    <button data-tab="ninos" class="active">👶 Niños 10-11 Años</button>
+    <button data-tab="adolescentes">🧑 Adolescentes 12-17 Años</button>
+    <button data-tab="jovenes">👨‍🦰 Jóvenes y Adultos 18-64 Años</button>
+    <button data-tab="adultomayor">👵 Adulto Mayor 65+ Años</button>
   </nav>
 
-  <main id="content-area">
+  <main>
     <!-- Niños 10-11 Años -->
     <section id="ninos" class="tab-content active" aria-label="Plan de entrenamiento para Niños 10-11 Años">
       <table>
@@ -280,7 +323,7 @@
     </section>
 
     <!-- Jóvenes y Adultos 18-64 Años -->
-    <section id="jovenes" class="tab-content" aria-label="Plan de entrenamiento para Jóvenes y Adultos 18 a 64 años">
+    <section id="jovenes" class="tab-content" aria-label="Plan de entrenamiento para Jóvenes y Adultos 18-64 Años">
       <table>
         <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
         <thead>
@@ -384,7 +427,7 @@
     </section>
 
     <!-- Adulto Mayor 65+ Años -->
-    <section id="adultomayor" class="tab-content" aria-label="Plan de entrenamiento para Adulto Mayor 65+ años">
+    <section id="adultomayor" class="tab-content" aria-label="Plan de entrenamiento para Adulto Mayor 65+ Años">
       <table>
         <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
         <thead>
@@ -443,30 +486,29 @@
             <td>Fuerza y resistencia</td>
             <td>
               1. Sentadillas asistidas (silla)<br />
-              2. Flexiones de pared<br />
-              3. Marcha con elevación de rodillas
+              2. Flexiones de rodillas en el suelo<br />
+              3. Caminata rápida
             </td>
-            <td>3x10<br />3x12<br />3x20 seg</td>
+            <td>1. 3x8<br />2. 3x6-8<br />3. 15 min</td>
             <td>—</td>
           </tr>
           <tr>
             <td>Sábado</td>
-            <td>Circuito funcional</td>
+            <td>Resistencia y equilibrio</td>
             <td>
-              1. Marcha en el lugar<br />
-              2. Elevación lateral de brazos<br />
-              3. Caminata lateral<br />
-              4. Estiramientos dinámicos
+              1. Caminata en línea recta (talón a punta)<br />
+              2. Subir y bajar un escalón bajo<br />
+              3. Elevación lateral de brazos sin carga
             </td>
-            <td>3 rondas de 30 seg por ejercicio</td>
+            <td>1. 3x10 pasos<br />2. 3x10<br />3. 3x12</td>
             <td>—</td>
           </tr>
           <tr>
             <td>Domingo</td>
             <td>Descanso activo</td>
-            <td>Yoga suave o ejercicios de respiración</td>
+            <td>Estiramientos suaves y respiración</td>
             <td>—</td>
-            <td>30 min</td>
+            <td>10 min</td>
           </tr>
         </tbody>
       </table>
@@ -491,6 +533,5 @@
       });
     });
   </script>
-
 </body>
 </html>
