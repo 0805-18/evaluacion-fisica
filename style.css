@@ -3,12 +3,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #fff0f5; /* fondo rosado claro */
   color: #333;
 }
 
 header {
-  background-color: #0e6ba8;
+  background-color: #d881a3; /* rosa más intenso */
   color: white;
   padding: 1rem;
   text-align: center;
@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 nav {
-  background-color: #e1ecf4;
+  background-color: #fce4ec; /* rosa pastel */
 }
 
 .tabs {
@@ -36,15 +36,16 @@ nav {
   border-bottom: 2px solid transparent;
   font-weight: bold;
   transition: all 0.3s;
+  color: #a94468;
 }
 
 .tab-item:hover {
-  background-color: #d0e5f0;
+  background-color: #f8bbd0; /* rosa suave al pasar */
 }
 
 .tab-item.active {
-  border-bottom: 3px solid #0e6ba8;
-  background-color: #cbe1f3;
+  border-bottom: 3px solid #d881a3;
+  background-color: #f8bbd0;
 }
 
 main {
@@ -68,7 +69,7 @@ table {
 }
 
 thead {
-  background-color: #0e6ba8;
+  background-color: #d881a3;
   color: white;
 }
 
@@ -89,7 +90,7 @@ ul li {
 
 h3 {
   margin-top: 1.5rem;
-  color: #0e6ba8;
+  color: #c2185b;
 }
 
 /* Animación suave */
