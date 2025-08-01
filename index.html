@@ -3,120 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Microciclos de Entrenamiento 🏋️‍♂️✨</title>
+  <title>Planes de Entrenamiento 🏋️‍♂️🏃‍♀️</title>
   <style>
-    /* Estilo general */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #ffe4f0; /* rosado suave */
-      margin: 20px;
-      color: #4a235a;
+      background-color: #ffe6f0;
+      color: #4a0033;
+      margin: 0;
+      padding: 0;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      color: #6a1b9a;
-    }
-
-    nav {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    nav button {
-      background: #d81b60;
+    header {
+      background-color: #ff66b2;
       color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(255, 102, 178, 0.5);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ff99cc;
+      box-shadow: 0 2px 5px rgba(255, 153, 204, 0.5);
+    }
+    nav button {
+      background: none;
       border: none;
-      padding: 10px 18px;
-      margin: 0 5px;
-      font-size: 1rem;
-      border-radius: 12px 12px 0 0;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      color: #660033;
+      transition: background-color 0.3s, color 0.3s;
       font-weight: 600;
-      user-select: none;
     }
-
-    nav button:hover {
-      background: #ad1457;
+    nav button:hover,
+    nav button[aria-selected="true"] {
+      background-color: #ff66b2;
+      color: white;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 8px rgba(255, 102, 178, 0.7);
     }
-
-    nav button.active {
-      background: #880e4f;
-      box-shadow: 0 4px 12px rgba(168, 44, 99, 0.5);
-    }
-
     main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
       background: white;
-      border-radius: 0 12px 12px 12px;
-      box-shadow: 0 8px 20px rgb(168 44 99 / 0.3);
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 102, 178, 0.3);
     }
-
+    section {
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    section.active {
+      display: block;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 1rem;
       font-size: 0.95rem;
-      color: #4a235a;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(255, 102, 178, 0.2);
     }
-
     caption {
       font-weight: 700;
       font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #a31e66;
+      margin-bottom: 0.75rem;
+      color: #cc0066;
+      text-align: left;
     }
-
+    thead {
+      background-color: #ff66b2;
+      color: white;
+    }
     th, td {
-      border: 1px solid #d81b60;
-      padding: 8px 10px;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #ff99cc;
       vertical-align: top;
       text-align: left;
     }
-
-    th {
-      background: #f48fb1;
-      color: #6a1b9a;
+    tbody tr:nth-child(even) {
+      background-color: #ffe6f0;
     }
-
-    /* Ocultar contenido por defecto */
-    section.tab-content {
-      display: none;
-    }
-    section.tab-content.active {
-      display: block;
-    }
-
-    /* Responsive */
     @media (max-width: 720px) {
-      nav button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-        margin: 3px 3px;
+      table, thead, tbody, th, td, tr {
+        display: block;
       }
-      table, th, td {
-        font-size: 0.85rem;
+      thead tr {
+        display: none;
       }
+      tbody tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid #ff99cc;
+        border-radius: 8px;
+        padding: 0.8rem;
+      }
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+      td::before {
+        position: absolute;
+        top: 0.6rem;
+        left: 1rem;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #cc0066;
+        content: attr(data-label);
+      }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
   </style>
 </head>
 <body>
-  <h1>Microciclos de Entrenamiento 🏃‍♂️💪🎉</h1>
+  <header>
+    Planes de Entrenamiento 🏋️‍♂️🏃‍♀️
+  </header>
 
-  <nav>
-    <button data-tab="ninos" class="active">👶 Niños 10-11 Años</button>
-    <button data-tab="adolescentes">🧑 Adolescentes 12-17 Años</button>
-    <button data-tab="jovenes">👨‍🦰 Jóvenes y Adultos 18-64 Años</button>
-    <button data-tab="adultomayor">👵 Adulto Mayor 65+ Años</button>
+  <nav role="tablist" aria-label="Planes de entrenamiento por grupo etario">
+    <button role="tab" aria-selected="true" aria-controls="infantil" id="tab-infantil">👦 Niños (6-12 años)</button>
+    <button role="tab" aria-selected="false" aria-controls="jovenes" id="tab-jovenes">🧑 Jóvenes y Adultos (18-64 años)</button>
+    <button role="tab" aria-selected="false" aria-controls="adultomayor" id="tab-adultomayor">👴 Adulto Mayor (65+ años)</button>
   </nav>
 
   <main>
-    <!-- Niños 10-11 Años -->
-    <section id="ninos" class="tab-content active" aria-label="Plan de entrenamiento para Niños 10-11 Años">
+    <!-- Niños 6-12 Años -->
+    <section id="infantil" class="tab-content active" role="tabpanel" tabindex="0" aria-labelledby="tab-infantil">
+      <p>Plan de entrenamiento para niños con enfoque en el desarrollo de fuerza general, coordinación y resistencia de manera lúdica y segura.</p>
       <table>
         <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
         <thead>
@@ -132,198 +155,96 @@
         </thead>
         <tbody>
           <tr>
-            <td>Lunes</td>
-            <td>Coordinación y agilidad</td>
-            <td>
-              1. Carrera con cambios de dirección (zigzag)<br />
-              2. Saltos a pies juntos sobre líneas marcadas<br />
-              3. Juego de "atrapa al compañero"
-            </td>
-            <td>1. 4x20 m<br />2. 3x12<br />3. 3x1 min</td>
-            <td>—</td>
-            <td>1 min</td>
-            <td>Trabajar en espacios seguros, superficie plana.</td>
-          </tr>
-          <tr>
-            <td>Martes</td>
-            <td>Fuerza básica</td>
-            <td>
-              1. Sentadillas sin peso<br />
-              2. Flexiones asistidas (apoyo rodillas)<br />
-              3. Plancha frontal
-            </td>
-            <td>1. 3x12<br />2. 3x8<br />3. 3x15 seg</td>
-            <td>—</td>
-            <td>45 seg</td>
-            <td>Asegurar correcta técnica y supervisión.</td>
-          </tr>
-          <tr>
-            <td>Miércoles</td>
-            <td>Resistencia lúdica</td>
-            <td>
-              1. Carrera suave (juego de relevos)<br />
-              2. Skipping bajo<br />
-              3. Saltos laterales
-            </td>
-            <td>1. 4x50 m<br />2. 3x20 seg<br />3. 3x12</td>
-            <td>—</td>
-            <td>1 min</td>
-            <td>Mantener ambiente motivante y recreativo.</td>
-          </tr>
-          <tr>
-            <td>Jueves</td>
-            <td>Descanso activo</td>
-            <td>Caminata ligera y juegos libres</td>
-            <td>—</td>
-            <td>20 min</td>
-            <td>—</td>
-            <td>Evitar esfuerzos intensos, fomentar movimiento espontáneo.</td>
-          </tr>
-          <tr>
-            <td>Viernes</td>
-            <td>Coordinación y equilibrio</td>
-            <td>
-              1. Caminar sobre línea recta (equilibrio)<br />
-              2. Juego de "simón dice" con movimientos motrices<br />
-              3. Saltos unipodales
-            </td>
-            <td>1. 3x10 pasos<br />2. 3x2 min<br />3. 3x6 por pierna</td>
-            <td>—</td>
-            <td>45 seg</td>
-            <td>Favorecer el control postural.</td>
-          </tr>
-          <tr>
-            <td>Sábado</td>
-            <td>Circuito motriz</td>
-            <td>
-              1. Gateo (4 puntos)<br />
-              2. Saltos cortos consecutivos<br />
-              3. Carreras cortas + burpees modificados
-            </td>
-            <td>1. 3x10 m<br />2. 3x10<br />3. 3x20 seg</td>
-            <td>—</td>
-            <td>1 min</td>
-            <td>Presentarlo en forma de juego por estaciones.</td>
-          </tr>
-          <tr>
-            <td>Domingo</td>
-            <td>Descanso activo</td>
-            <td>Juegos al aire libre (bicicleta, pelota)</td>
-            <td>—</td>
-            <td>30 min</td>
-            <td>—</td>
-            <td>Mantener movimiento sin estructura formal.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Adolescentes 12-17 Años -->
-    <section id="adolescentes" class="tab-content" aria-label="Plan de entrenamiento para Adolescentes 12-17 Años">
-      <table>
-        <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Objetivo</th>
-            <th>Ejercicios</th>
-            <th>Series x</th>
-            <th>Repeticiones</th>
-            <th>Descanso</th>
-            <th>Observaciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lunes</td>
-            <td>Fuerza general</td>
-            <td>
+            <td data-label="Día">Lunes</td>
+            <td data-label="Objetivo">Fuerza general</td>
+            <td data-label="Ejercicios">
               1. Sentadillas sin peso<br />
               2. Flexiones de brazos<br />
               3. Plancha frontal
             </td>
-            <td>3x12<br />3x10<br />3x20 seg</td>
-            <td>—</td>
-            <td>60 seg</td>
-            <td>Enfocar en técnica, progresar aumentando repeticiones.</td>
+            <td data-label="Series x">3x12<br />3x10<br />3x20 seg</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">60 seg</td>
+            <td data-label="Observaciones">Enfocar en técnica, progresar aumentando repeticiones.</td>
           </tr>
           <tr>
-            <td>Martes</td>
-            <td>Resistencia aeróbica</td>
-            <td>
+            <td data-label="Día">Martes</td>
+            <td data-label="Objetivo">Resistencia aeróbica</td>
+            <td data-label="Ejercicios">
               1. Carrera continua<br />
               2. Skipping bajo<br />
               3. Juego de relevos
             </td>
-            <td>—<br />3x30 seg<br />4 repeticiones</td>
-            <td>10-15 min</td>
-            <td>60 seg</td>
-            <td>Mantener RPE 5-6 (moderado).</td>
+            <td data-label="Series x">—<br />3x30 seg<br />4 repeticiones</td>
+            <td data-label="Repeticiones">10-15 min</td>
+            <td data-label="Descanso">60 seg</td>
+            <td data-label="Observaciones">Mantener RPE 5-6 (moderado).</td>
           </tr>
           <tr>
-            <td>Miércoles</td>
-            <td>Coordinación y agilidad</td>
-            <td>
+            <td data-label="Día">Miércoles</td>
+            <td data-label="Objetivo">Coordinación y agilidad</td>
+            <td data-label="Ejercicios">
               1. Circuito de conos (zigzag)<br />
               2. Saltos laterales<br />
               3. Escalera de coordinación
             </td>
-            <td>4x20 m<br />3x12<br />3x20 seg</td>
-            <td>—</td>
-            <td>45 seg</td>
-            <td>Velocidad controlada, énfasis en precisión.</td>
+            <td data-label="Series x">4x20 m<br />3x12<br />3x20 seg</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">45 seg</td>
+            <td data-label="Observaciones">Velocidad controlada, énfasis en precisión.</td>
           </tr>
           <tr>
-            <td>Jueves</td>
-            <td>Descanso activo</td>
-            <td>Caminata suave, estiramientos y juegos recreativos</td>
-            <td>—</td>
-            <td>20 min</td>
-            <td>—</td>
-            <td>Mantener movilidad sin fatiga.</td>
+            <td data-label="Día">Jueves</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Caminata suave, estiramientos y juegos recreativos</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">20 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Mantener movilidad sin fatiga.</td>
           </tr>
           <tr>
-            <td>Viernes</td>
-            <td>Potencia y resistencia</td>
-            <td>
+            <td data-label="Día">Viernes</td>
+            <td data-label="Objetivo">Potencia y resistencia</td>
+            <td data-label="Ejercicios">
               1. Burpees modificados<br />
               2. Saltos con rodillas al pecho<br />
               3. Mountain climbers
             </td>
-            <td>3x8<br />3x10<br />3x15 seg</td>
-            <td>—</td>
-            <td>60 seg</td>
-            <td>Trabajo explosivo adaptado al nivel del adolescente.</td>
+            <td data-label="Series x">3x8<br />3x10<br />3x15 seg</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">60 seg</td>
+            <td data-label="Observaciones">Trabajo explosivo adaptado al nivel del adolescente.</td>
           </tr>
           <tr>
-            <td>Sábado</td>
-            <td>Circuito funcional</td>
-            <td>
+            <td data-label="Día">Sábado</td>
+            <td data-label="Objetivo">Circuito funcional</td>
+            <td data-label="Ejercicios">
               1. Sentadillas<br />
               2. Flexiones<br />
               3. Planchas laterales<br />
               4. Skipping alto
             </td>
-            <td>3 rondas de 30 seg por ejercicio</td>
-            <td>—</td>
-            <td>30 seg</td>
-            <td>Hacerlo tipo circuito (3 vueltas).</td>
+            <td data-label="Series x">3 rondas de 30 seg por ejercicio</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">30 seg</td>
+            <td data-label="Observaciones">Hacerlo tipo circuito (3 vueltas).</td>
           </tr>
           <tr>
-            <td>Domingo</td>
-            <td>Descanso activo</td>
-            <td>Juegos al aire libre, bicicleta o caminata</td>
-            <td>—</td>
-            <td>30 min</td>
-            <td>—</td>
-            <td>Recuperación activa.</td>
+            <td data-label="Día">Domingo</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Juegos al aire libre, bicicleta o caminata</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">30 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Recuperación activa.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <!-- Jóvenes y Adultos 18-64 Años -->
-    <section id="jovenes" class="tab-content" aria-label="Plan de entrenamiento para Jóvenes y Adultos 18-64 Años">
+    <section id="jovenes" class="tab-content" role="tabpanel" tabindex="0" aria-labelledby="tab-jovenes">
+      <p>Este plan está orientado a jóvenes y adultos en edad laboral para mantener o mejorar la condición física general, con énfasis en fuerza, resistencia, potencia y movilidad.</p>
       <table>
         <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
         <thead>
@@ -339,95 +260,96 @@
         </thead>
         <tbody>
           <tr>
-            <td>Lunes</td>
-            <td>Fuerza de tren inferior</td>
-            <td>
+            <td data-label="Día">Lunes</td>
+            <td data-label="Objetivo">Fuerza de tren inferior</td>
+            <td data-label="Ejercicios">
               1. Sentadillas (peso corporal o con carga ligera)<br />
               2. Zancadas alternas<br />
               3. Puente de glúteos
             </td>
-            <td>4x12<br />3x12 por pierna<br />3x15</td>
-            <td>—</td>
-            <td>60 seg</td>
-            <td>Técnica correcta antes de progresar con carga.</td>
+            <td data-label="Series x">4x12<br />3x12 por pierna<br />3x15</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">60 seg</td>
+            <td data-label="Observaciones">Técnica correcta antes de progresar con carga.</td>
           </tr>
           <tr>
-            <td>Martes</td>
-            <td>Resistencia aeróbica</td>
-            <td>
+            <td data-label="Día">Martes</td>
+            <td data-label="Objetivo">Resistencia aeróbica</td>
+            <td data-label="Ejercicios">
               1. Caminata rápida o trote suave<br />
               2. Skipping bajo<br />
               3. Remo sin máquina (simulación con bandas o movimiento corporal)
             </td>
-            <td>—<br />3x30 seg<br />3x15</td>
-            <td>20 min</td>
-            <td>60 seg</td>
-            <td>Mantener RPE 5-6 (moderado).</td>
+            <td data-label="Series x">—<br />3x30 seg<br />3x15</td>
+            <td data-label="Repeticiones">20 min</td>
+            <td data-label="Descanso">60 seg</td>
+            <td data-label="Observaciones">Mantener RPE 5-6 (moderado).</td>
           </tr>
           <tr>
-            <td>Miércoles</td>
-            <td>Fuerza de tren superior</td>
-            <td>
+            <td data-label="Día">Miércoles</td>
+            <td data-label="Objetivo">Fuerza de tren superior</td>
+            <td data-label="Ejercicios">
               1. Flexiones (rodillas apoyadas o completas)<br />
               2. Remo invertido (en mesa o barra baja)<br />
               3. Plancha frontal
             </td>
-            <td>4x8-12<br />3x10<br />3x30 seg</td>
-            <td>—</td>
-            <td>60-75 seg</td>
-            <td>Progresar aumentando repeticiones según tolerancia.</td>
+            <td data-label="Series x">4x8-12<br />3x10<br />3x30 seg</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">60-75 seg</td>
+            <td data-label="Observaciones">Progresar aumentando repeticiones según tolerancia.</td>
           </tr>
           <tr>
-            <td>Jueves</td>
-            <td>Descanso activo</td>
-            <td>Caminata ligera + movilidad articular</td>
-            <td>—</td>
-            <td>30 min</td>
-            <td>—</td>
-            <td>Incluye estiramientos dinámicos.</td>
+            <td data-label="Día">Jueves</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Caminata ligera + movilidad articular</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">30 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Incluye estiramientos dinámicos.</td>
           </tr>
           <tr>
-            <td>Viernes</td>
-            <td>Potencia y core</td>
-            <td>
+            <td data-label="Día">Viernes</td>
+            <td data-label="Objetivo">Potencia y core</td>
+            <td data-label="Ejercicios">
               1. Burpees controlados<br />
               2. Jumping jacks<br />
               3. Mountain climbers
             </td>
-            <td>3x8<br />3x30 seg<br />3x20</td>
-            <td>—</td>
-            <td>45-60 seg</td>
-            <td>Mantener técnica para evitar sobrecarga lumbar.</td>
+            <td data-label="Series x">3x8<br />3x30 seg<br />3x20</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">45-60 seg</td>
+            <td data-label="Observaciones">Mantener técnica para evitar sobrecarga lumbar.</td>
           </tr>
           <tr>
-            <td>Sábado</td>
-            <td>Circuito funcional</td>
-            <td>
+            <td data-label="Día">Sábado</td>
+            <td data-label="Objetivo">Circuito funcional</td>
+            <td data-label="Ejercicios">
               1. Sentadillas<br />
               2. Flexiones<br />
               3. Planchas laterales<br />
               4. Saltos cortos
             </td>
-            <td>3 rondas de 30 seg por ejercicio</td>
-            <td>—</td>
-            <td>30 seg</td>
-            <td>Realizar en formato circuito con 2 min descanso entre vueltas.</td>
+            <td data-label="Series x">3 rondas de 30 seg por ejercicio</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">30 seg</td>
+            <td data-label="Observaciones">Realizar en formato circuito con 2 min descanso entre vueltas.</td>
           </tr>
           <tr>
-            <td>Domingo</td>
-            <td>Descanso activo</td>
-            <td>Bicicleta suave, caminata o yoga</td>
-            <td>—</td>
-            <td>30 min</td>
-            <td>—</td>
-            <td>Enfocado en recuperación y movilidad.</td>
+            <td data-label="Día">Domingo</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Bicicleta suave, caminata o yoga</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">30 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Enfocado en recuperación y movilidad.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <!-- Adulto Mayor 65+ Años -->
-    <section id="adultomayor" class="tab-content" aria-label="Plan de entrenamiento para Adulto Mayor 65+ Años">
+    <section id="adultomayor" class="tab-content" role="tabpanel" tabindex="0" aria-labelledby="tab-adultomayor">
+      <p>Entrenamiento adaptado para adultos mayores con foco en movilidad, equilibrio, fuerza funcional y respiración.</p>
       <table>
         <caption>Estructura del microciclo (5 días de entrenamiento + 2 de descanso activo)</caption>
         <thead>
@@ -437,78 +359,89 @@
             <th>Ejercicios</th>
             <th>Series x</th>
             <th>Repeticiones</th>
+            <th>Descanso</th>
+            <th>Observaciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Lunes</td>
-            <td>Movilidad y fuerza básica</td>
-            <td>
-              1. Marcha en el lugar con brazos (2 min)<br />
-              2. Sentarse y levantarse de la silla<br />
-              3. Flexiones de pared<br />
-              4. Elevación de talones
+            <td data-label="Día">Lunes</td>
+            <td data-label="Objetivo">Movilidad articular</td>
+            <td data-label="Ejercicios">
+              1. Rotaciones de hombros y cuello<br />
+              2. Flexión y extensión de rodillas<br />
+              3. Respiración diafragmática
             </td>
-            <td>1. 2 min<br />2. 3x10<br />3. 3x10<br />4. 3x12</td>
-            <td>—</td>
+            <td data-label="Series x">—<br />3x15<br />3x10</td>
+            <td data-label="Repeticiones">15 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Ejecutar movimientos lentos y controlados.</td>
           </tr>
           <tr>
-            <td>Martes</td>
-            <td>Resistencia cardiovascular</td>
-            <td>
-              1. Caminata continua<br />
-              2. Marcha lateral (pasos cortos)<br />
-              3. Skipping bajo suave
+            <td data-label="Día">Martes</td>
+            <td data-label="Objetivo">Fuerza y equilibrio</td>
+            <td data-label="Ejercicios">
+              1. Sentadillas asistidas<br />
+              2. Apoyo unipodal (mantener 15 seg por pierna)<br />
+              3. Marcha en el lugar
             </td>
-            <td>1. 20 min<br />2. 3x20 pasos<br />3. 3x20 seg</td>
-            <td>—</td>
+            <td data-label="Series x">3x10<br />3x15 seg<br />2 min</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Priorizar seguridad y estabilidad.</td>
           </tr>
           <tr>
-            <td>Miércoles</td>
-            <td>Equilibrio y fuerza</td>
-            <td>
-              1. Apoyo unipodal (con apoyo) pierna<br />
-              2. Puente de glúteos<br />
-              3. Curl de bíceps isométrico (sin carga, contracción 5 seg)
+            <td data-label="Día">Miércoles</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Estiramientos suaves y respiración</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">20 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Mantener movilidad sin fatiga.</td>
+          </tr>
+          <tr>
+            <td data-label="Día">Jueves</td>
+            <td data-label="Objetivo">Movilidad y fortalecimiento</td>
+            <td data-label="Ejercicios">
+              1. Flexiones de pared<br />
+              2. Elevación lateral de brazos<br />
+              3. Caminar con pasos amplios
             </td>
-            <td>1. 3x15 seg cada<br />2. 3x12<br />3. 3x8</td>
-            <td>—</td>
+            <td data-label="Series x">3x10<br />3x10<br />3x15</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Enfocado en fortalecer y mantener independencia.</td>
           </tr>
           <tr>
-            <td>Jueves</td>
-            <td>Descanso activo</td>
-            <td>Caminata ligera o movilidad articular completa</td>
-            <td>—</td>
-            <td>20 min</td>
-          </tr>
-          <tr>
-            <td>Viernes</td>
-            <td>Fuerza y resistencia</td>
-            <td>
-              1. Sentadillas asistidas (silla)<br />
-              2. Flexiones de rodillas en el suelo<br />
-              3. Caminata rápida
+            <td data-label="Día">Viernes</td>
+            <td data-label="Objetivo">Circuito funcional ligero</td>
+            <td data-label="Ejercicios">
+              1. Sentadillas asistidas<br />
+              2. Caminata lenta<br />
+              3. Estiramientos
             </td>
-            <td>1. 3x8<br />2. 3x6-8<br />3. 15 min</td>
-            <td>—</td>
+            <td data-label="Series x">3x10<br />10 min<br />10 min</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Realizar con ayuda si es necesario.</td>
           </tr>
           <tr>
-            <td>Sábado</td>
-            <td>Resistencia y equilibrio</td>
-            <td>
-              1. Caminata en línea recta (talón a punta)<br />
-              2. Subir y bajar un escalón bajo<br />
-              3. Elevación lateral de brazos sin carga
-            </td>
-            <td>1. 3x10 pasos<br />2. 3x10<br />3. 3x12</td>
-            <td>—</td>
+            <td data-label="Día">Sábado</td>
+            <td data-label="Objetivo">Descanso activo</td>
+            <td data-label="Ejercicios">Paseo al aire libre o respiración consciente</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">30 min</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Promover relajación y bienestar.</td>
           </tr>
           <tr>
-            <td>Domingo</td>
-            <td>Descanso activo</td>
-            <td>Estiramientos suaves y respiración</td>
-            <td>—</td>
-            <td>10 min</td>
+            <td data-label="Día">Domingo</td>
+            <td data-label="Objetivo">Descanso total</td>
+            <td data-label="Ejercicios">—</td>
+            <td data-label="Series x">—</td>
+            <td data-label="Repeticiones">—</td>
+            <td data-label="Descanso">—</td>
+            <td data-label="Observaciones">Recuperación completa.</td>
           </tr>
         </tbody>
       </table>
@@ -516,20 +449,24 @@
   </main>
 
   <script>
-    // Código para manejar las pestañas
-    const tabs = document.querySelectorAll('nav button');
-    const tabContents = document.querySelectorAll('.tab-content');
+    // Tabs functionality
+    const tabs = document.querySelectorAll('nav button[role="tab"]');
+    const sections = document.querySelectorAll('section[role="tabpanel"]');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Quitar clase active de todas las pestañas y contenidos
-        tabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(tc => tc.classList.remove('active'));
-
-        // Activar la pestaña y contenido correspondiente
-        tab.classList.add('active');
-        const tabId = tab.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
+        // Deselect all tabs
+        tabs.forEach(t => {
+          t.setAttribute('aria-selected', 'false');
+        });
+        // Hide all sections
+        sections.forEach(s => s.classList.remove('active'));
+        // Select clicked tab
+        tab.setAttribute('aria-selected', 'true');
+        // Show associated section
+        const id = tab.getAttribute('aria-controls');
+        document.getElementById(id).classList.add('active');
+        document.getElementById(id).focus();
       });
     });
   </script>
