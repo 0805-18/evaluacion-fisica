@@ -1,111 +1,108 @@
-/* Fondo y tipografía general */
+/* Estilo general */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffeef4; /* Rosado claro suave */
   margin: 0;
   padding: 0;
+  background-color: #fdeef4; /* rosado claro suave */
   color: #333;
 }
 
-/* Encabezado */
 header {
-  background-color: #f8a5c2;
-  color: white;
+  background-color: #f8c8dc; /* rosado pastel */
+  color: #4a4a4a;
+  padding: 20px;
   text-align: center;
-  padding: 1.2rem 0;
 }
 
-/* Navegación con pestañas */
+h1, h2, h3 {
+  color: #4b2c3c;
+}
+
 nav {
-  background-color: #ffc0d9;
-  display: flex;
-  justify-content: center;
+  background-color: #f7d9e4;
 }
 
 .tabs {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0;
 }
 
 .tab-item {
-  padding: 0.8rem 1.2rem;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  color: #6c1e39;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f9d5e5;
+  color: #4b2c3c;
+  transition: background-color 0.3s ease;
 }
 
 .tab-item:hover {
-  background-color: #f9d3e1;
+  background-color: #f7cde2;
 }
 
 .tab-item.active {
-  border-bottom: 3px solid #d44b84;
-  background-color: #fce4ec;
+  background-color: #f6b4d1;
+  font-weight: bold;
 }
 
-/* Contenido de pestañas */
+/* Contenido de las pestañas */
 .tab-content {
   display: none;
-  padding: 2rem;
-  animation: fadeIn 0.5s ease;
+  padding: 20px;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* Animación */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Tablas */
+/* Estilo de las tablas */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin: 20px 0;
   background-color: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 th, td {
-  border: 1px solid #e6a9b3;
-  padding: 0.75rem;
-  text-align: left;
+  border: 1px solid #dcaecb;
+  padding: 12px;
+  text-align: center;
 }
 
 th {
-  background-color: #f8c2d5;
-  color: #4d1c2f;
-}
-
-td {
-  background-color: #fff5f8;
+  background-color: #f6b4d1;
+  color: #333;
 }
 
 /* Listas */
 ul {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
+  list-style-type: square;
+  margin-left: 20px;
 }
 
 /* Imágenes */
-.tab-image {
-  width: 100%;
-  max-width: 500px;
+.section-image {
+  max-width: 100%;
   height: auto;
-  display: block;
-  margin: 1rem auto 2rem auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-item {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 }
