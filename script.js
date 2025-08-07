@@ -1,12 +1,22 @@
-const tabItems = document.querySelectorAll('.tab-item');
-const tabContents = document.querySelectorAll('.tab-content');
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab-item");
+  const contents = document.querySelectorAll(".tab-content");
 
-tabItems.forEach(item => {
-  item.addEventListener('click', () => {
-    tabItems.forEach(tab => tab.classList.remove('active'));
-    tabContents.forEach(content => content.classList.remove('active'));
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // Remover la clase active de todas las pestañas
+      tabs.forEach(t => t.classList.remove("active"));
+      // Agregar clase active a la pestaña clickeada
+      tab.classList.add("active");
 
-    item.classList.add('active');
-    document.getElementById(item.getAttribute('data-tab')).classList.add('active');
+      // Ocultar todos los contenidos
+      contents.forEach(content => content.classList.remove("active"));
+      // Mostrar el contenido correspondiente
+      const tabId = tab.getAttribute("data-tab");
+      const activeContent = document.getElementById(tabId);
+      if (activeContent) {
+        activeContent.classList.add("active");
+      }
+    });
   });
 });
