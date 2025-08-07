@@ -47,11 +47,24 @@ main {
   display: block;
 }
 
+h2 {
+  color: #660033;
+}
+
+h3 {
+  color: #b30059;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
   background-color: #fff7fb;
+  border-radius: 10px;
 }
 
 th,
@@ -61,10 +74,20 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-h3 {
-  color: #b30059;
+th {
+  background-color: #f4c2d7;
+  color: #660033;
 }
 
-ul {
-  padding-left: 1.2rem;
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+.rpe-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
